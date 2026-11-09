@@ -29,11 +29,13 @@ Browser checks use installed Chrome. On a different system, set `CHROME_PATH` to
 
 ## Netlify draft deployment
 
+Push everyday changes to `dev` and review them at the [Netlify branch deploy](https://dev--paulbpro.netlify.app/). `main` is the production branch, with auto-publishing locked in Netlify. To release, merge the changes into `main`, open its successful build in [Netlify Deploys](https://app.netlify.com/projects/paulbpro/deploys), and select **Publish deploy**. Keep auto-publishing locked between releases.
+
 Netlify currently runs `npm run build:preview`, including builds from `main`. It publishes the supplied draft with visible content gaps and unavailable contact controls. Every draft page carries `noindex, nofollow`, and the generated `_headers` file applies `X-Robots-Tag` to every response. Draft robots.txt omits the sitemap and allows crawlers to read the noindex directive. These directives request exclusion from search indexes; they do not control access. Existing Netlify access protection remains unchanged.
 
 The preview command explicitly selects its mode even if the host sets `ELEVENTY_ENV=production`. `npm run check:build-modes` verifies that behavior and checks that the strict production command still rejects unfinished content.
 
-When launch inputs are complete, change `netlify.toml` to `command = "npm run build"` and `ELEVENTY_ENV = "production"`. Production builds omit the draft indexing directives.
+When launch inputs are complete, set `command = "npm run build"` under `[context.production]` in `netlify.toml`. This removes the draft indexing directives from production builds while keeping `dev` on the preview command.
 
 ## Launch blockers
 
