@@ -173,7 +173,6 @@
   inline-size: 1.4ex;
   block-size: 1.4ex;
   vertical-align: -.2ex;
-  color: var(--fg);
   opacity: var(--stat-arrow-opacity, 0);
   translate: var(--stat-arrow-offset, -.35ex) 0;
   transition: opacity var(--t-base) var(--ease-out), translate var(--t-base) var(--ease-out);
