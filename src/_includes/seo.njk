@@ -1,31 +1,46 @@
 {% set metaTitle = pageTitle or site.site.pageTitle %}
 {% set description = site.site.description %}
+{% set imagePath = site.site.ogImage %}
+{% set imageAlt = site.site.ogImageAlt %}
 {% if entry %}
   {% set metaTitle = entry.data.title + ' | ' + site.site.name %}
   {% set description = entry.data.seoDescription or entry.data.summary %}
+  {% set imagePath = entry.data.socialImage %}
+  {% set imageAlt = entry.data.title + ' | ' + site.site.name %}
+  {% if entry.data.hasSocialArtwork and entry.data.imageAlt %}
+    {% set imageAlt = imageAlt + '. ' + entry.data.imageAlt %}
+  {% endif %}
 {% elif errorPage %}
   {% set metaTitle = site.ui.notFound.title + ' | ' + site.site.name %}
   {% set description = site.ui.notFound.body %}
 {% endif %}
-<title>{{ metaTitle }}</title>
-<meta name="description" content="{{ description }}">
-<meta name="theme-color" content="{{ site.site.themeColor }}">
+<title>{{ metaTitle | escape }}</title>
+<meta name="description" content="{{ description | trim | escape }}">
+<meta name="theme-color" content="{{ site.site.themeColor | escape }}">
 {% if not production or errorPage or noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 {% if not errorPage and not noindex %}
 {% set canonical = site.site.url + page.url %}
-<link rel="canonical" href="{{ canonical }}">
-<meta property="og:url" content="{{ canonical }}">
+{% set shareImage = socialOrigin + imagePath %}
+<link rel="canonical" href="{{ canonical | escape }}">
+<meta property="og:url" content="{{ canonical | escape }}">
 <meta property="og:type" content="{{ 'article' if entry else 'website' }}">
-<meta property="og:site_name" content="{{ site.site.name }}">
+<meta property="og:site_name" content="{{ site.site.name | escape }}">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="{{ metaTitle }}">
-<meta property="og:description" content="{{ description }}">
-<meta property="og:image" content="{{ site.site.url }}{{ site.site.ogImage }}">
+<meta property="og:title" content="{{ metaTitle | escape }}">
+<meta property="og:description" content="{{ description | trim | escape }}">
+<meta property="og:image" content="{{ shareImage | escape }}">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="{{ site.site.ogImageAlt }}">
+<meta property="og:image:alt" content="{{ imageAlt | escape }}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ metaTitle | escape }}">
+<meta name="twitter:description" content="{{ description | trim | escape }}">
+<meta name="twitter:image" content="{{ shareImage | escape }}">
+<meta name="twitter:image:alt" content="{{ imageAlt | escape }}">
 {% if home %}
 <script type="application/ld+json">{{ profileSchema | json | safe }}</script>
+{% elif entry %}
+<script type="application/ld+json">{{ entry | articleSchema(site.site, canonical, description | trim) | json | safe }}</script>
 {% endif %}
 {% endif %}

@@ -22,7 +22,14 @@ export default function(config) {
   const readSite = () => Object.fromEntries(fs.readdirSync('content/site').filter(f=>f.endsWith('.json')).map(f=>[f.slice(0,-5),JSON.parse(fs.readFileSync(`content/site/${f}`))]));
   const records = kind => fs.readdirSync(`content/${kind}`).filter(f=>f.endsWith('.md')).map(file=>{
     const {data,content} = matter(fs.readFileSync(`content/${kind}/${file}`,'utf8'));
-    return {data:{...data,kindOfPage:kind},body:md.render(content),url:`/${kind==='cases'?'work':'build'}/${data.slug}/`};
+    const section = kind === 'cases' ? 'work' : 'build';
+    const url = `/${section}/${data.slug}/`;
+    const hasSocialArtwork = Boolean(data.image?.endsWith('.svg') && fs.existsSync(`src${data.image}`));
+    return {
+      data: {...data, kindOfPage:kind, hasSocialArtwork, socialImage:`/og/${section}/${data.slug}.png`},
+      body: md.render(content),
+      url,
+    };
   }).sort((a,b)=>a.data.order-b.data.order);
   for (const kind of ['cases','builds']) {
     config.addCollection(kind,()=>{
@@ -41,6 +48,9 @@ export default function(config) {
         {'@type': 'WebSite', '@id': `${url}#website`, url, name: site.name},
         {
           '@type': 'ProfilePage',
+          '@id': `${url}#profile`,
+          name: site.pageTitle,
+          description: site.description,
           url,
           isPartOf: {'@id': `${url}#website`},
           mainEntity: {
@@ -48,6 +58,8 @@ export default function(config) {
             '@id': `${url}#paul-butcher`,
             name: site.name,
             jobTitle: site.title,
+            description: site.description,
+            sameAs: [site.linkedin],
             url,
             image: `${site.url}/img/paul-headshot-644.webp`,
           },
@@ -55,6 +67,28 @@ export default function(config) {
       ],
     };
   });
+  config.addGlobalData('socialOrigin', () => {
+    const {site} = readSite();
+    const preview = process.env.ELEVENTY_ENV !== 'production' && process.env.DEPLOY_PRIME_URL;
+    return new URL(preview || site.url).origin;
+  });
+  config.addFilter('articleSchema', (entry, site, canonical, description) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${canonical}#article`,
+    url: canonical,
+    mainEntityOfPage: canonical,
+    headline: entry.data.title,
+    description,
+    image: `${site.url}${entry.data.socialImage}`,
+    author: {
+      '@type': 'Person',
+      '@id': `${site.url}/#paul-butcher`,
+      name: site.name,
+      url: `${site.url}/`,
+    },
+    isPartOf: {'@id': `${site.url}/#website`},
+  }));
   config.addGlobalData('year',new Date().getFullYear());
   config.addGlobalData('production',process.env.ELEVENTY_ENV==='production');
   config.addGlobalData('heroSizes', heroSizes);
@@ -97,7 +131,7 @@ export default function(config) {
   config.addPassthroughCopy({'src/js':'js', 'src/img/surfaces':'img/surfaces'});
   if(fs.existsSync('src/Paul-Butcher-Resume.pdf')) config.addPassthroughCopy({'src/Paul-Butcher-Resume.pdf':'Paul-Butcher-Resume.pdf'});
   config.on('eleventy.before',async()=>{
-    await prepareAssets(readSite());
+    await prepareAssets(readSite(), [...records('cases'), ...records('builds')]);
     fs.mkdirSync('dist/css',{recursive:true});
     fs.writeFileSync('dist/css/main.css',['tokens','base','grid','components','sections','motion'].map(f=>fs.readFileSync(`src/css/${f}.css`,'utf8')).join('\n').replace(/\/\*[\s\S]*?\*\//g,'').replace(/\s+/g,' '));
   });
