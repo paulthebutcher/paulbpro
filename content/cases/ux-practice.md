@@ -1,5 +1,6 @@
 ---
 title: Building a UX practice from zero
+seoDescription: "How Paul Butcher built Mastercard’s cybersecurity UX practice and brought design, customer analytics and research into product decisions."
 slug: ux-practice
 order: 4
 featured: false

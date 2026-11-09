@@ -1,5 +1,6 @@
 ---
 title: Foundry
+seoDescription: "Foundry is Paul Butcher’s multi-agent pipeline for moving product ideas through research, design, and implementation."
 slug: foundry
 order: 1
 featured_size: small

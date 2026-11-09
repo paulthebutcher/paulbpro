@@ -14,20 +14,20 @@
     ]}
   ],
   "objects": [
-    { "caption": "banking", "src": "/img/about/banking" },
-    { "caption": "healthcare", "src": "/img/about/healthcare" },
-    { "caption": "payments", "src": "/img/about/payments" },
-    { "caption": "security", "src": "/img/about/security" }
+    { "caption": "banking", "src": "/img/about/banking", "alt": "Steel wheel on a bank vault door" },
+    { "caption": "healthcare", "src": "/img/about/healthcare", "alt": "Hospital wristband with a barcode" },
+    { "caption": "payments", "src": "/img/about/payments", "alt": "Contactless card on a payment terminal" },
+    { "caption": "security", "src": "/img/about/security", "alt": "USB security key" }
   ],
   "paper": [
-    { "caption": "engineering", "src": "/img/about/engineering" },
-    { "caption": "product", "src": "/img/about/product" },
-    { "caption": "services", "src": "/img/about/services" },
-    { "caption": "support", "src": "/img/about/support" },
-    { "caption": "finance", "src": "/img/about/finance" },
-    { "caption": "sales", "src": "/img/about/sales" },
-    { "caption": "marketing", "src": "/img/about/marketing" },
-    { "caption": "legal", "src": "/img/about/legal" }
+    { "caption": "engineering", "src": "/img/about/engineering", "alt": "Sketch of a browser, server and database connected in a stack" },
+    { "caption": "product", "src": "/img/about/product", "alt": "Three sketched mobile screens connected by arrows" },
+    { "caption": "services", "src": "/img/about/services", "alt": "Clipboard with a checked service timeline" },
+    { "caption": "support", "src": "/img/about/support", "alt": "Paper sketch of a conversation with a resolved check mark" },
+    { "caption": "finance", "src": "/img/about/finance", "alt": "Financial worksheet beside a calculator" },
+    { "caption": "sales", "src": "/img/about/sales", "alt": "Open folder with a signed agreement" },
+    { "caption": "marketing", "src": "/img/about/marketing", "alt": "Photo contact sheet with one image marked for selection" },
+    { "caption": "legal", "src": "/img/about/legal", "alt": "Document with a clause marked for revision" }
   ],
   "paragraphs": [
     "Customers deal with one company, and they notice each seam where many teams’ efforts don’t quite line up. I’ve done this work in banking, payments, security and healthcare, places with more products than anybody planned and someone who only wants to book an appointment or move money. As I see it, the job is looking after the whole: what connects, what merges, and what shouldn’t exist yet.",

@@ -4,12 +4,13 @@
   "domain": "paulb.pro",
   "url": "https://paulb.pro",
   "pageTitle": "Paul Butcher, design and research leader",
-  "description": "I lead design and research for multi-product platforms, so several teams’ work adds up to one experience for the customer. Director at Mastercard, where I built the cybersecurity UX practice from zero. I also ship code.",
+  "description": "Paul Butcher leads design and research for multi-product platforms. Explore his work in cybersecurity, healthcare, payments, and accessibility.",
   "email": "hello@paulb.pro",
   "linkedin": "https://www.linkedin.com/in/[gap: linkedin handle]",
   "scheduleUrl": "[gap: Cal.com or Calendly URL]",
   "resume": "/Paul-Butcher-Resume.pdf",
   "location": "Salt Lake City (open to relocation)",
   "ogImage": "/og.png",
+  "ogImageAlt": "Kind to people, hard on assumptions. paulb.pro",
   "themeColor": "#174f3f"
 }

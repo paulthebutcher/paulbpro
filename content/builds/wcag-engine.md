@@ -1,5 +1,6 @@
 ---
 title: WCAG Engine
+seoDescription: "WCAG Engine automates website accessibility audits for municipalities. Paul Butcher also used it to find and fix issues on Popfly’s site."
 slug: wcag-engine
 order: 2
 featured_size: large

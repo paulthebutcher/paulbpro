@@ -6,6 +6,17 @@ import Image from '@11ty/eleventy-img';
 import {prepareAssets} from './scripts/assets.mjs';
 const md = new MarkdownIt({html:false,typographer:false});
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const careerImages = {
+  objects: {
+    widths: [160, 264, 352, 528, 704],
+    sizes: '(min-width:1512px) 263px, (min-width:1200px) calc(20.833vw - 52px), (min-width:768px) calc(25vw - 28px), calc(50vw - 32px)',
+  },
+  paper: {
+    widths: [96, 160, 240, 352],
+    sizes: '(min-width:1512px) 116px, (min-width:1200px) calc(10.417vw - 42px), (min-width:768px) calc(12.5vw - 22px), calc(25vw - 24px)',
+  },
+};
+const heroSizes = '(min-width:1200px) 322px, (min-width:768px) calc(25vw - 32px), calc(100vw - 48px)';
 export default function(config) {
   const readSite = () => Object.fromEntries(fs.readdirSync('content/site').filter(f=>f.endsWith('.json')).map(f=>[f.slice(0,-5),JSON.parse(fs.readFileSync(`content/site/${f}`))]));
   const records = kind => fs.readdirSync(`content/${kind}`).filter(f=>f.endsWith('.md')).map(file=>{
@@ -20,23 +31,61 @@ export default function(config) {
     });
   }
   config.addGlobalData('site',readSite);
+  config.addGlobalData('profileSchema', () => {
+    const {site} = readSite();
+    const url = `${site.url}/`;
+    return {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {'@type': 'WebSite', '@id': `${url}#website`, url, name: site.name},
+        {
+          '@type': 'ProfilePage',
+          url,
+          isPartOf: {'@id': `${url}#website`},
+          mainEntity: {
+            '@type': 'Person',
+            '@id': `${url}#paul-butcher`,
+            name: site.name,
+            jobTitle: site.title,
+            url,
+            image: `${site.url}/img/paul-headshot-644.webp`,
+          },
+        },
+      ],
+    };
+  });
   config.addGlobalData('year',new Date().getFullYear());
   config.addGlobalData('production',process.env.ELEVENTY_ENV==='production');
+  config.addGlobalData('heroSizes', heroSizes);
   config.addFilter('br',value=>escape(value).replace(/\n/g,'<br class="br-desktop"> '));
   config.addFilter('copyright',value=>value.replace('{year}',new Date().getFullYear()));
   config.addFilter('available',value=>Boolean(value && !value.includes('[gap') && (value!==readSite().site.resume || fs.existsSync('src/Paul-Butcher-Resume.pdf'))));
   config.addFilter('resolveHref',item=>item.type==='mailto'?`mailto:${readSite().site[item.hrefKey]}`:readSite().site[item.hrefKey]);
   config.addFilter('featured',items=>items.filter(item=>item.data.featured));
-  config.addFilter('json',v=>JSON.stringify(v));
+  config.addFilter('json', value => JSON.stringify(value).replace(/</g, '\\u003c'));
   config.addShortcode('styles',()=>{const css=fs.readFileSync('dist/css/main.css','utf8');return Buffer.byteLength(css)<20000?`<style>${css}</style>`:'<link rel="preload" href="/css/main.css" as="style"><link rel="stylesheet" href="/css/main.css">';});
   config.addFilter('gapMarkup',value=>value.replace(/\[gap[^\]]*\]/g,'<mark class="content-gap">$&</mark>'));
-  config.addAsyncShortcode('media',async function(src,alt,width=590,height=308,priority=false){
-    const attributes = `width="${width}" height="${height}" alt="${escape(alt)}" decoding="async" ${priority?'fetchpriority="high"':'loading="lazy"'}`;
+  config.addAsyncShortcode('media',async function(src,alt,width=590,height=308,priority=false,gallery){
     const master = src==='/img/paul-headshot'?'assets/images/headshot.png':`src/img/_masters/${src.replace('/img/','')}.png`;
     if (src.endsWith('.svg') && fs.existsSync(`src${src}`)) return `<figure class="diagram" role="img" aria-label="${escape(alt)}">${fs.readFileSync(`src${src}`,'utf8')}</figure>`;
     if (!fs.existsSync(master)) return `<div class="media placeholder" role="img" aria-label="${escape(readSite().ui.imageComing)}" style="--media-ratio:${width}/${height}"><span class="visually-hidden">${escape(readSite().ui.imageComing)}</span></div>`;
-    const stats = await Image(master,{widths:[width,width*2],formats:['avif','webp'],outputDir:`dist${path.posix.dirname(src)}`,urlPath:path.posix.dirname(src),filenameFormat:(id,source,sourceWidth,format)=>`${path.posix.basename(src)}-${sourceWidth}.${format}`,sharpOptions:{},sharpAvifOptions:{quality:55},sharpWebpOptions:{quality:75}});
-    return `<picture><source type="image/avif" srcset="${stats.avif.map(x=>`${x.url} ${x.width}w`).join(', ')}" sizes="(min-width:1200px) ${width}px, (min-width:768px) 279px, calc(100vw - 48px)"><img src="${stats.webp[0].url}" srcset="${stats.webp.map(x=>`${x.url} ${x.width}w`).join(', ')}" sizes="(min-width:1200px) ${width}px, (min-width:768px) 279px, calc(100vw - 48px)" ${attributes}></picture>`;
+    const career = careerImages[gallery];
+    const sizes = career?.sizes ?? (priority ? heroSizes : `(min-width:1200px) ${width}px, (min-width:768px) 279px, calc(100vw - 48px)`);
+    const stats = await Image(master, {
+      widths: career?.widths ?? (priority ? [192, width, width * 2] : [width, width * 2]),
+      formats: ['avif', 'webp'],
+      outputDir: `dist${path.posix.dirname(src)}`,
+      urlPath: path.posix.dirname(src),
+      filenameFormat: (id, source, sourceWidth, format) => {
+        const revision = career ? `-${id}` : '';
+        return `${path.posix.basename(src)}-${sourceWidth}${revision}.${format}`;
+      },
+      sharpAvifOptions: {quality: 55},
+      sharpWebpOptions: {quality: 75},
+    });
+    const fallback = stats.webp[0];
+    const srcset = images => images.map(image => image.srcset).join(', ');
+    return `<picture><source type="image/avif" srcset="${srcset(stats.avif)}" sizes="${sizes}"><img src="${fallback.url}" srcset="${srcset(stats.webp)}" sizes="${sizes}" width="${fallback.width}" height="${fallback.height}" alt="${escape(alt)}" decoding="async" ${priority ? 'fetchpriority="high"' : 'loading="lazy"'}></picture>`;
   });
   config.addWatchTarget('content'); config.addWatchTarget('src/css'); config.addWatchTarget('assets'); config.addWatchTarget('src/img');
   config.addPassthroughCopy({'src/js':'js'});

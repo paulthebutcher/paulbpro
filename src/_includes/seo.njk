@@ -1,0 +1,31 @@
+{% set metaTitle = site.site.pageTitle %}
+{% set description = site.site.description %}
+{% if entry %}
+  {% set metaTitle = entry.data.title + ' | ' + site.site.name %}
+  {% set description = entry.data.seoDescription or entry.data.summary %}
+{% elif errorPage %}
+  {% set metaTitle = site.ui.notFound.title + ' | ' + site.site.name %}
+  {% set description = site.ui.notFound.body %}
+{% endif %}
+<title>{{ metaTitle }}</title>
+<meta name="description" content="{{ description }}">
+<meta name="theme-color" content="{{ site.site.themeColor }}">
+{% if not production or errorPage %}<meta name="robots" content="noindex, nofollow">{% endif %}
+{% if not errorPage %}
+{% set canonical = site.site.url + page.url %}
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:type" content="{{ 'article' if entry else 'website' }}">
+<meta property="og:site_name" content="{{ site.site.name }}">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{{ metaTitle }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:image" content="{{ site.site.url }}{{ site.site.ogImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.site.ogImageAlt }}">
+<meta name="twitter:card" content="summary_large_image">
+{% if home %}
+<script type="application/ld+json">{{ profileSchema | json | safe }}</script>
+{% endif %}
+{% endif %}

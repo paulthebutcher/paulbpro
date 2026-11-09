@@ -1,5 +1,6 @@
 ---
 title: Identity service
+seoDescription: "How Paul Butcher connected site visits and campaigns to CRM records so Popfly could trace marketing spend to revenue."
 slug: identity-service
 order: 3
 featured_size: small

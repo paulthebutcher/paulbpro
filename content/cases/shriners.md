@@ -1,5 +1,6 @@
 ---
 title: Twenty-two sites into one
+seoDescription: "How Paul Butcher led discovery and designed the information architecture, search and content model for a unified Shriners Children’s website."
 slug: shriners
 order: 5
 featured: false

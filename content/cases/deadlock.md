@@ -1,5 +1,6 @@
 ---
 title: Ending a deadlock on a $25M feature
+seoDescription: "How a two-day workshop helped product and engineering agree on scope for a Mastercard feature tied to a $25M revenue target."
 slug: deadlock
 order: 1
 featured: true

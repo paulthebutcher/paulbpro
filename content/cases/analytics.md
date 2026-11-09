@@ -1,5 +1,6 @@
 ---
 title: From no data to a shared answer
+seoDescription: "How Paul Butcher got enterprise cybersecurity analytics live in three months and used the data to resolve a product integration dispute."
 slug: analytics
 order: 2
 featured: true

@@ -1,5 +1,6 @@
 ---
 title: Research saves $6M of budget
+seoDescription: "How research with 250 potential customers found too little demand for a planned $6M small-business security product."
 slug: six-million
 order: 3
 featured: true
