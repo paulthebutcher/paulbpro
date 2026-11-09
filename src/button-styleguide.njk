@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 noindex: true
 pageTitle: Button styleguide | Paul Butcher
 ---
-{% from 'components.njk' import buttonIcon %}
+{% from 'components.njk' import headingText,buttonIcon %}
 {% set variants = ['filled', 'outline'] %}
 {% set directions = [
   { kind: 'right', label: 'Internal' },
@@ -22,7 +22,7 @@ pageTitle: Button styleguide | Paul Butcher
 <main id="main">
   <div class="section on-alabaster">
     <div class="frame section-pad">
-      <h1 class="display2 inset">Buttons</h1>
+      <h1 class="display2 inset">{{ headingText("Buttons") }}</h1>
     </div>
   </div>
   {% for surface in ['Pine', 'Alabaster'] %}

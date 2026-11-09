@@ -10,41 +10,27 @@
       from { opacity: 0; transform: translateY(12px); animation-timing-function: var(--ease-fluid); }
       to { opacity: 1; transform: none; }
     }
-    @keyframes settle {
-      from { opacity: 0; transform: translateY(12px); animation-timing-function: var(--ease-fluid); }
-      to { opacity: 1; transform: none; }
-    }
 
     .case-card {
       view-timeline-name: --work-card;
       view-timeline-inset: var(--tag-h) 0px;
     }
-    .work-image {
+    html.reveal-ready .work-image {
       animation: reveal-image linear both;
       animation-timeline: --work-card;
       animation-range: entry 0% entry 60%;
     }
-    .case-card h3 {
-      animation: settle linear both;
-      animation-timeline: --work-card;
-      animation-range: entry 60% cover 32%;
-    }
-    .case-card:focus-within :is(.work-image, h3) { animation: none; }
+    html.reveal-ready .case-card:focus-within .work-image { animation: none; }
 
     .lead-level {
       view-timeline-name: --lead-level;
       view-timeline-inset: var(--tag-h) 0px;
     }
-    .lead-level > h3::after {
+    html.reveal-ready .lead-level > h3::after {
       transform-origin: left;
       animation: grow-rule linear both;
       animation-timeline: --lead-level;
       animation-range: entry 0% cover 42%;
-    }
-    .principles > div, .lead-closing {
-      animation: settle linear both;
-      animation-timeline: view(block var(--tag-h) 0px);
-      animation-range: entry var(--settle-delay, 0%) entry calc(45% + var(--settle-delay, 0%));
     }
     @media (min-width: 1200px) {
       .work-layout { timeline-scope: --work-cards; }
@@ -57,9 +43,65 @@
         animation-timeline: --work-cards;
         animation-range: cover 0% cover calc(100% - var(--work-last-tail, 0px));
       }
-      .principles > :nth-child(2) { --settle-delay: 8%; }
-      .principles > :nth-child(3) { --settle-delay: 16%; }
     }
+  }
+}
+
+/* Headings keep their authored breaks and normal wrapping outside a reveal. */
+.heading-mask, .heading-text { display: block; }
+.closing-word { display: inline-block; white-space: nowrap; }
+.closing-letter-mask { display: inline-block; vertical-align: bottom; }
+.closing-letter { display: block; }
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes text-rise {
+    from { transform: translateY(100%); }
+    to { transform: none; }
+  }
+  @keyframes settle {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes text-label {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0); }
+  }
+
+  :is([data-reveal-kind="heading"] .heading-mask, [data-reveal-kind="lines"] .heading-line-mask, [data-reveal-kind="closing"] .closing-letter-mask) {
+    overflow: hidden;
+    padding-block: .1em;
+    margin-block: -.1em;
+  }
+  [data-reveal-kind="lines"] .heading-text { display: flex; flex-direction: column; }
+  [data-reveal-kind="lines"] :is(.heading-line-mask, .heading-line) { display: block; }
+  [data-reveal-kind="lines"] .br-desktop { display: none; }
+  [data-reveal-kind="lines"] .heading-line-mask { --line-delay: calc(var(--heading-line-i) * 120ms); }
+
+  [data-reveal-state="waiting"] :is(.heading-text, .closing-letter) { transform: translateY(100%); }
+  [data-reveal-kind="heading"][data-reveal-state="playing"] .heading-text,
+  [data-reveal-kind="lines"][data-reveal-state="playing"] .heading-line {
+    animation: text-rise 560ms var(--ease-rise) var(--line-delay, 0ms) both;
+  }
+  [data-reveal-kind="settle"][data-reveal-state="waiting"],
+  [data-reveal-state="waiting"].lead-closing > p { opacity: 0; }
+  [data-reveal-kind="settle"][data-reveal-state="playing"] {
+    animation: settle 480ms var(--ease-fluid) both;
+  }
+  [data-reveal-kind="label"][data-reveal-state="waiting"] { clip-path: inset(0 100% 0 0); }
+  [data-reveal-kind="label"][data-reveal-state="playing"] {
+    animation: text-label 250ms var(--ease-rise) both;
+  }
+
+  .lead-closing {
+    --letter-duration: 360ms;
+    --letter-step: 10ms;
+    --statement-duration: calc(var(--letter-duration) + (var(--closing-letters) - 1) * var(--letter-step));
+  }
+  [data-reveal-state="playing"].lead-closing .closing-letter {
+    animation: text-rise var(--letter-duration) var(--ease-rise) calc(var(--letter-i) * var(--letter-step)) both;
+  }
+  [data-reveal-state="playing"].lead-closing > p {
+    animation: settle 480ms var(--ease-fluid) calc(var(--statement-duration) + 175ms) both;
   }
 }
 
@@ -148,9 +190,8 @@
     animation: hero-rule-down 780ms var(--ease-fluid) calc(var(--rule-i) * 24ms) both;
   }
   html.intro-ready .hero-line {
-    animation: hero-headline 700ms var(--ease-rise) 100ms both;
+    animation: hero-headline 700ms var(--ease-rise) calc(100ms + var(--heading-line-i) * 120ms) both;
   }
-  html.intro-ready .hero-line-mask:nth-child(2) .hero-line { animation-delay: 220ms; }
   html.intro-ready .hero-portrait {
     animation: hero-portrait 780ms var(--ease-rise) 230ms both;
   }

@@ -3,4 +3,4 @@ layout: base.njk
 permalink: /404.html
 errorPage: true
 ---
-{% from 'components.njk' import nav %}<div class="section on-alabaster"><div class="frame">{{ nav(site) }}<main id="main" class="detail inset"><h1 class="display2">{{ site.ui.notFound.title }}</h1><p class="intro">{{ site.ui.notFound.body }}</p><a href="/">{{ site.ui.notFound.link }}</a></main></div></div>{% include 'footer.njk' %}
+{% from 'components.njk' import nav,headingText %}<div class="section on-alabaster"><div class="frame">{{ nav(site) }}<main id="main" class="detail inset"><h1 class="display2">{{ headingText(site.ui.notFound.title) }}</h1><p class="intro">{{ site.ui.notFound.body }}</p><a href="/">{{ site.ui.notFound.link }}</a></main></div></div>{% include 'footer.njk' %}

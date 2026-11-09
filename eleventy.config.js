@@ -93,6 +93,11 @@ export default function(config) {
   config.addGlobalData('production',process.env.ELEVENTY_ENV==='production');
   config.addGlobalData('heroSizes', heroSizes);
   config.addFilter('br',value=>escape(value).replace(/\n/g,'<br class="br-desktop"> '));
+  config.addFilter('closingWords', value => {
+    let count = 0;
+    const words = value.split(' ').map(word => Array.from(word, letter => ({letter, index: count++})));
+    return {words, count};
+  });
   config.addFilter('copyright',value=>value.replace('{year}',new Date().getFullYear()));
   config.addFilter('available',value=>Boolean(value && !value.includes('[gap') && (value!==readSite().site.resume || fs.existsSync('src/Paul-Butcher-Resume.pdf'))));
   config.addFilter('resolveHref',item=>item.type==='mailto'?`mailto:${readSite().site[item.hrefKey]}`:readSite().site[item.hrefKey]);

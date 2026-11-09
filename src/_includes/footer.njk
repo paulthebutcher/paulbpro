@@ -1,6 +1,6 @@
-{% from 'components.njk' import button, arrow %}
+{% from 'components.njk' import button, headingText %}
 <footer id="contact" class="section on-alabaster"><div class="frame"><div class="footer-grid inset">
-<h2 class="display2">{{ site.footer.heading | br | safe }}</h2>
+<h2 class="display2">{{ headingText(site.footer.heading) }}</h2>
 <p class="intro">{{ site.footer.intro }}</p>
 <div class="footer-button">{{ button(site.footer.button, site) }}</div>
 <div class="footer-links">{% for item in site.footer.links %}{% set href = item | resolveHref %}{% if not loop.first %}<span aria-hidden="true" class="muted"> · </span>{% endif %}{% if href | available %}<a href="{{ href }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>{{ item.label }}{% if item.external %}<span class="visually-hidden">{{ site.ui.external }}</span>{% endif %}</a>{% else %}<span aria-disabled="true" title="{{ site.ui.unavailable }}">{{ item.label }}</span>{% endif %}{% endfor %}</div>

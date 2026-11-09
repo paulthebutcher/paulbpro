@@ -1,116 +1,116 @@
 {
   "375": [
     {
-      "firstPaint": 28,
-      "headlineFromPaint": 961,
-      "totalFromPaint": 1795,
-      "latestLCP": {
-        "time": 60,
-        "element": "IMG"
-      },
-      "headlineEnd": 989,
-      "portraitEnd": 1073,
-      "navEnd": 1823
-    },
-    {
-      "firstPaint": 48,
-      "headlineFromPaint": 914,
-      "totalFromPaint": 1746,
-      "latestLCP": {
-        "time": 48,
-        "element": "IMG"
-      },
-      "headlineEnd": 962,
-      "portraitEnd": 1045,
-      "navEnd": 1794
-    },
-    {
-      "firstPaint": 40,
-      "headlineFromPaint": 947,
-      "totalFromPaint": 1779,
+      "firstPaint": 36,
+      "headlineFromPaint": 949,
+      "totalFromPaint": 1782,
       "latestLCP": {
         "time": 72,
         "element": "IMG"
       },
-      "headlineEnd": 987,
-      "portraitEnd": 1070,
-      "navEnd": 1819
+      "headlineEnd": 985,
+      "portraitEnd": 1068,
+      "navEnd": 1818
+    },
+    {
+      "firstPaint": 36,
+      "headlineFromPaint": 946,
+      "totalFromPaint": 1779,
+      "latestLCP": {
+        "time": 68,
+        "element": "IMG"
+      },
+      "headlineEnd": 982,
+      "portraitEnd": 1065,
+      "navEnd": 1815
+    },
+    {
+      "firstPaint": 36,
+      "headlineFromPaint": 945,
+      "totalFromPaint": 1779,
+      "latestLCP": {
+        "time": 68,
+        "element": "IMG"
+      },
+      "headlineEnd": 981,
+      "portraitEnd": 1065,
+      "navEnd": 1815
     }
   ],
   "768": [
     {
       "firstPaint": 32,
-      "headlineFromPaint": 943,
-      "totalFromPaint": 1776,
+      "headlineFromPaint": 948,
+      "totalFromPaint": 1781,
       "latestLCP": {
-        "time": 60,
+        "time": 64,
         "element": "IMG"
       },
-      "headlineEnd": 975,
-      "portraitEnd": 1059,
-      "navEnd": 1808
+      "headlineEnd": 980,
+      "portraitEnd": 1064,
+      "navEnd": 1813
     },
     {
-      "firstPaint": 28,
-      "headlineFromPaint": 959,
-      "totalFromPaint": 1792,
+      "firstPaint": 20,
+      "headlineFromPaint": 963,
+      "totalFromPaint": 1796,
       "latestLCP": {
-        "time": 56,
+        "time": 52,
         "element": "IMG"
       },
-      "headlineEnd": 987,
-      "portraitEnd": 1070,
-      "navEnd": 1820
+      "headlineEnd": 983,
+      "portraitEnd": 1066,
+      "navEnd": 1816
     },
     {
-      "firstPaint": 28,
-      "headlineFromPaint": 964,
-      "totalFromPaint": 1797,
+      "firstPaint": 24,
+      "headlineFromPaint": 960,
+      "totalFromPaint": 1793,
       "latestLCP": {
-        "time": 60,
+        "time": 52,
         "element": "IMG"
       },
-      "headlineEnd": 992,
-      "portraitEnd": 1074,
-      "navEnd": 1825
+      "headlineEnd": 984,
+      "portraitEnd": 1067,
+      "navEnd": 1817
     }
   ],
   "1440": [
     {
       "firstPaint": 24,
-      "headlineFromPaint": 967,
-      "totalFromPaint": 1800,
+      "headlineFromPaint": 947,
+      "totalFromPaint": 1780,
       "latestLCP": {
-        "time": 60,
+        "time": 56,
         "element": "IMG"
       },
-      "headlineEnd": 991,
-      "portraitEnd": 1074,
-      "navEnd": 1824
+      "headlineEnd": 971,
+      "portraitEnd": 1055,
+      "navEnd": 1804
     },
     {
-      "firstPaint": 32,
+      "firstPaint": 36,
       "headlineFromPaint": 946,
       "totalFromPaint": 1779,
       "latestLCP": {
-        "time": 64,
+        "time": 68,
         "element": "IMG"
       },
-      "headlineEnd": 978,
-      "portraitEnd": 1062,
-      "navEnd": 1811
+      "headlineEnd": 982,
+      "portraitEnd": 1066,
+      "navEnd": 1815
     },
     {
-      "firstPaint": 40,
-      "headlineFromPaint": 948,
-      "totalFromPaint": 1781,
+      "firstPaint": 32,
+      "headlineFromPaint": 949,
+      "totalFromPaint": 1782,
       "latestLCP": {
-        "time": 72,
+        "time": 68,
         "element": "IMG"
       },
-      "headlineEnd": 988,
-      "portraitEnd": 1072,
-      "navEnd": 1821
+      "headlineEnd": 981,
+      "portraitEnd": 1065,
+      "navEnd": 1814
     }
   ]
 }

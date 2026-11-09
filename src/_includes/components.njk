@@ -3,3 +3,19 @@
 {% macro button(item,site) %}{% set href = item | resolveHref %}{% if href | available %}<a class="button {{ item.style or 'filled' }}" href="{{ href }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>{{ item.label }}{% if item.external %}<span class="visually-hidden">{{ site.ui.external }}</span>{% endif %}{{ buttonIcon(item.icon) }}</a>{% else %}<span class="button {{ item.style or 'filled' }} unavailable" aria-disabled="true" title="{{ site.ui.unavailable }}">{{ item.label }}{{ buttonIcon(item.icon) }}<span class="visually-hidden">{{ site.ui.unavailable }}</span></span>{% endif %}{% endmacro %}
 {% macro tag(label) %}<div class="section-tag-row"><p class="section-tag mono">{{ label }}</p></div>{% endmacro %}
 {% macro nav(site) %}<header class="nav"><div class="identity"><a href="/">{{ site.site.name }}</a><span class="muted">{{ site.site.title }}</span></div><nav aria-label="{{ site.ui.navigation }}">{% for item in site.nav %}<a href="/{{ item.href }}" data-nav="{{ item.href }}">{{ item.label }}</a>{% endfor %}</nav></header>{% endmacro %}
+
+{% macro headlineLines(text, hero=false) %}
+{%- for line in text.split('\n') -%}
+  {%- if not loop.first -%}{%- if not hero -%}<br class="br-desktop">{%- endif -%}{{ ' ' }}{%- endif -%}
+  <span class="heading-line-mask{% if hero %} hero-line-mask{% endif %}" style="--heading-line-i:{{ loop.index0 }}"><span class="heading-line{% if hero %} hero-line{% endif %}">{{ line | escape }}</span></span>
+{%- endfor -%}
+{% endmacro %}
+
+{% macro headingText(text) %}<span class="heading-mask"><span class="heading-text">{{ headlineLines(text) }}</span></span>{% endmacro %}
+
+{% macro closingLetters(words) %}
+{%- for word in words -%}
+  <span class="closing-word">{%- for entry in word -%}<span class="closing-letter-mask"><span class="closing-letter" style="--letter-i:{{ entry.index }}">{{ entry.letter | escape }}</span></span>{%- endfor -%}</span>
+  {%- if not loop.last -%}{{ ' ' }}{%- endif -%}
+{%- endfor -%}
+{% endmacro %}

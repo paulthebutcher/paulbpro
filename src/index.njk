@@ -2,15 +2,15 @@
 layout: base.njk
 home: true
 ---
-{% from 'components.njk' import arrow,button,buttonIcon,tag,nav %}
+{% from 'components.njk' import arrow,button,buttonIcon,closingLetters,headlineLines,headingText,tag,nav %}
 <div class="section on-pine home-nav"><div class="frame">{{ nav(site) }}</div></div>
 <main id="main">
 <section id="hero" class="section on-pine"><div class="frame">
 <div class="hero-rules" aria-hidden="true">{% for i in range(0, 13) %}<span style="--rule-i:{{ i }}"></span>{% endfor %}</div>
 <div class="hero-grid inset">
-<h1 class="display">{% for line in site.hero.headline.split('\n') %}<span class="hero-line-mask"><span class="hero-line">{{ line | escape }}</span></span>{% if not loop.last %} {% endif %}{% endfor %}</h1><p class="hero-thesis intro">{{ site.hero.thesis }}</p><div class="portrait hero-portrait">{% media site.hero.portrait.src, site.hero.portrait.alt, 322, 322, true %}</div><div class="hero-buttons">{% for item in site.hero.buttons %}{{ button(item,site) }}{% endfor %}</div></div>
+<h1 class="display">{{ headlineLines(site.hero.headline, true) }}</h1><p class="hero-thesis intro">{{ site.hero.thesis }}</p><div class="portrait hero-portrait">{% media site.hero.portrait.src, site.hero.portrait.alt, 322, 322, true %}</div><div class="hero-buttons">{% for item in site.hero.buttons %}{{ button(item,site) }}{% endfor %}</div></div>
 <div class="stats">{% for stat in site.hero.stats %}<a class="stat" href="/work/{{ stat.case }}/" style="--stat-i:{{ loop.index0 }}"><span class="stat-copy"><span class="stat-value">{{ stat.value }}</span><span class="stat-caption">{{ stat.caption }} {{ buttonIcon() }}</span></span></a>{% endfor %}</div></div></section>
-<section id="about" class="section on-alabaster"><div class="frame section-pad"><div class="about-top inset"><div><h2 class="display2">{{ site.about.headline }}</h2><div class="resume-button">{{ button(site.about.resumeButton,site) }}</div></div><div class="roles">{% for group in site.about.roles %}<div><p class="mono muted">{{ group.eyebrow }}</p><ul>{% for item in group.items %}<li class="small">{{ item.role }} {{ site.ui.roleConnector }} {{ item.org }}</li>{% endfor %}</ul></div>{% endfor %}</div></div>
+<section id="about" class="section on-alabaster"><div class="frame section-pad"><div class="about-top inset"><div><h2 class="display2">{{ headingText(site.about.headline) }}</h2><div class="resume-button">{{ button(site.about.resumeButton,site) }}</div></div><div class="roles">{% for group in site.about.roles %}<div><p class="mono muted">{{ group.eyebrow }}</p><ul>{% for item in group.items %}<li class="small">{{ item.role }} {{ site.ui.roleConnector }} {{ item.org }}</li>{% endfor %}</ul></div>{% endfor %}</div></div>
 {% for group in [site.about.objects, site.about.paper] %}
 {% set gallery = 'paper' if loop.last else 'objects' %}
 <div class="about-row">
@@ -31,7 +31,7 @@ home: true
     <div class="work-layout">
       <div class="work-lane">
         <div class="work-heading">
-          <h2 class="display inset">{{ site.work.headline | br | safe }}</h2>
+          <h2 class="display inset">{{ headingText(site.work.headline) }}</h2>
           <div class="work-intro inset">
             <p class="intro">{{ site.work.intro }}</p>
             {% set caseCount = (collections.cases | featured) | length %}
@@ -56,8 +56,8 @@ home: true
     </div>
   </div>
 </section>
-<section id="build" class="section on-alabaster"><div class="frame section-pad tagged">{{ tag(site.build.tag) }}<h2 class="display build-heading inset">{{ site.build.headline }}</h2><p class="intro build-intro inset">{{ site.build.intro }}</p><div class="build-tiles inset">{% for item in collections.builds %}{% if item.data.featured_size %}<article class="build-tile {{ item.data.featured_size }}"><a href="{{ item.url }}" aria-labelledby="build-{{ item.data.slug }}">{% if item.data.featured_size == 'large' %}{% media item.data.image,item.data.imageAlt,676,450 %}{% else %}{% media item.data.image,item.data.imageAlt,322,322 %}{% endif %}<h3 id="build-{{ item.data.slug }}" class="link-arrow cardTitle">{{ item.data.title }}{{ arrow() }}</h3></a><p class="mono muted">{{ item.data.kind }} · {{ item.data.status }}{% if item.data.stack.length %}<br>{{ item.data.stack | join(', ') }}{% endif %}</p></article>{% endif %}{% endfor %}</div></div></section>
-<section id="lead" class="section on-pine"><div class="frame section-pad tagged">{{ tag(site.lead.tag) }}<div class="lead-header"><h2 class="display inset">{{ site.lead.headline | br | safe }}</h2><div class="inset">{% for paragraph in site.lead.intro %}<p class="intro">{{ paragraph }}</p>{% endfor %}</div></div>
+<section id="build" class="section on-alabaster"><div class="frame section-pad tagged">{{ tag(site.build.tag) }}<h2 class="display build-heading inset">{{ headingText(site.build.headline) }}</h2><p class="intro build-intro inset">{{ site.build.intro }}</p><div class="build-tiles inset">{% for item in collections.builds %}{% if item.data.featured_size %}<article class="build-tile {{ item.data.featured_size }}"><a href="{{ item.url }}" aria-labelledby="build-{{ item.data.slug }}">{% if item.data.featured_size == 'large' %}{% media item.data.image,item.data.imageAlt,676,450 %}{% else %}{% media item.data.image,item.data.imageAlt,322,322 %}{% endif %}<h3 id="build-{{ item.data.slug }}" class="link-arrow cardTitle">{{ item.data.title }}{{ arrow() }}</h3></a><p class="mono muted">{{ item.data.kind }} · {{ item.data.status }}{% if item.data.stack.length %}<br>{{ item.data.stack | join(', ') }}{% endif %}</p></article>{% endif %}{% endfor %}</div></div></section>
+<section id="lead" class="section on-pine"><div class="frame section-pad tagged">{{ tag(site.lead.tag) }}<div class="lead-header"><h2 class="display inset">{{ headingText(site.lead.headline) }}</h2><div class="inset">{% for paragraph in site.lead.intro %}<p class="intro">{{ paragraph }}</p>{% endfor %}</div></div>
 <div class="lead-levels">
   {% for level in site.lead.levels %}
   <section id="level-{{ level.id }}" class="lead-level" aria-labelledby="heading-{{ level.id }}">
@@ -76,5 +76,9 @@ home: true
   </section>
   {% endfor %}
 </div>
-<p class="closing lead-closing">{{ site.lead.closing.statement }} {{ site.lead.closing.note }}</p></div></section>
+{% set closing = site.lead.closing.statement | closingWords %}
+<div class="lead-closing" style="--closing-letters:{{ closing.count }}">
+  <h3 class="display2"><span class="visually-hidden">{{ site.lead.closing.statement }}</span><span aria-hidden="true">{{ closingLetters(closing.words) }}</span></h3>
+  <p class="intro muted">{{ site.lead.closing.note }}</p>
+</div></div></section>
 </main>{% include 'footer.njk' %}
