@@ -29,7 +29,7 @@ Browser checks use installed Chrome. On a different system, set `CHROME_PATH` to
 
 ## Netlify draft deployment
 
-Netlify currently runs `npm run build:preview`, including builds from `main`. It publishes the supplied draft with visible content gaps and unavailable contact controls. Every draft page carries `noindex, nofollow`, and the generated `_headers` file applies `X-Robots-Tag` to every response. Draft robots.txt omits the sitemap and allows crawlers to read the noindex directive. This discourages search indexing; the draft is still publicly accessible.
+Netlify currently runs `npm run build:preview`, including builds from `main`. It publishes the supplied draft with visible content gaps and unavailable contact controls. Every draft page carries `noindex, nofollow`, and the generated `_headers` file applies `X-Robots-Tag` to every response. Draft robots.txt omits the sitemap and allows crawlers to read the noindex directive. These directives request exclusion from search indexes; they do not control access. Existing Netlify access protection remains unchanged.
 
 The preview command explicitly selects its mode even if the host sets `ELEVENTY_ENV=production`. `npm run check:build-modes` verifies that behavior and checks that the strict production command still rejects unfinished content.
 
