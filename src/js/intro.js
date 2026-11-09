@@ -1,21 +1,46 @@
-// Homepage load sequence. Loaded as a blocking classic script from <head> so the
-// .intro class lands before first paint. External (not inline) so the CSP can
-// stay script-src 'self' with no hash to keep in sync.
+// The external script runs in <head> so the waiting state lands before first paint.
 (() => {
   const motion = matchMedia('(prefers-reduced-motion: no-preference)');
-  if (!motion.matches) return;
+  if (!motion.matches || !document.fonts) return;
+
   const root = document.documentElement;
   root.classList.add('intro');
-  const stop = () => root.classList.remove('intro', 'intro-ready');
-  const parsed = new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve, {once: true}));
-  Promise.race([
-    parsed.then(() => document.fonts?.ready),
-    new Promise(resolve => setTimeout(resolve, 300))
-  ]).then(() => {
-    if (!root.classList.contains('intro')) return;
+  const listeners = new AbortController();
+  const options = { signal: listeners.signal };
+  const deadline = setTimeout(stop, 1000);
+
+  function stop() {
+    clearTimeout(deadline);
+    listeners.abort();
+    root.classList.remove('intro', 'intro-ready');
+  }
+
+  motion.addEventListener('change', stop, options);
+  document.addEventListener('DOMContentLoaded', async () => {
+    const hero = document.querySelector('#hero');
+    if (!hero) return stop();
+
+    try {
+      const faces = await Promise.all([
+        document.fonts.load('400 1em "ABC Diatype"'),
+        document.fonts.load('300 1em "ABC Diatype"')
+      ]);
+      if (listeners.signal.aborted) return;
+      if (!faces.every(group => group.some(face => face.status === 'loaded'))) return stop();
+    } catch {
+      return stop();
+    }
+
+    const lastStat = hero.querySelector('.stat:last-child');
+    if (!lastStat || lastStat.matches(':focus-within')) return stop();
+
+    function finish(event) {
+      if (event.target === lastStat && event.animationName === 'hero-stat-rule') stop();
+    }
+
+    hero.addEventListener('animationend', finish, options);
+    hero.addEventListener('animationcancel', finish, options);
+    clearTimeout(deadline);
     root.classList.add('intro-ready');
-    // Clear the opt-in after the CSS finishes so focus cannot restart a step.
-    setTimeout(stop, 1530);
-  });
-  motion.addEventListener('change', stop, {once: true});
+  }, { ...options, once: true });
 })();

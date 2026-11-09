@@ -3,6 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
+const screenshots = process.env.SCROLL_QA_OUTPUT || 'reference/screenshots';
+
 async function scroll(page, top) {
   await page.evaluate(async y => {
     scrollTo({top: y, behavior: 'instant'});
@@ -75,7 +77,8 @@ export async function checkScrollLayout(page, zoom = false) {
 async function checkFocus(page) {
   await page.locator('.resume-button a').focus();
   await page.keyboard.press('Tab');
-  for (let i = 0; i < 6; i++) {
+  const cardCount = await page.locator('.case-card a, .build-tile a').count();
+  for (let i = 0; i < cardCount; i++) {
     await page.waitForFunction(() => {
       const title = document.activeElement.querySelector('h3');
       const box = title?.getBoundingClientRect();
@@ -110,7 +113,7 @@ export async function captureScroll(browser, base, {width, height, reducedMotion
     const final = fallback || reducedMotion === 'reduce';
     for (const section of ['work', 'lead']) {
       const suffix = fallback ? '-firefox' : final ? '-reduced' : '';
-      const dir = `reference/screenshots/scroll-${section}-${width}${suffix}`;
+      const dir = `${screenshots}/scroll-${section}-${width}${suffix}`;
       fs.mkdirSync(dir, {recursive: true});
       const bounds = await page.locator(`#${section}`).evaluate(el => {
         const rect = el.getBoundingClientRect();
@@ -207,7 +210,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
         const rect = item.getBoundingClientRect();
         return [rect.x, rect.width];
       }).sort((a, b) => a[0] - b[0])), [[64, 322], [418, 322], [772, 322], [1126, 322]]);
-      await level.screenshot({path: 'reference/screenshots/lead-person-desktop.jpg', quality: 90});
+      await level.screenshot({path: `${screenshots}/lead-person-desktop.jpg`, quality: 90});
     }
   } finally {
     if (browser) await browser.close();

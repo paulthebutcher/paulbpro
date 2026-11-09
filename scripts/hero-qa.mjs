@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {serve} from './server.mjs';
 
-const screenshots = 'reference/screenshots';
+const screenshots = process.env.HERO_QA_OUTPUT || 'reference/screenshots';
 await fs.mkdir('.cache/hero-video', {recursive: true});
 await fs.mkdir('.cache/tmp', {recursive: true});
 process.env.TMPDIR = path.resolve('.cache/tmp');
@@ -40,6 +40,8 @@ try {
       return {animations: animations.length, firstPaint, finish, fromPaint: finish - firstPaint};
     });
     assert.ok(timing.animations > 15 && timing.fromPaint <= 1800, JSON.stringify(timing));
+    await page.locator('html.intro').waitFor({state: 'detached'});
+    assert.equal(await page.locator('.hero-line').first().evaluate(el => getComputedStyle(el).willChange), 'auto');
     const video = page.video();
     await context.close();
     await video.saveAs(`${screenshots}/hero-intro-${viewport.width}.webm`);
@@ -80,24 +82,38 @@ try {
     assert.equal(await page.locator('.hero-thesis').evaluate(el => getComputedStyle(el).opacity), '1');
     await context.close();
   }
-  const slowFonts = await browser.newContext();
-  await slowFonts.route('**/fonts/*.woff2', async route => {
-    await new Promise(resolve => setTimeout(resolve, 650));
-    await route.continue();
-  });
-  const slowPage = await slowFonts.newPage();
-  await slowPage.goto(base, {waitUntil: 'domcontentloaded'});
-  await slowPage.waitForFunction(() => document.documentElement.classList.contains('intro-ready'));
-  const slow = await slowPage.evaluate(async () => {
-    await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-    const firstPaint = performance.getEntriesByName('first-paint')[0]?.startTime || 0;
-    const animations = document.getAnimations().filter(a => a.animationName?.startsWith('hero-'));
-    return {fontStatus: document.fonts.status, finish: Math.max(...animations.map(a => a.startTime + a.effect.getComputedTiming().endTime)) - firstPaint};
-  });
-  assert.equal(slow.fontStatus, 'loading', 'The 300ms cap wins over slow fonts');
-  assert.ok(slow.finish <= 1800, JSON.stringify(slow));
-  console.log('Slow-font cap:', slow);
-  await slowFonts.close();
+  for (const delay of [650, 1400]) {
+    const context = await browser.newContext({viewport: {width: 402, height: 844}});
+    await context.route('**/fonts/ABCDiatype-*.woff2', async route => {
+      await new Promise(resolve => setTimeout(resolve, delay));
+      await route.continue();
+    });
+    const page = await context.newPage();
+    await page.goto(base, {waitUntil: 'domcontentloaded'});
+    const readLines = () => page.locator('.hero-line').evaluateAll(lines => lines.map(line => {
+      const range = document.createRange();
+      range.selectNodeContents(line);
+      return range.getClientRects().length;
+    }));
+    const fallbackLines = await readLines();
+    assert.equal(await page.locator('html.intro:not(.intro-ready)').count(), 1, 'The intro waits for Diatype');
+    if (delay < 1000) {
+      await page.locator('html.intro-ready').waitFor({state: 'attached'});
+      const weights = await page.evaluate(() => [...document.fonts]
+        .filter(face => face.family === 'ABC Diatype' && face.status === 'loaded')
+        .map(face => face.weight).sort());
+      assert.deepEqual(weights, ['300', '400']);
+    } else {
+      await page.locator('html.intro').waitFor({state: 'detached'});
+      assert.equal(await page.locator('.hero-thesis').evaluate(el => getComputedStyle(el).opacity), '1');
+      assert.equal(await page.evaluate(() => document.fonts.status), 'loading', 'The deadline shows the static hero while fonts are still loading');
+    }
+    await page.evaluate(() => document.fonts.ready);
+    assert.deepEqual(await readLines(), fallbackLines, 'The font swap preserves the headline line count');
+    if (delay > 1000) assert.equal(await page.locator('html.intro').count(), 0, 'Late fonts do not restart the intro');
+    await context.close();
+    console.log(`Font delay ${delay}ms: ${delay < 1000 ? 'waits' : 'skips'}`);
+  }
 
   const protectedContext = await browser.newContext();
   await protectedContext.route(base + '/', async route => {

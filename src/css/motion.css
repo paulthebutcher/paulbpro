@@ -1,9 +1,19 @@
 /* All scroll motion is opt-in. The base styles are the completed state. */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    @keyframes grow-rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-    @keyframes reveal-image { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }
-    @keyframes settle { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    @keyframes work-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes grow-rule {
+      from { transform: scaleX(0); animation-timing-function: var(--ease-fluid); }
+      to { transform: scaleX(1); }
+    }
+    @keyframes reveal-image {
+      from { opacity: 0; transform: translateY(12px); animation-timing-function: var(--ease-fluid); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes settle {
+      from { opacity: 0; transform: translateY(12px); animation-timing-function: var(--ease-fluid); }
+      to { opacity: 1; transform: none; }
+    }
 
     .case-card {
       view-timeline-name: --work-card;
@@ -43,7 +53,7 @@
         view-timeline-inset: var(--work-sticky-top) calc(100% - var(--work-sticky-top));
       }
       .work-layout[data-work-ready] .work-progress__track::after {
-        animation: grow-rule linear both;
+        animation: work-progress linear both;
         animation-timeline: --work-cards;
         animation-range: cover 0% cover calc(100% - var(--work-last-tail, 0px));
       }
@@ -71,64 +81,84 @@
 }
 @media (max-width: 767px) { .hero-rules span:nth-child(n+6) { display: none; } }
 @media (768px <= width < 1200px) { .hero-rules span:nth-child(n+10) { display: none; } }
+.hero-line-mask {
+  display: block;
+  overflow: hidden;
+  /* Preserve space for glyphs outside the tight line box without adding a gap. */
+  padding-block: .1em;
+  margin-block: -.1em;
+}
+.hero-grid h1 { display: flex; flex-direction: column; }
 .hero-line { display: block; }
 
+#hero .stat { position: relative; border-block-start-color: transparent; }
+#hero .stat::before {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * var(--hair)) 0 auto;
+  block-size: var(--hair);
+  background: var(--section-rule);
+  transform-origin: left;
+}
+.stat-copy { display: flex; flex-direction: column; gap: var(--s-1); }
+
 @media (prefers-reduced-motion: no-preference) {
-  @keyframes hero-rule-down { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-  @keyframes hero-rule-across { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes hero-rule-down {
+    from { opacity: 0; transform: scaleY(0); }
+    to { opacity: 1; transform: none; }
+  }
   @keyframes hero-headline {
-    from { transform: translateY(16px); clip-path: inset(0 0 8px); }
-    to { transform: none; clip-path: inset(0); }
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: none; }
   }
-  @keyframes hero-portrait { from { clip-path: inset(100% 0 0); } to { clip-path: inset(0); } }
+  @keyframes hero-portrait {
+    from { opacity: .08; transform: scale(1.03); }
+    to { opacity: 1; transform: none; }
+  }
   @keyframes hero-settle {
-    from { transform: translateY(12px); opacity: 0; }
-    to { transform: none; opacity: 1; }
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes hero-stat-rule {
+    from { opacity: 0; transform: scaleX(0); }
+    to { opacity: 1; transform: none; }
   }
 
-  html.intro .hero-rules span { transform: scaleY(0); }
+  html.intro :where(.hero-rules span, .hero-line, .hero-thesis, .hero-buttons > *, .stat-copy),
+  html.intro #hero .stat::before { opacity: 0; }
+
+  /* A faint first paint keeps the portrait eligible for LCP while fonts load. */
+  html.intro .hero-portrait > :is(picture, img) {
+    opacity: .08;
+    transform: scale(1.03);
+  }
+
+  html.intro-ready :where(.hero-line, .hero-portrait > :is(picture, img), .hero-thesis, .hero-buttons > *, .stat-copy) {
+    will-change: transform, opacity;
+  }
   html.intro-ready .hero-rules span {
-    animation: hero-rule-down 220ms var(--ease-out) calc(var(--rule-i) * 30ms) both;
+    animation: hero-rule-down 780ms var(--ease-fluid) calc(var(--rule-i) * 24ms) both;
   }
-
-  html.intro .hero-line { transform: translateY(16px); clip-path: inset(0 0 8px); }
   html.intro-ready .hero-line {
-    animation: hero-headline 330ms var(--ease-out) 150ms both;
+    animation: hero-headline 700ms var(--ease-fluid) 100ms both;
   }
-  html.intro-ready .hero-line:nth-child(2) { animation-delay: 270ms; }
-
-  html.intro .hero-portrait { clip-path: inset(100% 0 0); }
-  html.intro-ready .hero-portrait { animation: hero-portrait 600ms var(--ease-out) 400ms both; }
-
-  html.intro :where(.hero-thesis, .hero-buttons > *, #hero .stat-value, #hero .stat-caption) {
-    opacity: 0;
-    transform: translateY(12px);
+  html.intro-ready .hero-line-mask:nth-child(2) .hero-line { animation-delay: 200ms; }
+  html.intro-ready .hero-portrait > :is(picture, img) {
+    animation: hero-portrait 900ms var(--ease-fluid) 220ms both;
   }
-  html.intro-ready .hero-thesis { animation: hero-settle 290ms var(--ease-out) 620ms both; }
-  html.intro-ready .hero-buttons > * { animation: hero-settle 290ms var(--ease-out) 700ms both; }
-  html.intro-ready .hero-buttons > :nth-child(2) { animation-delay: 780ms; }
-
-  html.intro #hero .stat { position: relative; border-block-start-color: transparent; }
-  html.intro #hero .stat::before {
-    content: "";
-    position: absolute;
-    inset: calc(-1 * var(--hair)) 0 auto;
-    block-size: var(--hair);
-    background: var(--section-rule);
-    transform: scaleX(0);
-    transform-origin: left;
+  html.intro-ready :is(.hero-thesis, .hero-buttons > *) {
+    animation: hero-settle 600ms var(--ease-fluid) 490ms both;
   }
+
+  #hero .stat { --stat-delay: calc(830ms + var(--stat-i) * 24ms); }
   html.intro-ready #hero .stat::before {
-    animation: hero-rule-across 165ms var(--ease-out) calc(900ms + var(--stat-i) * 80ms) both;
+    animation: hero-stat-rule 600ms var(--ease-fluid) var(--stat-delay) both;
   }
-  html.intro-ready #hero .stat-value {
-    animation: hero-settle 200ms var(--ease-out) calc(1010ms + var(--stat-i) * 80ms) both;
-  }
-  html.intro-ready #hero .stat-caption {
-    animation: hero-settle 190ms var(--ease-out) calc(1050ms + var(--stat-i) * 80ms) both;
+  html.intro-ready #hero .stat-copy {
+    animation: hero-settle 600ms var(--ease-fluid) var(--stat-delay) both;
   }
   html.intro .hero-buttons:focus-within > *,
-  html.intro #hero .stat:focus-within :is(.stat-value, .stat-caption),
+  html.intro #hero .stat:focus-within .stat-copy,
   html.intro #hero .stat:focus-within::before {
     animation: none;
     opacity: 1;
