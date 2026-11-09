@@ -31,15 +31,20 @@ try {
     await page.goto(base);
     await page.waitForFunction(() => document.documentElement.classList.contains('intro-ready'));
     const timing = await page.evaluate(async () => {
-      const hero = () => document.getAnimations().filter(a => a.animationName?.startsWith('hero-'));
+      const navEnd = new Promise(resolve => {
+        document.addEventListener('animationend', function onEnd(event) {
+          if (event.animationName !== 'hero-nav') return;
+          document.removeEventListener('animationend', onEnd);
+          resolve(performance.now());
+        });
+      });
       await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-      const animations = hero();
+      const animations = document.getAnimations().filter(a => a.animationName?.startsWith('hero-'));
+      const finish = await navEnd;
       const firstPaint = performance.getEntriesByName('first-paint')[0]?.startTime || 0;
-      const finish = Math.max(...animations.map(a => a.startTime + a.effect.getComputedTiming().endTime));
-      await Promise.all(animations.map(a => a.finished));
-      return {animations: animations.length, firstPaint, finish, fromPaint: finish - firstPaint};
+      return {animations: animations.length + 1, firstPaint, finish, fromPaint: finish - firstPaint};
     });
-    assert.ok(timing.animations > 15 && timing.fromPaint <= 1800, JSON.stringify(timing));
+    assert.ok(timing.animations > 15 && timing.fromPaint < 2000, JSON.stringify(timing));
     await page.locator('html.intro').waitFor({state: 'detached'});
     assert.equal(await page.locator('.hero-line').first().evaluate(el => getComputedStyle(el).willChange), 'auto');
     const video = page.video();

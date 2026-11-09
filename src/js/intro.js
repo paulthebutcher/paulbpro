@@ -12,13 +12,15 @@
   function stop() {
     clearTimeout(deadline);
     listeners.abort();
-    root.classList.remove('intro', 'intro-ready');
+    root.classList.remove('intro', 'intro-ready', 'intro-nav');
   }
 
   motion.addEventListener('change', stop, options);
   document.addEventListener('DOMContentLoaded', async () => {
     const hero = document.querySelector('#hero');
-    if (!hero) return stop();
+    const header = document.querySelector('.home-nav .nav');
+    if (!hero || !header || header.matches(':focus-within')) return stop();
+    header.addEventListener('focusin', stop, options);
 
     try {
       const faces = await Promise.all([
@@ -35,11 +37,15 @@
     if (!lastStat || lastStat.matches(':focus-within')) return stop();
 
     function finish(event) {
-      if (event.target === lastStat && event.animationName === 'hero-stat-rule') stop();
+      if (event.target === lastStat && event.animationName === 'hero-stat-rule') {
+        if (event.type === 'animationcancel') stop();
+        else root.classList.add('intro-nav');
+      }
+      if (event.target === header && event.animationName === 'hero-nav') stop();
     }
 
-    hero.addEventListener('animationend', finish, options);
-    hero.addEventListener('animationcancel', finish, options);
+    document.addEventListener('animationend', finish, options);
+    document.addEventListener('animationcancel', finish, options);
     clearTimeout(deadline);
     root.classList.add('intro-ready');
   }, { ...options, once: true });

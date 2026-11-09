@@ -3,7 +3,7 @@ layout: base.njk
 home: true
 ---
 {% from 'components.njk' import arrow,button,buttonIcon,tag,nav %}
-<div class="section on-pine"><div class="frame">{{ nav(site) }}</div></div>
+<div class="section on-pine home-nav"><div class="frame">{{ nav(site) }}</div></div>
 <main id="main">
 <section id="hero" class="section on-pine"><div class="frame">
 <div class="hero-rules" aria-hidden="true">{% for i in range(0, 13) %}<span style="--rule-i:{{ i }}"></span>{% endfor %}</div>

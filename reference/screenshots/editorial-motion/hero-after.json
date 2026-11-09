@@ -1,0 +1,116 @@
+{
+  "375": [
+    {
+      "firstPaint": 28,
+      "headlineFromPaint": 961,
+      "totalFromPaint": 1795,
+      "latestLCP": {
+        "time": 60,
+        "element": "IMG"
+      },
+      "headlineEnd": 989,
+      "portraitEnd": 1073,
+      "navEnd": 1823
+    },
+    {
+      "firstPaint": 48,
+      "headlineFromPaint": 914,
+      "totalFromPaint": 1746,
+      "latestLCP": {
+        "time": 48,
+        "element": "IMG"
+      },
+      "headlineEnd": 962,
+      "portraitEnd": 1045,
+      "navEnd": 1794
+    },
+    {
+      "firstPaint": 40,
+      "headlineFromPaint": 947,
+      "totalFromPaint": 1779,
+      "latestLCP": {
+        "time": 72,
+        "element": "IMG"
+      },
+      "headlineEnd": 987,
+      "portraitEnd": 1070,
+      "navEnd": 1819
+    }
+  ],
+  "768": [
+    {
+      "firstPaint": 32,
+      "headlineFromPaint": 943,
+      "totalFromPaint": 1776,
+      "latestLCP": {
+        "time": 60,
+        "element": "IMG"
+      },
+      "headlineEnd": 975,
+      "portraitEnd": 1059,
+      "navEnd": 1808
+    },
+    {
+      "firstPaint": 28,
+      "headlineFromPaint": 959,
+      "totalFromPaint": 1792,
+      "latestLCP": {
+        "time": 56,
+        "element": "IMG"
+      },
+      "headlineEnd": 987,
+      "portraitEnd": 1070,
+      "navEnd": 1820
+    },
+    {
+      "firstPaint": 28,
+      "headlineFromPaint": 964,
+      "totalFromPaint": 1797,
+      "latestLCP": {
+        "time": 60,
+        "element": "IMG"
+      },
+      "headlineEnd": 992,
+      "portraitEnd": 1074,
+      "navEnd": 1825
+    }
+  ],
+  "1440": [
+    {
+      "firstPaint": 24,
+      "headlineFromPaint": 967,
+      "totalFromPaint": 1800,
+      "latestLCP": {
+        "time": 60,
+        "element": "IMG"
+      },
+      "headlineEnd": 991,
+      "portraitEnd": 1074,
+      "navEnd": 1824
+    },
+    {
+      "firstPaint": 32,
+      "headlineFromPaint": 946,
+      "totalFromPaint": 1779,
+      "latestLCP": {
+        "time": 64,
+        "element": "IMG"
+      },
+      "headlineEnd": 978,
+      "portraitEnd": 1062,
+      "navEnd": 1811
+    },
+    {
+      "firstPaint": 40,
+      "headlineFromPaint": 948,
+      "totalFromPaint": 1781,
+      "latestLCP": {
+        "time": 72,
+        "element": "IMG"
+      },
+      "headlineEnd": 988,
+      "portraitEnd": 1072,
+      "navEnd": 1821
+    }
+  ]
+}
