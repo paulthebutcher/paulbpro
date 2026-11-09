@@ -6,25 +6,25 @@ order: 3
 featured_size: small
 kind: first-party identity for Popfly
 status: live
-stack: []
+stack: [Webflow Cloud]
 image: /img/builds/identity-service.svg
 imageAlt: "Visit dots, a campaign tag and a data stack feed a record, with the highlighted branches merging the three sources into one field."
 summary: >
-  Designed and built the service that connects site visits, campaigns and third-party data to CRM records, so marketing spend can be traced to revenue. Every demo request arrives with its landing page and visit history, and about two-thirds with a known referring source.
+  Popfly’s demo requests used to arrive with little idea of where they came from. I designed and built a first-party identity service so each one now arrives with its landing page and visit history. About two-thirds of demo requests come in with a known source.
 ---
 
-## What it is
+## Why it exists
 
-[gap]
+Attribution ran through a chain of tools: n8n, RB2B and Tag Manager. A footer script was overwriting the UTM fields, so the source of a demo request was often lost before it reached the CRM. [gap: what made a service the answer instead of more patches.]
 
-## Why I built it
+## What I built
 
-[gap]
+A first-party service that ties site visits, campaign tags and third-party data to one CRM record, so marketing spend can be traced to revenue. It runs on Webflow Cloud and deploys with the site. [gap: the pieces, from the spec.]
 
-## How it works
+## Where it is now
 
-[gap: confirm the stack before listing it; n8n, GTM and the CRM were mentioned]
+Live. Every demo request arrives with its landing page and visit history, and about two-thirds arrive with a known referring source.
 
-## What’s next
+## What’s still hard
 
-[gap]
+[gap: from the spec or your notes.]
