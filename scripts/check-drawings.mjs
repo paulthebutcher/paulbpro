@@ -87,10 +87,20 @@ try{
         const svg=figure.querySelector('svg'),box=svg.viewBox.baseVal,bounds=svg.getBoundingClientRect();
         const staticElements=[figure,svg,...svg.querySelectorAll('*')];
         if(figure.parentElement.matches('.lead-art,.work-image'))staticElements.push(figure.parentElement);
-        return {alt:!!figure.getAttribute('aria-label'),ratio:Math.abs(bounds.width/bounds.height-box.width/box.height)<0.001,
+        const swatch = document.createElement('span');
+        swatch.hidden = true;
+        swatch.style.color = 'var(--accent)';
+        figure.append(swatch);
+        const accent = getComputedStyle(swatch).color;
+        swatch.remove();
+        const decision = [...svg.querySelectorAll('path.decision')].every(path => {
+          const style = getComputedStyle(path);
+          return style.stroke === accent && style.strokeWidth === '2px' && style.fill === 'none';
+        });
+        return {alt:!!figure.getAttribute('aria-label'),decision,ratio:Math.abs(bounds.width/bounds.height-box.width/box.height)<0.001,
           static:staticElements.every(el=>getComputedStyle(el).animationName==='none'&&el.getAnimations().length===0)};
       }));
-      assert.ok(drawings.length&&drawings.every(x=>x.alt&&x.ratio&&x.static),`${mode.name} ${route}: alt, aspect ratio and static artwork`);
+      assert.ok(drawings.length&&drawings.every(x=>x.alt&&x.ratio&&x.static&&x.decision),`${mode.name} ${route}: alt, aspect ratio, accent and static artwork`);
       if(route!=='/'){
         await current.addScriptTag({content:axe});
         const violations=await current.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}}).then(r=>r.violations.map(x=>x.id)));
@@ -100,10 +110,22 @@ try{
     }
     await current.goto('http://127.0.0.1:4175/');
     for(const card of await current.locator('.case-card a,.build-tile a').all()){
-      if(!mode.hasTouch)await card.hover();
+      const decision = card.locator('path.decision');
+      const stroke = () => decision.evaluate(path => {
+        const style = getComputedStyle(path);
+        return {color:style.stroke,width:style.strokeWidth,fill:style.fill,dash:style.strokeDasharray,
+          animation:style.animationName,offset:style.strokeDashoffset,animations:path.getAnimations().length};
+      });
+      const rest = await stroke();
+      assert.equal(rest.animation,'none');
+      assert.equal(rest.offset,'0px');
+      assert.equal(rest.animations,0);
+      if(!mode.hasTouch){
+        await card.hover();
+        assert.deepEqual(await stroke(),rest,'Hover preserves the decision stroke');
+      }
       await card.focus();
-      const state=await card.locator('.decision').evaluate(p=>({animation:getComputedStyle(p).animationName,offset:getComputedStyle(p).strokeDashoffset,animations:p.getAnimations().length}));
-      assert.deepEqual(state,{animation:'none',offset:'0px',animations:0});
+      assert.deepEqual(await stroke(),rest,'Focus preserves the decision stroke');
     }
     await current.emulateMedia({reducedMotion:'reduce'});
     assert.ok(await current.locator('.diagram svg').evaluateAll(svgs=>svgs.every(svg=>svg.getAnimations({subtree:true}).length===0)));

@@ -161,7 +161,7 @@
   margin-inline-start: .3em;
   vertical-align: -.08em;
   transition: transform var(--t-base) var(--ease);
-}.case-card a,.build-tile a{text-decoration:none;scroll-margin-block:6px}.case-card a:hover .link-arrow,.build-tile a:hover .link-arrow,.case-card a:focus-visible .link-arrow,.build-tile a:focus-visible .link-arrow{text-decoration:underline}.build-tile a:hover .icon-arrow{transform:translateX(4px)}.case-card h3{margin-top:var(--s-4)}.build-tile h3{margin-top:var(--s-3)}.build-tile>p{margin-top:var(--s-1)}.build-tile .media{transition:border-color var(--t-fast) var(--ease)}.build-tile:is(:hover,:focus-within) .media{border-color:var(--accent)}.case-card .decision{stroke-width:var(--stroke-accent)}.roles>div+div{margin-top:var(--s-3)}.roles ul{margin-top:var(--s-1)}.caption-grid {
+}.case-card a,.build-tile a{text-decoration:none;scroll-margin-block:6px}.case-card a:hover .link-arrow,.build-tile a:hover .link-arrow,.case-card a:focus-visible .link-arrow,.build-tile a:focus-visible .link-arrow{text-decoration:underline}.build-tile a:hover .icon-arrow{transform:translateX(4px)}.case-card h3{margin-top:var(--s-4)}.build-tile h3{margin-top:var(--s-3)}.build-tile>p{margin-top:var(--s-1)}.build-tile .media{transition:border-color var(--t-fast) var(--ease)}.build-tile:is(:hover,:focus-within) .media{border-color:var(--accent)}.roles>div+div{margin-top:var(--s-3)}.roles ul{margin-top:var(--s-1)}.caption-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--s-2);
@@ -211,10 +211,6 @@
 .work-image:has(.diagram), .lead-art, .diagram, .diagram * {
   animation: none !important;
   transition: none !important;
-}
-.diagram .draw-stroke {
-  stroke-dasharray: none !important;
-  stroke-dashoffset: 0 !important;
 }
 
 /* Keep each drawing at its authored viewBox ratio at every breakpoint. */
