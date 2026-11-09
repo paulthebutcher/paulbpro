@@ -1,0 +1,54 @@
+/* All scroll motion is opt-in. The base styles are the completed state. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes grow-rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes reveal-image { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }
+    @keyframes settle { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+    .case-card {
+      view-timeline-name: --work-card;
+      view-timeline-inset: var(--tag-h) 0px;
+    }
+    .work-image {
+      animation: reveal-image linear both;
+      animation-timeline: --work-card;
+      animation-range: entry 0% entry 60%;
+    }
+    .case-card h3 {
+      animation: settle linear both;
+      animation-timeline: --work-card;
+      animation-range: entry 60% cover 32%;
+    }
+    .case-card:focus-within :is(.work-image, h3) { animation: none; }
+
+    .lead-level {
+      view-timeline-name: --lead-level;
+      view-timeline-inset: var(--tag-h) 0px;
+    }
+    .lead-level > h3::after {
+      transform-origin: left;
+      animation: grow-rule linear both;
+      animation-timeline: --lead-level;
+      animation-range: entry 0% cover 42%;
+    }
+    .principles > div, .lead-closing {
+      animation: settle linear both;
+      animation-timeline: view(block var(--tag-h) 0px);
+      animation-range: entry var(--settle-delay, 0%) entry calc(45% + var(--settle-delay, 0%));
+    }
+    @media (min-width: 1200px) {
+      .work-layout { timeline-scope: --work-cards; }
+      .case-list {
+        view-timeline-name: --work-cards;
+        view-timeline-inset: var(--work-sticky-top) calc(100% - var(--work-sticky-top));
+      }
+      .work-layout[data-work-ready] .work-progress__track::after {
+        animation: grow-rule linear both;
+        animation-timeline: --work-cards;
+        animation-range: cover 0% cover calc(100% - var(--work-last-tail, 0px));
+      }
+      .principles > :nth-child(2) { --settle-delay: 8%; }
+      .principles > :nth-child(3) { --settle-delay: 16%; }
+    }
+  }
+}

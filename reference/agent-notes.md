@@ -83,3 +83,30 @@
 - Per Paul's override, the repository now carries tokens.json and updated src/css/tokens.css. Solid line tints are #285B4C on Pine and #D7D3D2 on Alabaster. The existing grid pseudo-element draws them above the texture. Muted text and placeholders are unchanged.
 - Each surface uses a static 160px SVG grain, at 0.08 on Pine and 0.06 on Alabaster. The channel curves keep Pine flecks at or below its background and Alabaster flecks at or above its background. The Crosswalk reference was not available in the supplied files; Alabaster was reviewed against the local screenshots. The existing Netlify CSP permits data images.
 - Playwright sampled every pixel of each 160px rendered tile using the actual body text foreground. Minimum WCAG contrast stayed at 7.61:1 on both surfaces. Mean contrast increased from 7.61:1 to 7.72:1 on Pine and 7.66:1 on Alabaster. Screenshots and measurements are indexed in reference/screenshots/visual-fixes/README.md.
+
+### Work and Lead scroll pass
+
+- [observed] The pinned Lead layout replaced the Figma row with a tab rail,
+  hid inactive levels, and stacked the principles within the active panel.
+  All three levels now stay in flow. At 1512px the principles and diagram
+  are each 322px wide, starting at x=64, 418, 772, and 1126. Each heading
+  sticks on desktop within its own level, above a first-column rule.
+- [observed] Work release geometry: the ResizeObserver measures heading
+  height minus the distance from the final image top to the case list
+  bottom. Positive offsets extend the card column; negative offsets
+  shorten the heading lane. In either case the lane ends at the last
+  image top plus the heading height, so the two tops move together.
+  The release gap was 0px at 1440×900, 1280×800 and 200% text zoom.
+- [observed] A one-pixel IntersectionObserver band drives the Work
+  counter and a separate top band drives the active nav. The progress
+  line uses the case list's CSS view timeline. Work, Build and Lead
+  share the sticky tag row and its anchor clearance.
+- [observed] Technical illustrations stay static per the separate
+  drawing revision. Scroll motion applies to rules, text and Work's
+  image placeholders. Reduced motion and Firefox 159 with scroll
+  timelines disabled render final states. Firefox needed a private
+  macOS app-data directory under the repo's cache for this run.
+- [observed] Preview build and axe passed. Home Lighthouse performance,
+  accessibility and best practices stayed at 100, matching the
+  pre-change dev run. The new scroll captures and measurements are
+  indexed in `reference/screenshots/scroll-README.md`.

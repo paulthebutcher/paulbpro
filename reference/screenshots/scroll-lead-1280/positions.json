@@ -1,0 +1,442 @@
+[
+  {
+    "y": 4786,
+    "tag": 248.265625,
+    "heading": 675.078125,
+    "content": {
+      "opacity": "0.359345",
+      "transform": "matrix(1, 0, 0, 1, 0, 7.68786)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(0.280983, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#build"
+  },
+  {
+    "y": 4886,
+    "tag": 148.265625,
+    "heading": 575.078125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(0.505994, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#build"
+  },
+  {
+    "y": 4986,
+    "tag": 48.265625,
+    "heading": 475.078125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(0.731006, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 5086,
+    "tag": 0,
+    "heading": 375.078125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(0.956017, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 5186,
+    "tag": 0,
+    "heading": 275.078125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 5286,
+    "tag": 0,
+    "heading": 175.078125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 5386,
+    "tag": 0,
+    "heading": 75.078125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 5486,
+    "tag": 0,
+    "heading": 56,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 5586,
+    "tag": 0,
+    "heading": 56,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 5686,
+    "tag": 0,
+    "heading": -27.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 5786,
+    "tag": 0,
+    "heading": -127.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 5886,
+    "tag": 0,
+    "heading": -227.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 5986,
+    "tag": 0,
+    "heading": -327.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 6086,
+    "tag": 0,
+    "heading": -427.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 6186,
+    "tag": 0,
+    "heading": -527.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 6286,
+    "tag": 0,
+    "heading": -627.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 6386,
+    "tag": 0,
+    "heading": -727.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 6486,
+    "tag": 0,
+    "heading": -827.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 6586,
+    "tag": 0,
+    "heading": -927.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 6604,
+    "tag": 0,
+    "heading": -945.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 6604,
+    "tag": 0,
+    "heading": -945.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  },
+  {
+    "y": 6604,
+    "tag": 0,
+    "heading": -945.796875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "none",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": "0px",
+    "lastImage": null,
+    "levels": [
+      false,
+      false,
+      false
+    ],
+    "active": "#lead"
+  }
+]

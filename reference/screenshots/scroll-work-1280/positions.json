@@ -1,0 +1,347 @@
+[
+  {
+    "y": 1886,
+    "tag": 248.65625,
+    "heading": 280.65625,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 1303.625,
+    "levels": [],
+    "active": null
+  },
+  {
+    "y": 1986,
+    "tag": 148.65625,
+    "heading": 180.65625,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 1203.625,
+    "levels": [],
+    "active": null
+  },
+  {
+    "y": 2086,
+    "tag": 48.65625,
+    "heading": 80.65625,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 1103.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 2186,
+    "tag": 0,
+    "heading": 64,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0.0814419, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 1003.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 2286,
+    "tag": 0,
+    "heading": 64,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0.179197, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 903.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 2386,
+    "tag": 0,
+    "heading": 64,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0.276951, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 803.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 2486,
+    "tag": 0,
+    "heading": 64,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0.374706, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 703.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 2586,
+    "tag": 0,
+    "heading": 64,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0.472461, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 603.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 2686,
+    "tag": 0,
+    "heading": 64,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0.570215, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 503.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 2786,
+    "tag": 0,
+    "heading": 64,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0.66797, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 403.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 2886,
+    "tag": 0,
+    "heading": 64,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0.765725, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 303.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 2986,
+    "tag": 0,
+    "heading": 64,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0.863479, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 203.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3086,
+    "tag": 0,
+    "heading": 64,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(0.961234, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 103.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3186,
+    "tag": 0,
+    "heading": 3.625,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": 3.625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3286,
+    "tag": 0,
+    "heading": -96.375,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": -96.375,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3386,
+    "tag": 0,
+    "heading": -196.375,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": -196.375,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3486,
+    "tag": 0,
+    "heading": -296.375,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": -296.375,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3586,
+    "tag": 0,
+    "heading": -396.375,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": -396.375,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3686,
+    "tag": 0,
+    "heading": -496.375,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": -496.375,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3786,
+    "tag": -63.53125,
+    "heading": -596.375,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": -596.375,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3886,
+    "tag": -163.53125,
+    "heading": -696.375,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "matrix(1, 0, 0, 1, 0, 0)",
+    "stroke": null,
+    "lastImage": -696.375,
+    "levels": [],
+    "active": "#build"
+  },
+  {
+    "release": {
+      "y": 3127,
+      "heading": 62.625,
+      "image": 62.625,
+      "gap": 0,
+      "progress": 1
+    }
+  }
+]

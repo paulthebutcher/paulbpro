@@ -99,7 +99,7 @@ export default function(config) {
   config.on('eleventy.before',async()=>{
     await prepareAssets(readSite());
     fs.mkdirSync('dist/css',{recursive:true});
-    fs.writeFileSync('dist/css/main.css',['tokens','base','grid','components','sections'].map(f=>fs.readFileSync(`src/css/${f}.css`,'utf8')).join('\n').replace(/\/\*[\s\S]*?\*\//g,'').replace(/\s+/g,' '));
+    fs.writeFileSync('dist/css/main.css',['tokens','base','grid','components','sections','motion'].map(f=>fs.readFileSync(`src/css/${f}.css`,'utf8')).join('\n').replace(/\/\*[\s\S]*?\*\//g,'').replace(/\s+/g,' '));
   });
   config.on('eleventy.after',()=>{
     if(process.env.ELEVENTY_ENV!=='production') return;

@@ -1,2 +1,2 @@
 import './nav.js';
-import './lead.js';
+import './work.js';

@@ -1,0 +1,306 @@
+[
+  {
+    "y": 2858,
+    "tag": 248.875,
+    "heading": 280.875,
+    "content": {
+      "opacity": "0",
+      "transform": "matrix(1, 0, 0, 1, 0, 12)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 4.22304%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 1392.65625,
+    "levels": [],
+    "active": null
+  },
+  {
+    "y": 2958,
+    "tag": 148.875,
+    "heading": 180.875,
+    "content": {
+      "opacity": "0.537983",
+      "transform": "matrix(1, 0, 0, 1, 0, 5.5442)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 1292.65625,
+    "levels": [],
+    "active": null
+  },
+  {
+    "y": 3058,
+    "tag": 48.875,
+    "heading": 80.875,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 1192.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3158,
+    "tag": 0,
+    "heading": -19.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 1092.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3258,
+    "tag": 0,
+    "heading": -119.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 992.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3358,
+    "tag": 0,
+    "heading": -219.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 892.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3458,
+    "tag": 0,
+    "heading": -319.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 792.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3558,
+    "tag": 0,
+    "heading": -419.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 692.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3658,
+    "tag": 0,
+    "heading": -519.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 592.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3758,
+    "tag": 0,
+    "heading": -619.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 492.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3858,
+    "tag": 0,
+    "heading": -719.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 392.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 3958,
+    "tag": 0,
+    "heading": -819.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 292.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 4058,
+    "tag": 0,
+    "heading": -919.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 192.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 4158,
+    "tag": 0,
+    "heading": -1019.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": 92.65625,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 4258,
+    "tag": 0,
+    "heading": -1119.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": -7.34375,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 4358,
+    "tag": 0,
+    "heading": -1219.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": -107.34375,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 4458,
+    "tag": 0,
+    "heading": -1319.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": -207.34375,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 4558,
+    "tag": -21.75,
+    "heading": -1419.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": -307.34375,
+    "levels": [],
+    "active": "#work"
+  },
+  {
+    "y": 4658,
+    "tag": -121.75,
+    "heading": -1519.125,
+    "content": {
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "clip": "none"
+    },
+    "clip": "inset(0px 0px 0%)",
+    "rule": "none",
+    "stroke": null,
+    "lastImage": -407.34375,
+    "levels": [],
+    "active": "#build"
+  }
+]

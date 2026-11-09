@@ -3,6 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright-core';
 import {serve} from './server.mjs';
+import {checkScrollLayout} from './scroll-qa.mjs';
 const mode=process.argv[2]||'a11y';
 const root=path.resolve('.');
 fs.mkdirSync('.cache/tmp',{recursive:true});process.env.TMPDIR=path.resolve('.cache/tmp');
@@ -49,26 +50,27 @@ try{
     await page.setViewportSize({width,height:900});await page.goto(base);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Horizontal overflow at ${width}`);
    }
    await page.setViewportSize({width:1440,height:900});await page.goto(base);
-   const stage=page.locator('.lead-stage');await assert.doesNotReject(()=>stage.waitFor());
-   assert.ok(await stage.evaluate(el=>el.classList.contains('lead-stage--pinned')));
-   for(const [index,label] of ['person','team','company'].entries()){
-    await stage.evaluate((el,index)=>scrollTo({top:scrollY+el.getBoundingClientRect().top+index/3*(el.offsetHeight-innerHeight)+10,behavior:'instant'}),index);
-    await page.waitForTimeout(100);assert.equal(await page.locator('.lead-level:visible').getAttribute('id'),`level-${label}`);
-   }
-   await page.locator('.lead-stage__labels button').last().focus();await page.keyboard.press('ArrowUp');assert.equal(await page.evaluate(()=>document.activeElement.textContent),'Team');await page.keyboard.press('Enter');await page.waitForTimeout(1000);assert.equal(await page.locator('.lead-level:visible').getAttribute('id'),'level-team');
-   await page.emulateMedia({reducedMotion:'reduce'});await page.waitForTimeout(200);assert.equal(await page.locator('.lead-level:visible').count(),3);
-   await page.emulateMedia({reducedMotion:'no-preference'});await page.setViewportSize({width:1440,height:700});await page.waitForTimeout(250);assert.equal(await page.locator('.lead-level:visible').count(),3);
-   await page.setViewportSize({width:1440,height:900});await page.evaluate(()=>document.documentElement.style.fontSize='200%');await page.waitForTimeout(300);assert.equal(await page.locator('.lead-level:visible').count(),3,'Text zoom must show stacked levels');assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'No overflow with 200% text');await page.evaluate(()=>document.documentElement.style.fontSize='');
-   const noJs=await browser.newContext({javaScriptEnabled:false,viewport:{width:1440,height:900}});const fallback=await noJs.newPage();await fallback.goto(base);assert.equal(await fallback.locator('.lead-level:visible').count(),3);await fallback.screenshot({path:'reference/screenshots/lead-no-js.png',fullPage:true});await noJs.close();
+   await page.evaluate(()=>document.fonts.ready);
+   await checkScrollLayout(page);
+   await page.emulateMedia({reducedMotion:'reduce'});
+   await checkScrollLayout(page);
+   await checkScrollLayout(page,true);
+   await page.evaluate(()=>document.documentElement.style.fontSize='');
+   const noJs=await browser.newContext({javaScriptEnabled:false,viewport:{width:1440,height:900}});
+   const fallback=await noJs.newPage();await fallback.goto(base);
+   assert.equal(await fallback.locator('.lead-level:visible').count(),3);
+   assert.equal(await fallback.locator('.principles h4:visible').count(),9);
+   await noJs.close();
    for(const route of ['/work/deadlock/','/work/analytics/','/work/six-million/','/work/ux-practice/','/work/shriners/','/build/foundry/','/build/wcag-engine/','/build/identity-service/','/404.html','/sitemap.xml','/robots.txt'])assert.equal((await page.goto(base+route)).status(),200,route);
-   assert.deepEqual(errors,[]);console.log('Reflow, Lead scrolling and keyboard, reduced motion, short viewport, 200% text zoom, no-JS, routes and runtime checks passed.');
+   assert.deepEqual(errors,[]);console.log('Reflow, Work release, Lead levels, reduced motion, 200% text zoom, no-JS, routes and runtime checks passed.');
   }else{
    for(const width of [1440,834,402]){
     await page.setViewportSize({width,height:900});await page.goto(base);await page.evaluate(()=>document.fonts.ready);await page.locator('img').evaluateAll(images=>Promise.all(images.map(img=>{img.loading='eager';return img.decode();})));await page.screenshot({path:`reference/screenshots/home-${width}.png`,fullPage:true});
    }
    await page.setViewportSize({width:1440,height:900});await page.goto(base);await page.evaluate(()=>document.fonts.ready);
-   for(const [index,label] of ['person','team','company'].entries()){
-    await page.locator('.lead-stage').evaluate((el,index)=>scrollTo({top:scrollY+el.getBoundingClientRect().top+index/3*(el.offsetHeight-innerHeight)+10,behavior:'instant'}),index);await page.waitForTimeout(300);await page.screenshot({path:`reference/screenshots/lead-${label}-1440.png`});
+   await page.emulateMedia({reducedMotion:'reduce'});
+   for(const label of ['person','team','company']){
+    await page.locator(`#level-${label}`).screenshot({path:`reference/screenshots/lead-${label}-1440.png`});
    }
    console.log('Saved homepage and Lead screenshots.');
   }
