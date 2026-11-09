@@ -1,0 +1,53 @@
+---
+layout: base.njk
+permalink: /styleguide/buttons/
+eleventyExcludeFromCollections: true
+noindex: true
+pageTitle: Button styleguide | Paul Butcher
+---
+{% from 'components.njk' import buttonIcon %}
+{% set variants = ['filled', 'outline'] %}
+{% set directions = [
+  { kind: 'right', label: 'Internal' },
+  { kind: 'outbound', label: 'External' },
+  { kind: 'download', label: 'Download' }
+] %}
+{% set states = [
+  { name: 'Rest', className: '' },
+  { name: 'Hover', className: 'is-hover' },
+  { name: 'Focus visible', className: 'is-focus' },
+  { name: 'Active', className: 'is-active' },
+  { name: 'Live controls', className: '' }
+] %}
+<main id="main">
+  <div class="section on-alabaster">
+    <div class="frame section-pad">
+      <h1 class="display2 inset">Buttons</h1>
+    </div>
+  </div>
+  {% for surface in ['Pine', 'Alabaster'] %}
+  <section class="section on-{{ surface | lower }}" aria-labelledby="buttons-{{ surface | lower }}">
+    <div class="frame section-pad">
+      <div class="inset button-review">
+        <h2 id="buttons-{{ surface | lower }}" class="level">{{ surface }}</h2>
+        {% for state in states %}
+        <div>
+          <h3 class="mono muted">{{ state.name }}</h3>
+          <div class="button-review-row">
+            {% for variant in variants %}
+              {% for direction in directions %}
+                {% if state.name == 'Live controls' %}
+                <button type="button" class="button {{ variant }}" aria-label="{{ variant | capitalize }} {{ direction.label | lower }}">{{ variant | capitalize }}{{ buttonIcon(direction.kind) }}</button>
+                {% else %}
+                <span class="button {{ variant }} {{ state.className }}">{{ variant | capitalize }}{{ buttonIcon(direction.kind) }}</span>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+</main>

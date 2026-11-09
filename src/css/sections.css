@@ -89,7 +89,6 @@
 .work-heading h2 {
   padding-block: var(--s-8) clamp(48px, 11vh, 128px);
   border-block-end: var(--hair) solid var(--section-rule);
-  border-inline-end: var(--hair) solid var(--section-rule);
 }
 .work-intro {
   max-inline-size: calc(100% * 6 / 7);
@@ -122,6 +121,7 @@
   display: block;
   padding: 0;
 }
+.case-card h3 { padding-inline: var(--grid-inset); }
 .case-card:not(:last-child) { padding-block-end: var(--s-12); }
 .build-heading{padding-block:var(--s-8);white-space:nowrap;font-size:clamp(2.75rem,6.1vw,6rem)}.build-intro{max-width:66.666%;margin-top:var(--s-6)}.build-tiles{grid-template-columns:1fr 2.1fr 1fr;align-items:start;margin-top:var(--s-12);gap:var(--card-gap)}.build-tile.large{order:0;grid-column:auto}.build-tile.small{padding-top:92px}.build-tile.small .media{aspect-ratio:322/320}.build-tile.large .media{aspect-ratio:676/412}.lead-header {
   position: relative;

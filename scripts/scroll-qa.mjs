@@ -36,7 +36,7 @@ export async function checkScrollLayout(page, zoom = false) {
     const images = [...layout.querySelectorAll('.work-image')];
     const top = parseFloat(getComputedStyle(heading).top);
     const crossings = images.map(image => image.getBoundingClientRect().top + scrollY - top);
-    return {top, start: crossings[0], second: crossings[1], end: crossings.at(-1)};
+    return {top, start: crossings[0], second: crossings[1], end: crossings.at(-1), count: crossings.length};
   });
   const sample = () => page.evaluate(() => {
     const heading = document.querySelector('.work-heading').getBoundingClientRect();
@@ -52,14 +52,15 @@ export async function checkScrollLayout(page, zoom = false) {
   const release = await sample();
   assert.ok(release.heading < before.heading && Math.abs(release.heading - release.image) <= 1, `Work release misaligned: ${JSON.stringify(release)}`);
   assert.ok(release.gap >= -1, 'Work heading stays in its own column');
-  await page.waitForFunction(() => document.querySelector('.work-progress__count').textContent === '03 / 03');
+  const total = String(dimensions.count).padStart(2, '0');
+  await page.waitForFunction(expected => document.querySelector('.work-progress__count').textContent === expected, `${total} / ${total}`);
   if (!zoom) {
     await scroll(page, Math.ceil(dimensions.start));
     const start = await sample();
     await scroll(page, Math.round((dimensions.start + dimensions.end) / 2));
     const middle = await sample();
     await scroll(page, Math.ceil(dimensions.second) + 2);
-    await page.waitForFunction(() => document.querySelector('.work-progress__count').textContent === '02 / 03', null, {timeout: 3000});
+    await page.waitForFunction(expected => document.querySelector('.work-progress__count').textContent === expected, `02 / ${total}`, {timeout: 3000});
     if (await page.evaluate(() => CSS.supports('animation-timeline: view()') && matchMedia('(prefers-reduced-motion: no-preference)').matches)) {
       assert.ok(start.progress < .02 && middle.progress > .45 && middle.progress < .55 && release.progress > .98,
         `Progress should span the first and last image: ${[start.progress, middle.progress, release.progress]}`);

@@ -6,4 +6,5 @@
 - Blue marks interaction: Royal on Alabaster, Periwinkle on Pine. Work and Build drawings may use one blue decision path. Headlines, dividers, grid lines and stat numbers stay in the surface palette.
 - Use Diatype Mono for lowercase tags, eyebrows, captions, status and stack lines, and the copyright line. Keep it muted and at least 11px. Use Diatype for editorial text.
 - Keep the editorial grid faint and surface-specific. Structural rules use the foreground. Align layout to the Figma grid at mobile, tablet (768px) and desktop (1200px).
+- Buttons are the only rounded element at rest. They square up to 2px on hover and focus.
 - Write plainly and omit em dashes. Keep unfinished copy marked with `[gap]` or `[gap: …]`; either form fails a production build even if the case is not featured.

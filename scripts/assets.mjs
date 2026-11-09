@@ -5,10 +5,15 @@ import sharp from 'sharp';
 export async function prepareAssets(site){
   fs.mkdirSync('.cache',{recursive:true});
   fs.mkdirSync('dist/fonts',{recursive:true});
-  for(const family of ['ABCDiatype','ABCDiatypeMono']){
-    const licensed=`src/fonts/${family}-Regular.woff2`;
-    const trial=`assets/fonts/${family}Trial-Regular.otf`;
-    const dest=`dist/fonts/${family}-Regular.woff2`;
+  const fonts = [
+    ['ABCDiatype', 'Regular'],
+    ['ABCDiatype', 'Light'],
+    ['ABCDiatypeMono', 'Regular'],
+  ];
+  for (const [family, weight] of fonts) {
+    const licensed = `src/fonts/${family}-${weight}.woff2`;
+    const trial = `assets/fonts/${family}Trial-${weight}.otf`;
+    const dest = `dist/fonts/${family}-${weight}.woff2`;
     if(fs.existsSync(licensed)) fs.copyFileSync(licensed,dest);
     else {
       console.warn(`TRIAL FONTS. Replace before launch: ${trial}`);

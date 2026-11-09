@@ -5,7 +5,7 @@ Push day-to-day work to `dev`. Review the [branch deploy](https://dev--paulbpro.
 Before merging to `main`:
 
 1. Run `npm run build:preview`, `npm run a11y`, `npm run lighthouse` and `npm run check:images`. Resolve missing launch assets. Run WCAG Engine against the preview and review it on a phone.
-2. Run `npm run build` for the launch gate. Resolve all content gaps and use licensed Diatype WOFF2 files in `src/fonts/` before publishing a public site.
+2. Run `npm run build` for the launch gate. Resolve all content gaps and use licensed Diatype Regular and Light and Diatype Mono Regular WOFF2 files in `src/fonts/` before publishing a public site.
 3. Netlify currently builds drafts with `build:preview` and sends noindex headers. At launch set `command = "npm run build"` under `[context.production]` in `netlify.toml`. Keep previews on the preview command. Only publish after checking the production build.
 
 The Webflow domain cutover is still pending:

@@ -35,6 +35,7 @@
   --fs-principle:  clamp(1.375rem, 1.24rem + 0.54vw, 1.75rem);   /* 22 to 28 */
   --fs-intro:      clamp(1.0625rem, 1.02rem + 0.27vw, 1.25rem);  /* 17 to 20 */
   --fs-body: 1rem;
+  --weight-body: 300;
   --fs-small: 0.9375rem;
   --fs-nav: 1rem;
   --fs-mono: 0.75rem;
@@ -66,7 +67,7 @@
   --frame-max: 1512px;
 
   /* Shape and line */
-  --r-button: 999px;
+  --r-button: calc(var(--button-h) / 2);
   --r-card: 2px;
   --hair: 1px;
   --stroke-diagram: 1.5px;
@@ -78,6 +79,11 @@
   --t-draw: 1200ms;
   --ease: cubic-bezier(0.2, 0, 0, 1);
   --ease-out: cubic-bezier(.2,.7,.2,1);
+  --t-button-in: 180ms;
+  --t-button-out: 240ms;
+  --t-button-arrow: 280ms;
+  --t-button-arrow-delay: 40ms;
+  --t-button-press: 60ms;
 
   /* Controls */
   --button-h: 56px;
