@@ -15,11 +15,11 @@
   --placeholder-on-pine: color-mix(in oklab, var(--alabaster) 18%, var(--pine));
   --placeholder-on-alabaster: color-mix(in oklab, var(--pine) 8%, var(--alabaster));
 
-  /* A shared grayscale tile; the light surface stays flat by default. */
+  /* Static grayscale tiles tuned for each surface. */
   --grain-size: 120px;
   --grain-image: url("/img/surfaces/paper-grain.png");
   --grain-pine: var(--grain-image);
-  --grain-alabaster: none;
+  --grain-alabaster: url("/img/surfaces/paper-grain-alabaster.png");
 
   /* Fonts */
   --font-sans: "ABC Diatype", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
