@@ -3,3 +3,6 @@ permalink: /_redirects
 eleventyExcludeFromCollections: true
 ---
 /book {{ site.site.scheduleUrl }} 302!
+
+# Serve the primary host locally before any legacy hostname rule.
+https://www.paulb.pro/* /:splat 200

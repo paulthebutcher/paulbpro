@@ -1,5 +1,7 @@
 # Branch deploys and deploy previews build in preview mode (noindex, gaps allowed).
 # Production (main) uses the strict build: indexable, and it fails on any [gap].
+redirects = []
+
 [build]
   command = "npm run build:preview"
   publish = "dist"
