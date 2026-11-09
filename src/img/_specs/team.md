@@ -1,17 +1,21 @@
 # Team
 
-Canvas: 322 by 215, Pine. Zoom out from Person to six peers, without a hub.
+Revision 2, inspired by the technical linework in https://www.crosswalk.cl/en.
+Canvas: 322 by 215, Pine. Entirely static.
 
-- Use six shared nodes at 0.625 scale: x64, 160 and 256, in rows y72 and y144.
-- Link top-left to top-middle to top-right with horizontal rightward arrows.
-- Link top-right to bottom-right downward, then bottom-right to bottom-middle
-  to bottom-left leftward, then bottom-left to top-left upward.
-- Add one downward peer connection between the middle nodes. It ends on the
-  bottom peer, not at a central manager. All connections stop 8px from nodes.
-- Above each top-row node, put one shared note at y32, connected vertically;
-  below each bottom-row node, put one at y176. Center the notes on their nodes.
-  These repeat Person's ownership tags without labelling any real product.
-- Leave the middle of the map open. Directional arrowheads are 4px diagonals.
-- Decision path: none. Every peer and connection has equal weight, 1.5px.
+- Six shared nodes at 0.625 scale form a staggered peer map:
+  (64, 72), (152, 96), (240, 64), (80, 152), (168, 160), (256, 144).
+- Each node sits inside two construction rings, radius 16 and32, using
+  55% and18% opacity. The outer rings sometimes overlap, giving a sense of
+  interdependent work. A very faint guide joins the six ring centers.
+- At 72% opacity, arrows route from top-left to top-middle to top-right,
+  down to bottom-right, across to bottom-middle to bottom-left, then back
+  to top-left. Elbows sit between the circles. No arrow points to a hub.
+- Three note tags at (40, 24), (136, 32), (224, 16) attach to the upper peers;
+  a fourth at (40, 184) attaches to the lower-left peer. All use scale 0.625.
+- Faint vertical datum lines at x64,152,240 span y16 to200. Baselines at
+  y112 and y200 and short registration crosses align the six-node assembly.
+- All structure is 1.5px. Main nodes and tags use 90% opacity.
+- Decision path: none. No movement or rotation of rings.
 
-Alt: Six peer nodes carry ownership tags and pass work to neighboring nodes through arrows, with no central manager node.
+Alt: Six peers sit within overlapping circular map guides and exchange work along neighboring arrows, with no central manager node.

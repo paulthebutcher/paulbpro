@@ -1,45 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 322 215" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-<path d="M72 72H152M148 68L152 72L148 76M168 72H248M244 68L248 72L244 76"/>
-<path d="M256 80V136M252 132L256 136L260 132"/>
-<path d="M248 144H168M172 140L168 144L172 148M152 144H72M76 140L72 144L76 148"/>
-<path d="M64 136V80M60 84L64 80L68 84M160 80V136M156 132L160 136L164 132"/>
-<path d="M64 47V64M64 152V176"/>
-<g transform="translate(52.5 32) scale(0.625)">
+<g opacity="0.14">
+<path d="M64 16V200M152 16V200M240 16V200M24 112H296M24 200H296" stroke-dasharray="1 4"/>
+<path d="M64 72L152 96L240 64L256 144L168 160L80 152Z"/>
+<rect x="62" y="198" width="4" height="4"/>
+<rect x="150" y="198" width="4" height="4"/>
+<rect x="238" y="198" width="4" height="4"/>
+</g>
+<g opacity="0.18">
+<circle cx="64" cy="72" r="32"/>
+<circle cx="152" cy="96" r="32"/>
+<circle cx="240" cy="64" r="32"/>
+<circle cx="80" cy="152" r="32"/>
+<circle cx="168" cy="160" r="32"/>
+<circle cx="256" cy="144" r="32"/>
+</g>
+<g opacity="0.55">
+<circle cx="64" cy="72" r="16"/>
+<circle cx="152" cy="96" r="16"/>
+<circle cx="240" cy="64" r="16"/>
+<circle cx="80" cy="152" r="16"/>
+<circle cx="168" cy="160" r="16"/>
+<circle cx="256" cy="144" r="16"/>
+</g>
+<g opacity="0.72">
+<path d="M72 72H104V96H144M140 92L144 96L140 100"/>
+<path d="M160 96H200V64H232M228 60L232 64L228 68"/>
+<path d="M248 64H280V144H264M268 140L264 144L268 148"/>
+<path d="M248 144H208V160H176M180 156L176 160L180 164"/>
+<path d="M160 160H120V152H88M92 148L88 152L92 156"/>
+<path d="M72 152H40V72H56M52 68L56 72L52 76"/>
+<path d="M51.5 39V48H64V64M147.5 47V64H152V88M235.5 31V40H240V56M51.5 184V176H80V160"/>
+</g>
+<g opacity="0.9">
+<g transform="translate(40 24) scale(0.625)">
 <rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
 </g>
-<g transform="translate(52.5 176) scale(0.625)">
+<g transform="translate(136 32) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(224 16) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(40 184) scale(0.625)">
 <rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
 </g>
 <g transform="translate(64 72) scale(0.625)">
 <circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
 </g>
-<g transform="translate(64 144) scale(0.625)">
+<g transform="translate(152 96) scale(0.625)">
 <circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
 </g>
-<path d="M160 47V64M160 152V176"/>
-<g transform="translate(148.5 32) scale(0.625)">
-<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
-</g>
-<g transform="translate(148.5 176) scale(0.625)">
-<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
-</g>
-<g transform="translate(160 72) scale(0.625)">
+<g transform="translate(240 64) scale(0.625)">
 <circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
 </g>
-<g transform="translate(160 144) scale(0.625)">
+<g transform="translate(80 152) scale(0.625)">
 <circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
 </g>
-<path d="M256 47V64M256 152V176"/>
-<g transform="translate(244.5 32) scale(0.625)">
-<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
-</g>
-<g transform="translate(244.5 176) scale(0.625)">
-<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
-</g>
-<g transform="translate(256 72) scale(0.625)">
+<g transform="translate(168 160) scale(0.625)">
 <circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
 </g>
 <g transform="translate(256 144) scale(0.625)">
 <circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
 </g>
 </svg>

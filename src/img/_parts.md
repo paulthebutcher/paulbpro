@@ -1,6 +1,6 @@
 # Drawing parts
 
-Status: proposed kit, awaiting Paul's approval of the Lead contact sheet.
+Status: revised technical drawing kit, awaiting Paul's approval of the second Lead contact sheet.
 
 All fourteen drawings use these five parts. The SVG snippets below are the source
 used by `scripts/drawings.mjs`, expanded inline without symbols, ids or references.
@@ -55,6 +55,21 @@ Larger page containers extend this outline to fit their map or contents.
 <rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
 <path d="M0 16H80" vector-effect="non-scaling-stroke"/>
 ```
+
+## Construction marks
+
+Reference: Crosswalk's hero at https://www.crosswalk.cl/en, inspected November 8.
+Use its layered technical linework as inspiration: concentric guide rings,
+datum lines, short ticks, and registration squares. These are construction
+marks around the five semantic parts, not new objects or a copy of its machine.
+
+All marks retain the 1.5px stroke. Hierarchy comes from opacity: 0.14 to0.28
+for distant guides, 0.36 to0.55 for nearby rings, 0.72 for connections and0.9
+for semantic parts. Rings use whole-pixel radii. At small sizes a main node
+still uses the shared radius-6 circle at0.625 scale, surrounded by guide rings.
+
+Everything is static. Paul's follow-up overrides the original hover/focus
+path draw-in requirement. Decision paths will be fully visible at rest.
 
 ## Connections and accents
 

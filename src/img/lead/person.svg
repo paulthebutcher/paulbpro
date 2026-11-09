@@ -1,13 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 322 215" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-<path d="M86.5 71.5H104V96H128V104M86.5 151.5H104V128H128V120"/>
-<path d="M136 112H200V48H328M308 44L312 48L308 52"/>
-<g transform="translate(64 64) scale(0.625)">
+<g opacity="0.14">
+<path d="M32 24H288M32 192H288M80 24V192M136 24V192M192 24V192M248 24V192" stroke-dasharray="1 4"/>
+<circle cx="136" cy="112" r="56"/>
+<rect x="30" y="22" width="4" height="4"/>
+<rect x="286" y="22" width="4" height="4"/>
+<rect x="30" y="190" width="4" height="4"/>
+<rect x="286" y="190" width="4" height="4"/>
+</g>
+<g opacity="0.28">
+<circle cx="136" cy="112" r="32"/>
+<path d="M136 48V56M136 168V176M72 112H80M192 112H200M224 56H328"/>
+</g>
+<g opacity="0.55">
+<circle cx="136" cy="112" r="16"/>
+</g>
+<g opacity="0.72">
+<path d="M78.5 55.5H104V88H136V104M78.5 159.5H104V136H136V120"/>
+<path d="M144 112H216V48H328M308 44L312 48L308 52"/>
+</g>
+<g opacity="0.9">
+<g transform="translate(56 48) scale(0.625)">
 <rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
 </g>
-<g transform="translate(64 144) scale(0.625)">
+<g transform="translate(56 152) scale(0.625)">
 <rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
 </g>
-<g transform="translate(128 112) scale(0.625)">
+<g transform="translate(136 112) scale(0.625)">
 <circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
 </g>
 </svg>

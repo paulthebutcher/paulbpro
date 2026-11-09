@@ -1,5 +1,27 @@
 # Agent notes
 
+### Lead revision after Crosswalk reference
+
+- [observed] Paul requested another pass inspired by the hero graphic at
+  https://www.crosswalk.cl/en and specified no animation. The reference was
+  inspected in a browser: concentric circles, faint construction guides,
+  registration marks and overlapping technical geometry inform this revision.
+- [observed] Revised all three Lead specs first, then regenerated the SVGs.
+  The five semantic parts and 1.5px strokes remain; opacity separates the
+  construction guides from the story-bearing nodes, tags and connections.
+  Crosswalk assets were not copied into the repository.
+- [observed] The no-animation instruction supersedes the original drawing
+  hover/focus draw-in requirement for this set. Removed the drawing JS module,
+  its import, draw-in CSS and the Lead panel fade. Future decision paths remain
+  fully visible at rest. A scoped static rule also prevents section motion
+  styles from animating artwork or its immediate wrapper.
+- [observed] Updated the alt text and the 2x contact sheet. The additional
+  `reference/screenshots/drawings-lead-detail.png` contains just the three
+  drawings for easier review; the full sheet retains the existing build row.
+  Preview build and accessibility checks pass. Style approval is still pending.
+- [observed] Concurrent layout, scroll animation and QA changes were present
+  in this checkout during the revision. They are outside this drawing commit.
+
 ### SVG drawings, November 8 Lead review
 
 - [observed] The November 8 evening `../build-pack/reference/image-production.md`

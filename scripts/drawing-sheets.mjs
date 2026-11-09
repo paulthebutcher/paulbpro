@@ -45,7 +45,7 @@ try {
     .row-section {padding-bottom:40px}
     .row-section .build-tiles {margin-top:0}
   </style></head><body>
-    <section class="${surface}"><h1 class="sheet-heading">${group === 'lead' ? 'Lead: parts and stroke review' : `${group}: drawing review`}</h1>
+    <section class="${surface}" data-drawing-sheet><h1 class="sheet-heading">${group === 'lead' ? 'Lead: technical drawing study, static' : `${group}: drawing review`}</h1>
     <div class="drawing-grid">${drawings.map(d => `<article class="drawing-cell" style="width:${d.width}px"><h2>${d.name.replaceAll('-', ' ')}</h2>${d.source}<p>${d.width} × ${d.height} · 1× size · 1.5px structure${group === 'lead' ? ' · no accent' : ' · 2px decision'}</p></article>`).join('')}</div></section>
     <section class="on-alabaster row-section"><div class="frame"><h2 class="sheet-heading">Homepage build row${pending ? ': existing placeholders, drawings follow Lead approval' : ''}</h2>${buildRow}</div></section>
   </body></html>`);
@@ -56,6 +56,7 @@ try {
     assert.equal(rendered.height, drawing.height);
   }
   await page.screenshot({path: `reference/screenshots/drawings-${group}.png`, fullPage: true});
+  await page.locator('[data-drawing-sheet]').screenshot({path: `reference/screenshots/drawings-${group}-detail.png`});
   console.log(`Saved drawings-${group}.png at deviceScaleFactor 2; every drawing verified at 1x CSS size.`);
 } finally {
   if (browser) await browser.close();

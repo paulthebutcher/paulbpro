@@ -13,33 +13,74 @@ const route = (d, attributes = '') => `<path d="${d}"${attributes ? ` ${attribut
 const small = (name, x, y, attributes) => part(name, x, y, 0.625, attributes);
 const svg = (width, height, content) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">\n${content.join('\n')}\n</svg>\n`;
 
+const layer = (opacity, content) => `<g opacity="${opacity}">\n${content.join('\n')}\n</g>`;
+const ring = (x, y, radius) => `<circle cx="${x}" cy="${y}" r="${radius}"/>`;
+const register = (x, y) => `<rect x="${x - 2}" y="${y - 2}" width="4" height="4"/>`;
+
 export function generateLead() {
   const person = [
-    route('M86.5 71.5H104V96H128V104M86.5 151.5H104V128H128V120'),
-    route('M136 112H200V48H328M308 44L312 48L308 52'),
-    small('note', 64, 64), small('note', 64, 144), small('node', 128, 112),
+    layer(0.14, [
+      route('M32 24H288M32 192H288M80 24V192M136 24V192M192 24V192M248 24V192', 'stroke-dasharray="1 4"'),
+      ring(136, 112, 56),
+      ...[[32, 24], [288, 24], [32, 192], [288, 192]].map(([x, y]) => register(x, y)),
+    ]),
+    layer(0.28, [ring(136, 112, 32), route('M136 48V56M136 168V176M72 112H80M192 112H200M224 56H328')]),
+    layer(0.55, [ring(136, 112, 16)]),
+    layer(0.72, [
+      route('M78.5 55.5H104V88H136V104M78.5 159.5H104V136H136V120'),
+      route('M144 112H216V48H328M308 44L312 48L308 52'),
+    ]),
+    layer(0.9, [small('note', 56, 48), small('note', 56, 152), small('node', 136, 112)]),
   ];
+  const peers = [[64, 72], [152, 96], [240, 64], [80, 152], [168, 160], [256, 144]];
   const team = [
-    route('M72 72H152M148 68L152 72L148 76M168 72H248M244 68L248 72L244 76'),
-    route('M256 80V136M252 132L256 136L260 132'),
-    route('M248 144H168M172 140L168 144L172 148M152 144H72M76 140L72 144L76 148'),
-    route('M64 136V80M60 84L64 80L68 84M160 80V136M156 132L160 136L164 132'),
-    ...[64, 160, 256].flatMap(x => [
-      route(`M${x} 47V64M${x} 152V176`),
-      small('note', x - 11.5, 32), small('note', x - 11.5, 176),
-      small('node', x, 72), small('node', x, 144),
+    layer(0.14, [
+      route('M64 16V200M152 16V200M240 16V200M24 112H296M24 200H296', 'stroke-dasharray="1 4"'),
+      route('M64 72L152 96L240 64L256 144L168 160L80 152Z'),
+      ...[64, 152, 240].map(x => register(x, 200)),
+    ]),
+    layer(0.18, peers.map(([x, y]) => ring(x, y, 32))),
+    layer(0.55, peers.map(([x, y]) => ring(x, y, 16))),
+    layer(0.72, [
+      route('M72 72H104V96H144M140 92L144 96L140 100'),
+      route('M160 96H200V64H232M228 60L232 64L228 68'),
+      route('M248 64H280V144H264M268 140L264 144L268 148'),
+      route('M248 144H208V160H176M180 156L176 160L180 164'),
+      route('M160 160H120V152H88M92 148L88 152L92 156'),
+      route('M72 152H40V72H56M52 68L56 72L52 76'),
+      route('M51.5 39V48H64V64M147.5 47V64H152V88M235.5 31V40H240V56M51.5 184V176H80V160'),
+    ]),
+    layer(0.9, [
+      ...[[40, 24], [136, 32], [224, 16], [40, 184]].map(([x, y]) => small('note', x, y)),
+      ...peers.map(([x, y]) => small('node', x, y)),
     ]),
   ];
   const company = [
-    '<rect x="64" y="24" width="224" height="168" rx="2"/>',
-    route('M64 48H288M16 112H80M76 108L80 112L76 116'),
-    ...[64, 128].flatMap(y => [
-      route(`M107.5 ${y + 15}V${y + 24}M163.5 ${y + 15}V${y + 24}M115.5 ${y + 32}H155.5`),
-      route(`M219.5 ${y + 15}V${y + 24}`, 'stroke-dasharray="2 4"'),
-      route(`M248 ${y + 16}V${y + 32}`),
-      ...[96, 152, 208].map(x => small('note', x, y)),
-      ...[107.5, 163.5].map(x => small('node', x, y + 32)),
-      small('node', 219.5, y + 32, 'stroke-dasharray="2 4"'),
+    layer(0.14, [
+      route('M40 16H296M40 200H296M91.5 16V200M155.5 16V200M219.5 16V200', 'stroke-dasharray="1 4"'),
+      ...[[40, 16], [296, 16], [40, 200], [296, 200]].map(([x, y]) => register(x, y)),
+    ]),
+    layer(0.42, [
+      '<rect x="48" y="24" width="240" height="168" rx="2"/>', route('M48 48H288'),
+    ]),
+    ...[96, 160].flatMap(y => [
+      layer(0.18, [91.5, 155.5, 219.5].map(x => ring(x, y, 24))),
+      layer(0.36, [91.5, 155.5, 219.5].map(x => ring(x, y, 12))),
+    ]),
+    layer(0.72, [
+      route('M8 104H32V112H64M60 108L64 112L60 116'),
+      ...[64, 128].flatMap(y => [
+        route(`M91.5 ${y + 15}V${y + 24}M155.5 ${y + 15}V${y + 24}M99.5 ${y + 32}H147.5`),
+        route(`M219.5 ${y + 15}V${y + 24}`, 'stroke-dasharray="2 4"'),
+      ]),
+    ]),
+    layer(0.9, [
+      ...[64, 128].flatMap(y => [
+        route(`M264 ${y + 24}V${y + 40}`),
+        ...[80, 144, 208].map(x => small('note', x, y)),
+        ...[91.5, 155.5].map(x => small('node', x, y + 32)),
+        small('node', 219.5, y + 32, 'stroke-dasharray="2 4"'),
+      ]),
     ]),
   ];
   fs.mkdirSync('src/img/lead', {recursive: true});
