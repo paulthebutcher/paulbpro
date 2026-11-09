@@ -196,6 +196,11 @@
 }
 .diagram > svg { width: 100%; height: auto; }
 
+/* Build drawings are drawn in the accent. Build tiles are links, so the whole
+   drawing reads as clickable; the decision path stands out by weight (2px). */
+.build-tile .diagram,
+.on-alabaster .detail-image .diagram { color: var(--accent); }
+
 /* Drawing artwork stays static, including under section motion styles. */
 .work-image:has(.diagram), .lead-art, .diagram, .diagram * {
   animation: none !important;
