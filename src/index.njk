@@ -5,9 +5,11 @@ home: true
 {% from 'components.njk' import arrow,button,tag,nav %}
 <div class="section on-pine"><div class="frame">{{ nav(site) }}</div></div>
 <main id="main">
-<section id="hero" class="section on-pine"><div class="frame"><div class="hero-grid inset">
-<h1 class="display">{{ site.hero.headline | br | safe }}</h1><p class="hero-thesis intro">{{ site.hero.thesis }}</p><div class="portrait hero-portrait">{% media site.hero.portrait.src, site.hero.portrait.alt, 322, 322, true %}</div><div class="hero-buttons">{% for item in site.hero.buttons %}{{ button(item,site) }}{% endfor %}</div></div>
-<div class="stats">{% for stat in site.hero.stats %}<a class="stat" href="/work/{{ stat.case }}/"><span class="stat-value">{{ stat.value }}</span><span class="stat-caption">{{ stat.caption }}</span></a>{% endfor %}</div></div></section>
+<section id="hero" class="section on-pine"><div class="frame">
+<div class="hero-rules" aria-hidden="true">{% for i in range(0, 13) %}<span style="--rule-i:{{ i }}"></span>{% endfor %}</div>
+<div class="hero-grid inset">
+<h1 class="display">{% for line in site.hero.headline.split('\n') %}<span class="hero-line">{{ line | escape }}</span>{% if not loop.last %} {% endif %}{% endfor %}</h1><p class="hero-thesis intro">{{ site.hero.thesis }}</p><div class="portrait hero-portrait">{% media site.hero.portrait.src, site.hero.portrait.alt, 322, 322, true %}</div><div class="hero-buttons">{% for item in site.hero.buttons %}{{ button(item,site) }}{% endfor %}</div></div>
+<div class="stats">{% for stat in site.hero.stats %}<a class="stat" href="/work/{{ stat.case }}/" style="--stat-i:{{ loop.index0 }}"><span class="stat-value">{{ stat.value }}</span><span class="stat-caption">{{ stat.caption }}</span></a>{% endfor %}</div></div></section>
 <section id="about" class="section on-alabaster"><div class="frame section-pad"><div class="about-top inset"><div><h2 class="display2">{{ site.about.headline }}</h2><div class="resume-button">{{ button(site.about.resumeButton,site) }}</div></div><div class="roles">{% for group in site.about.roles %}<div><p class="mono muted">{{ group.eyebrow }}</p><ul>{% for item in group.items %}<li class="small">{{ item.role }} {{ site.ui.roleConnector }} {{ item.org }}</li>{% endfor %}</ul></div>{% endfor %}</div></div>
 {% for group in [site.about.objects, site.about.paper] %}
 {% set gallery = 'paper' if loop.last else 'objects' %}

@@ -52,3 +52,86 @@
     }
   }
 }
+
+/* The hero uses real lines so the intro can draw them independently. */
+#hero > .frame::before { content: none; }
+.hero-rules {
+  position: absolute;
+  inset: 0 var(--grid-margin);
+  z-index: -1;
+  pointer-events: none;
+}
+.hero-rules span {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: min(calc(var(--rule-i) * 100% / var(--grid-columns)), calc(100% - var(--hair)));
+  inline-size: var(--hair);
+  background-color: var(--line);
+  transform-origin: top;
+}
+@media (max-width: 767px) { .hero-rules span:nth-child(n+6) { display: none; } }
+@media (768px <= width < 1200px) { .hero-rules span:nth-child(n+10) { display: none; } }
+.hero-line { display: block; }
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes hero-rule-down { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  @keyframes hero-rule-across { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes hero-headline {
+    from { transform: translateY(16px); clip-path: inset(0 0 8px); }
+    to { transform: none; clip-path: inset(0); }
+  }
+  @keyframes hero-portrait { from { clip-path: inset(100% 0 0); } to { clip-path: inset(0); } }
+  @keyframes hero-settle {
+    from { transform: translateY(12px); opacity: 0; }
+    to { transform: none; opacity: 1; }
+  }
+
+  html.intro .hero-rules span { transform: scaleY(0); }
+  html.intro-ready .hero-rules span {
+    animation: hero-rule-down 220ms var(--ease-out) calc(var(--rule-i) * 30ms) both;
+  }
+
+  html.intro .hero-line { transform: translateY(16px); clip-path: inset(0 0 8px); }
+  html.intro-ready .hero-line {
+    animation: hero-headline 330ms var(--ease-out) 150ms both;
+  }
+  html.intro-ready .hero-line:nth-child(2) { animation-delay: 270ms; }
+
+  html.intro .hero-portrait { clip-path: inset(100% 0 0); }
+  html.intro-ready .hero-portrait { animation: hero-portrait 600ms var(--ease-out) 400ms both; }
+
+  html.intro :where(.hero-thesis, .hero-buttons > *, #hero .stat-value, #hero .stat-caption) {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  html.intro-ready .hero-thesis { animation: hero-settle 290ms var(--ease-out) 620ms both; }
+  html.intro-ready .hero-buttons > * { animation: hero-settle 290ms var(--ease-out) 700ms both; }
+  html.intro-ready .hero-buttons > :nth-child(2) { animation-delay: 780ms; }
+
+  html.intro #hero .stat { position: relative; border-block-start-color: transparent; }
+  html.intro #hero .stat::before {
+    content: "";
+    position: absolute;
+    inset: calc(-1 * var(--hair)) 0 auto;
+    block-size: var(--hair);
+    background: var(--section-rule);
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  html.intro-ready #hero .stat::before {
+    animation: hero-rule-across 165ms var(--ease-out) calc(900ms + var(--stat-i) * 80ms) both;
+  }
+  html.intro-ready #hero .stat-value {
+    animation: hero-settle 200ms var(--ease-out) calc(1010ms + var(--stat-i) * 80ms) both;
+  }
+  html.intro-ready #hero .stat-caption {
+    animation: hero-settle 190ms var(--ease-out) calc(1050ms + var(--stat-i) * 80ms) both;
+  }
+  html.intro .hero-buttons:focus-within > *,
+  html.intro #hero .stat:focus-within :is(.stat-value, .stat-caption),
+  html.intro #hero .stat:focus-within::before {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -5,7 +5,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/ABCDiatype-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/ABCDiatypeMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 {% if home %}<link rel="preload" as="image" type="image/avif" href="/img/paul-headshot-322.avif" imagesrcset="/img/paul-headshot-192.avif 192w, /img/paul-headshot-322.avif 322w, /img/paul-headshot-644.avif 644w" imagesizes="{{ heroSizes }}">{% endif %}
-{% styles %}<script type="module" src="/js/main.js"></script>
+{% styles %}{% if home %}{% include 'hero-intro.njk' %}{% endif %}<script type="module" src="/js/main.js"></script>
 </head><body class="on-alabaster{% if not production %} development{% endif %}"><a class="skip-link button filled" href="#main">{{ site.ui.skip }}</a>
 {{ content | safe }}
 </body></html>

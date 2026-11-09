@@ -146,3 +146,23 @@
   accessibility and best practices stayed at 100, matching the
   pre-change dev run. The new scroll captures and measurements are
   indexed in `reference/screenshots/scroll-README.md`.
+
+### Paper grain and hero intro
+
+- [observed] Crosswalk's green hero repeats a 120×120 baked texture; its
+  light surface is flat. Its styles use bone at 7% and a warm dark tint
+  at 15% for grid lines. Our seeded 120×120 grayscale PNG is generated
+  locally by `scripts/paper-grain.mjs`. The Pine and Alabaster grid
+  contrasts are 1.21:1 and 1.20:1. Pine body text measured 9.51:1 against
+  the darkest tile pixel and 6.71:1 against the lightest. See
+  `reference/screenshots/grain-compare.png`.
+- [observed] Playwright measured the last hero animation at 1459ms on
+  1440×900 and 1487ms on 390×844 from first paint. Delaying the fonts
+  forced the 300ms start cap; that run settled in 1677ms. The repeat,
+  reduced-motion, no-JavaScript and CSP/keyboard focus checks passed.
+  Reproduce the videos and frames with `node scripts/hero-qa.mjs` after
+  building the preview and installing Playwright's FFmpeg.
+- [observed] Median homepage LCP, three Lighthouse runs per device on
+  the same local preview server and Chrome: mobile 1502.08ms before and
+  1502.20ms after (+0.12ms); desktop 344.35ms before and 342.60ms after
+  (-1.75ms). CLS was 0 in all runs.

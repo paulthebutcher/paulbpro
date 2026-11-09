@@ -77,6 +77,7 @@
   --t-base: 200ms;
   --t-draw: 1200ms;
   --ease: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(.2,.7,.2,1);
 
   /* Controls */
   --button-h: 56px;
