@@ -14,7 +14,7 @@ summary: >
 
 ## Why it exists
 
-The audit is the entry point to my consulting work. I wanted every observation tied to something a client can open and look at.
+I built it to find the quickest path to impact for new clients of my consulting practice, Paul Butcher, LLC. The audit is where those engagements start, and I wanted every observation tied to something a client can open and look at.
 
 ## What I built
 

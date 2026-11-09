@@ -5,7 +5,7 @@ slug: shriners
 order: 5
 featured: true
 org: Shriners Children’s, with The Berndt Group (later Valtech)
-years: "2019 to 2020"
+years: "2020 to 2021"
 role: Senior Digital Strategist and UX Architect
 image: /img/cases/shriners.svg
 imageAlt: "Twenty-two abstract site frames converge into one, with the highlighted connection and final frame marking the unified site."

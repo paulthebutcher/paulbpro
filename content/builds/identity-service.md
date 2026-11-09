@@ -29,7 +29,7 @@ A service on Webflow Cloud that deploys with the site and records five things:
 
 ## Where it is now
 
-Live. Every demo request arrives with its landing page and visit history, and about two-thirds arrive with a known referring source. In an audit in late October, pageviews arrived with no gaps and 27 of 28 form fills joined to their visit history.
+Live. It feeds Reach, where Popfly’s sales, marketing and operations teams use it. Every demo request arrives with its landing page and visit history, and about two-thirds arrive with a known referring source. In an audit in late October, pageviews arrived with no gaps and 27 of 28 form fills joined to their visit history.
 
 ## What’s still hard
 
