@@ -27,6 +27,14 @@ Browser checks use installed Chrome. On a different system, set `CHROME_PATH` to
 
 `a11y` uses axe-core in Playwright at 1440 and 390 on the homepage and deadlock case. It also checks 320px reflow, Lead keyboard and scroll behavior, motion preferences, short viewports, no-JavaScript rendering, asset loading and generated routes. `lighthouse` asserts accessibility 100, performance at least 95 and best practices at least 95 on the same pages with mobile throttling.
 
+## Netlify draft deployment
+
+Netlify currently runs `npm run build:preview`, including builds from `main`. It publishes the supplied draft with visible content gaps and unavailable contact controls. Every draft page carries `noindex, nofollow`, and the generated `_headers` file applies `X-Robots-Tag` to every response. Draft robots.txt omits the sitemap and allows crawlers to read the noindex directive. This discourages search indexing; the draft is still publicly accessible.
+
+The preview command explicitly selects its mode even if the host sets `ELEVENTY_ENV=production`. `npm run check:build-modes` verifies that behavior and checks that the strict production command still rejects unfinished content.
+
+When launch inputs are complete, change `netlify.toml` to `command = "npm run build"` and `ELEVENTY_ENV = "production"`. Production builds omit the draft indexing directives.
+
 ## Launch blockers
 
 `npm run build` deliberately fails while the supplied `[gap]` markers remain. Fill the unfinished case and build content, scheduler URL and LinkedIn URL in `content/`. Add `src/Paul-Butcher-Resume.pdf`. The supplied copy has not been rewritten to bypass this gate.
@@ -35,6 +43,6 @@ Replace trial fonts with licensed `src/fonts/ABCDiatype-Regular.woff2` and `src/
 
 Images other than the supplied portrait remain the specified placeholders. Add PNG masters under `src/img/_masters/about/` and `src/img/_masters/builds/`, matching content paths. Add diagram SVGs under `src/img/cases/` and `src/img/lead/`, following the build pack's currentColor contract. `check:images` lists the remaining placeholders. Add final approved favicon and Open Graph artwork by updating `scripts/assets.mjs`.
 
-Netlify configuration is included. Use the repository root as the Netlify base directory. No site has been published and no DNS settings have changed.
+Netlify configuration is included. Use the repository root as the Netlify base directory. Publishing is handled by the connected Netlify site. This repository does not change DNS settings.
 
 See `reference/agent-notes.md` for implementation decisions and `reference/verification.md` for recorded results.

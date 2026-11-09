@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en"><head>
+{% if not production %}<meta name="robots" content="noindex, nofollow">{% endif %}
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if entry %}{{ entry.data.title }}, {{ site.site.name }}{% elif errorPage %}{{ site.ui.notFound.title }} {{ site.site.name }}{% else %}{{ site.site.pageTitle }}{% endif %}</title>
 <meta name="description" content="{{ site.site.description }}"><meta name="theme-color" content="{{ site.site.themeColor }}">

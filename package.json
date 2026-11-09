@@ -8,11 +8,12 @@
   "scripts": {
     "dev": "eleventy --serve",
     "build": "ELEVENTY_ENV=production eleventy",
-    "build:preview": "eleventy",
+    "build:preview": "ELEVENTY_ENV=preview eleventy",
     "a11y": "npm run build:preview && node scripts/qa.mjs a11y",
     "lighthouse": "npm run build:preview && node scripts/qa.mjs lighthouse",
     "screenshots": "npm run build:preview && node scripts/qa.mjs screenshots",
-    "check:images": "node scripts/check-images.mjs"
+    "check:images": "node scripts/check-images.mjs",
+    "check:build-modes": "node scripts/check-build-modes.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",

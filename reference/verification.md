@@ -27,3 +27,7 @@ Reports: lighthouse-home.html, lighthouse-deadlock.html and axe-results.json. Lo
 The production command fails as required on unfinished supplied content. See production-build.log. Remaining input: case gaps in six-million, ux-practice and shriners; all three build bodies; scheduler and LinkedIn URLs; résumé PDF; licensed fonts. There are 23 permitted image placeholders. No production deployment was attempted.
 
 WCAG Engine against a deployed preview and résumé PDF accessibility remain Paul's launch checks. The local checks do not claim a manual screen-reader audit or verification on every browser.
+
+## Netlify draft deployment update
+
+Paul authorized deploying the unfinished draft with search indexing disabled. Netlify now runs build:preview. `npm run check:build-modes` passes: preview succeeds even with an inherited production environment; all 10 HTML pages contain noindex metadata; the generated headers apply noindex to every response; production still rejects the existing gaps; switching build modes clears draft-only headers correctly. The final local output is the draft build. The original production-build.log documents the strict launch check, not the Netlify draft command.

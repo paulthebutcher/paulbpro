@@ -1,0 +1,7 @@
+---
+permalink: /_headers
+eleventyExcludeFromCollections: true
+---
+{% if not production %}/*
+  X-Robots-Tag: noindex, nofollow
+{% endif %}

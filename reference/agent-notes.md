@@ -15,3 +15,4 @@
 - The local audit server uses gzip for text assets, matching ordinary Netlify delivery. Lighthouse uses its default mobile throttling.
 - Accessibility uses axe-core through Playwright instead of requiring a separately installed matching ChromeDriver. Lighthouse uses the same Lighthouse engine and explicit CI thresholds in the local runner. Both requested npm entry points are present and reports are retained.
 - Enlarged root text above 20px disables the pinned Lead stage. A resize observer re-evaluates that fallback without intercepting any scroll or pointer event.
+- Paul authorized a public Netlify draft with indexing disabled after the first main-branch deploy hit the required content gate. Netlify now selects build:preview; npm run build retains the strict launch gate. Preview commands override inherited ELEVENTY_ENV, and previews emit robots noindex metadata plus a site-wide X-Robots-Tag header.
