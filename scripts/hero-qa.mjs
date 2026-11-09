@@ -11,7 +11,7 @@ process.env.TMPDIR = path.resolve('.cache/tmp');
 process.env.PLAYWRIGHT_BROWSERS_PATH ??= path.resolve('.cache/playwright');
 const {chromium} = await import('playwright-core');
 const csp = (await fs.readFile('netlify.toml', 'utf8')).match(/Content-Security-Policy = "([^"]+)"/)[1];
-const bootstrap = (await fs.readFile('dist/index.html', 'utf8')).match(/<script>([\s\S]*?introPlayed[\s\S]*?)<\/script>/)[1];
+const bootstrap = (await fs.readFile('dist/index.html', 'utf8')).match(/<script>([\s\S]*?intro-ready[\s\S]*?)<\/script>/)[1];
 const hash = createHash('sha256').update(bootstrap).digest('base64');
 assert.ok(csp.includes(`'sha256-${hash}'`), 'Netlify CSP permits the rendered bootstrap');
 
@@ -64,7 +64,8 @@ try {
       await stills.screenshot({path: `${folder}/${String(time).padStart(4, '0')}.jpg`, quality: 85});
     }
     await stills.reload();
-    assert.equal(await stills.locator('html.intro').count(), 0, 'Repeat visit stays static');
+    await stills.waitForFunction(() => document.documentElement.classList.contains('intro-ready'));
+    assert.ok(await stills.evaluate(() => document.getAnimations().some(a => a.animationName === 'hero-headline')), 'Reload replays the hero animation');
     await stillContext.close();
     console.log(`${viewport.width}×${viewport.height}`, timing);
   }

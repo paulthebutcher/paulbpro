@@ -79,10 +79,11 @@
   --t-draw: 1200ms;
   --ease: cubic-bezier(0.2, 0, 0, 1);
   --ease-out: cubic-bezier(.2,.7,.2,1);
-  --t-button-in: 180ms;
-  --t-button-out: 240ms;
+  --ease-button: cubic-bezier(.25,.46,.45,.94);
   --t-button-arrow: 280ms;
   --t-button-arrow-delay: 40ms;
+  --t-button-in: calc(var(--t-button-arrow) + var(--t-button-arrow-delay));
+  --t-button-out: 120ms;
   --t-button-press: 60ms;
 
   /* Controls */

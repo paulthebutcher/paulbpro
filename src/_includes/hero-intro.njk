@@ -2,12 +2,6 @@
 (() => {
   const motion = matchMedia('(prefers-reduced-motion: no-preference)');
   if (!motion.matches) return;
-  try {
-    if (sessionStorage.getItem('introPlayed')) return;
-    sessionStorage.setItem('introPlayed', '1');
-  } catch {
-    return;
-  }
   const root = document.documentElement;
   root.classList.add('intro');
   const stop = () => root.classList.remove('intro', 'intro-ready');

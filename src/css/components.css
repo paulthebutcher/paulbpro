@@ -57,7 +57,8 @@
 }
 .button {
   --button-radius: var(--r-button);
-  --button-radius-time: var(--t-button-out);
+  --button-transition-time: var(--t-button-out);
+  --button-icon-cycle: button-arrow-cycle var(--t-button-arrow) var(--ease-button) var(--t-button-arrow-delay);
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -67,13 +68,15 @@
   padding: var(--s-2) var(--button-px);
   border: var(--hair) solid transparent;
   border-radius: var(--button-radius);
+  scale: var(--button-scale, 1);
   background-color: var(--button-background, var(--button-rest-fill));
   font-size: var(--fs-intro);
   font-weight: 400;
   line-height: var(--lh-body);
   text-decoration: none;
   transition:
-    border-radius var(--button-radius-time) var(--ease-out),
+    border-radius var(--button-transition-time) var(--ease-button),
+    scale var(--button-transition-time) var(--ease-button),
     background-color var(--t-fast) var(--ease),
     translate var(--t-button-press) var(--ease-out);
 }
@@ -108,22 +111,25 @@
 
 .button:is(:focus-visible, .is-hover, .is-focus, .is-active) {
   --button-radius: var(--r-card);
-  --button-radius-time: var(--t-button-in);
+  --button-transition-time: var(--t-button-in);
 }
 .button:is(:focus-visible, .is-hover, .is-focus) {
-  --button-arrow-animation: button-arrow-cycle var(--t-button-arrow) var(--ease-out) var(--t-button-arrow-delay);
+  --button-scale: 1.04;
+  --button-arrow-animation: var(--button-icon-cycle);
 }
+.button.is-active { --button-scale: 1.04; }
 .button.is-hover { --button-background: var(--button-hover-fill); }
 .button.is-focus { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 @media (hover: hover) {
   .button:not(.unavailable):is(:hover, :active) {
     --button-radius: var(--r-card);
-    --button-radius-time: var(--t-button-in);
+    --button-transition-time: var(--t-button-in);
   }
   .button:not(.unavailable):hover {
     --button-background: var(--button-hover-fill);
-    --button-arrow-animation: button-arrow-cycle var(--t-button-arrow) var(--ease-out) var(--t-button-arrow-delay);
+    --button-scale: 1.04;
+    --button-arrow-animation: var(--button-icon-cycle);
   }
 }
 
@@ -131,7 +137,7 @@
 .button.is-active { translate: 0 1px; }
 
 @media (prefers-reduced-motion: reduce) {
-  .button { transition: none; }
+  .button { scale: none; transition: none; }
   .button-icon .icon-arrow { animation: none; }
 }
 
