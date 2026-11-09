@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 322 215" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<rect x="64" y="24" width="224" height="168" rx="2"/>
+<path d="M64 48H288M16 112H80M76 108L80 112L76 116"/>
+<path d="M107.5 79V88M163.5 79V88M115.5 96H155.5"/>
+<path d="M219.5 79V88" stroke-dasharray="2 4"/>
+<path d="M248 80V96"/>
+<g transform="translate(96 64) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(152 64) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(208 64) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(107.5 96) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(163.5 96) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(219.5 96) scale(0.625)" stroke-dasharray="2 4">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<path d="M107.5 143V152M163.5 143V152M115.5 160H155.5"/>
+<path d="M219.5 143V152" stroke-dasharray="2 4"/>
+<path d="M248 144V160"/>
+<g transform="translate(96 128) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(152 128) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(208 128) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(107.5 160) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(163.5 160) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(219.5 160) scale(0.625)" stroke-dasharray="2 4">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+</svg>

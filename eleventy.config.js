@@ -18,6 +18,7 @@ const careerImages = {
 };
 const heroSizes = '(min-width:1200px) 322px, (min-width:768px) calc(25vw - 32px), calc(100vw - 48px)';
 export default function(config) {
+  config.ignores.add('src/img/**/*.md');
   const readSite = () => Object.fromEntries(fs.readdirSync('content/site').filter(f=>f.endsWith('.json')).map(f=>[f.slice(0,-5),JSON.parse(fs.readFileSync(`content/site/${f}`))]));
   const records = kind => fs.readdirSync(`content/${kind}`).filter(f=>f.endsWith('.md')).map(file=>{
     const {data,content} = matter(fs.readFileSync(`content/${kind}/${file}`,'utf8'));
@@ -67,7 +68,12 @@ export default function(config) {
   config.addFilter('gapMarkup',value=>value.replace(/\[gap[^\]]*\]/g,'<mark class="content-gap">$&</mark>'));
   config.addAsyncShortcode('media',async function(src,alt,width=590,height=308,priority=false,gallery){
     const master = src==='/img/paul-headshot'?'assets/images/headshot.png':`src/img/_masters/${src.replace('/img/','')}.png`;
-    if (src.endsWith('.svg') && fs.existsSync(`src${src}`)) return `<figure class="diagram" role="img" aria-label="${escape(alt)}">${fs.readFileSync(`src${src}`,'utf8')}</figure>`;
+    if (src.endsWith('.svg') && fs.existsSync(`src${src}`)) {
+      const drawing = fs.readFileSync(`src${src}`,'utf8');
+      const box = drawing.match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/);
+      if (!box) throw new Error(`Drawing requires a zero-origin viewBox: ${src}`);
+      return `<figure class="diagram" role="img" aria-label="${escape(alt)}" style="--media-ratio:${box[1]}/${box[2]}">${drawing}</figure>`;
+    }
     if (!fs.existsSync(master)) return `<div class="media placeholder" role="img" aria-label="${escape(readSite().ui.imageComing)}" style="--media-ratio:${width}/${height}"><span class="visually-hidden">${escape(readSite().ui.imageComing)}</span></div>`;
     const career = careerImages[gallery];
     const sizes = career?.sizes ?? (priority ? heroSizes : `(min-width:1200px) ${width}px, (min-width:768px) 279px, calc(100vw - 48px)`);

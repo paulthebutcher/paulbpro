@@ -1,5 +1,36 @@
 # Agent notes
 
+### SVG drawings, November 8 Lead review
+
+- [observed] The November 8 evening `../build-pack/reference/image-production.md`
+  and Paul's current instructions govern the scenes. All work is on `dev`.
+- [observed] Paul supplied the dimensions from Figma file
+  `eFoQM2tITelXx3aVoYCryR`, Codex Pass node `23:230`. These override spec 06:
+  Work is 590×393 instead of its default 590×308; Lead is 322×215 instead of
+  322×240. Build dimensions agree with the drawing table in spec 06:
+  WCAG 676×450, Foundry and Identity 322×322, other builds 590×393. The older
+  676×412 responsive-image example and existing 322×320 tile calls are superseded.
+- [observed] Three Lead SVGs, three plain-language specs, and the proposed
+  five-part kit are present. `scripts/drawings.mjs lead` expands the snippets in
+  `src/img/_parts.md`. Small parts use scale 0.625 with non-scaling strokes.
+  Specs are edited before regenerating drawings. The kit remains provisional
+  until Paul approves the Lead sheet; no Work or build drawings have been made.
+- [observed] The media shortcode already supported inline SVGs. It now reads
+  their viewBox ratio, and SVG wrappers inherit the section foreground even
+  inside links. Production excludes the parts and specification Markdown files.
+- [observed] Company alt text now describes uncovered products being counted;
+  the drawing does not imply that a funding case was approved. Lead has no
+  accent paths, text, titles, ids, or literal colors.
+- [observed] `reference/screenshots/drawings-lead.png` was rendered with
+  Playwright at deviceScaleFactor 2. Each drawing was checked at exactly
+  322×215 CSS pixels. The sheet includes the current homepage build row with
+  its existing placeholders, explicitly marked as pending Lead approval.
+- [observed] `npm run build:preview` and `npm run a11y` pass for this checkpoint.
+  `npm run check:images` reports eight existing references still missing, all
+  Work/build images. The three additional build pages and their copy review
+  remain in the next group of work. This is the required Lead approval stop,
+  not completion of the fourteen-drawing request.
+
 - The user named /codex and /build-pack; those are the existing codex/ and build-pack/ directories inside the supplied workspace. All task writes stay in codex/.
 - The source content is copied into content/ unchanged. Added UI labels and the approved 404 copy in content/site/ui.json so templates carry no prose.
 - Missing scheduler, LinkedIn and résumé destinations render as unavailable controls in previews. Production rejects incomplete URLs, body gaps and the missing résumé.

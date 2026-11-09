@@ -86,3 +86,11 @@
   .identity { flex-direction: column; align-items: flex-start; gap: 0; }
   .identity > a { min-block-size: 0; }
 }
+
+/* Inline drawings inherit the section foreground, including inside links. */
+.diagram {
+  color: var(--fg);
+  border: 0;
+  box-shadow: inset 0 0 0 var(--hair) var(--line);
+}
+.diagram > svg { width: 100%; height: auto; }
