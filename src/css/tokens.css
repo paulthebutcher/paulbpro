@@ -8,17 +8,18 @@
   --periwinkle: #b4c1ff;
 
   /* Surface tints */
-  --line-on-pine: #245849;
-  --line-on-alabaster: #DBD7D6;
+  --line-on-pine: #285B4C;
+  --line-on-alabaster: #D7D3D2;
   --muted-on-pine: color-mix(in oklab, var(--alabaster) 62%, var(--pine));
   --muted-on-alabaster: color-mix(in oklab, var(--pine) 68%, var(--alabaster));
   --placeholder-on-pine: color-mix(in oklab, var(--alabaster) 18%, var(--pine));
   --placeholder-on-alabaster: color-mix(in oklab, var(--pine) 8%, var(--alabaster));
 
-  /* Monochrome grain stays on the contrast-preserving side of each surface. */
-  --grain-size: 160px;
-  --grain-pine: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer color-interpolation-filters='sRGB'%3E%3CfeFuncR type='linear' slope='.09' intercept='0'/%3E%3CfeFuncG type='linear' slope='.30' intercept='0'/%3E%3CfeFuncB type='linear' slope='.24' intercept='0'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
-  --grain-alabaster: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer color-interpolation-filters='sRGB'%3E%3CfeFuncR type='linear' slope='0.08' intercept='0.92'/%3E%3CfeFuncG type='linear' slope='0.08' intercept='0.92'/%3E%3CfeFuncB type='linear' slope='0.08' intercept='0.92'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  /* A shared grayscale tile; the light surface stays flat by default. */
+  --grain-size: 120px;
+  --grain-image: url("/img/surfaces/paper-grain.png");
+  --grain-pine: var(--grain-image);
+  --grain-alabaster: none;
 
   /* Fonts */
   --font-sans: "ABC Diatype", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
