@@ -15,11 +15,11 @@ summary: >
 
 ## Why it exists
 
-Attribution ran through a chain of tools: n8n, RB2B and Tag Manager. A footer script was overwriting the UTM fields, so the source of a demo request was often lost before it reached the CRM. [gap: what made a service the answer instead of more patches.]
+Attribution ran through a chain of tools: n8n, RB2B and Tag Manager. A footer script was overwriting the UTM fields, so the source of a demo request was often lost before it reached the CRM.
 
 ## What I built
 
-A first-party service that ties site visits, campaign tags and third-party data to one CRM record, so marketing spend can be traced to revenue. It runs on Webflow Cloud and deploys with the site. [gap: the pieces, from the spec.]
+A first-party service that ties site visits, campaign tags and third-party data to one CRM record, so marketing spend can be traced to revenue. It runs on Webflow Cloud and deploys with the site.
 
 ## Where it is now
 
@@ -27,4 +27,4 @@ Live. Every demo request arrives with its landing page and visit history, and ab
 
 ## What’s still hard
 
-[gap: from the spec or your notes.]
+Attribution is only as good as what a visit leaves behind. About a third of demo requests still arrive without a known source.

@@ -1,7 +1,20 @@
-# Draft deployment. For launch, use npm run build and ELEVENTY_ENV=production.
+# Branch deploys and deploy previews build in preview mode (noindex, gaps allowed).
+# Production (main) uses the strict build: indexable, and it fails on any [gap].
 [build]
   command = "npm run build:preview"
   publish = "dist"
+  environment = { NODE_VERSION = "22", ELEVENTY_ENV = "preview" }
+
+[context.production]
+  command = "npm run build"
+  environment = { NODE_VERSION = "22", ELEVENTY_ENV = "production" }
+
+[context.branch-deploy]
+  command = "npm run build:preview"
+  environment = { NODE_VERSION = "22", ELEVENTY_ENV = "preview" }
+
+[context.deploy-preview]
+  command = "npm run build:preview"
   environment = { NODE_VERSION = "22", ELEVENTY_ENV = "preview" }
 
 [[headers]]
