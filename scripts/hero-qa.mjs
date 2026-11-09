@@ -1,5 +1,4 @@
 import assert from 'node:assert/strict';
-import {createHash} from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {serve} from './server.mjs';
@@ -11,9 +10,11 @@ process.env.TMPDIR = path.resolve('.cache/tmp');
 process.env.PLAYWRIGHT_BROWSERS_PATH ??= path.resolve('.cache/playwright');
 const {chromium} = await import('playwright-core');
 const csp = (await fs.readFile('netlify.toml', 'utf8')).match(/Content-Security-Policy = "([^"]+)"/)[1];
-const bootstrap = (await fs.readFile('dist/index.html', 'utf8')).match(/<script>([\s\S]*?intro-ready[\s\S]*?)<\/script>/)[1];
-const hash = createHash('sha256').update(bootstrap).digest('base64');
-assert.ok(csp.includes(`'sha256-${hash}'`), 'Netlify CSP permits the rendered bootstrap');
+const indexHtml = await fs.readFile('dist/index.html', 'utf8');
+assert.ok(indexHtml.includes('<script src="/js/intro.js"></script>'), 'Homepage loads the intro bootstrap as an external script');
+assert.ok((await fs.readFile('dist/js/intro.js', 'utf8')).includes('intro-ready'), 'Intro bootstrap is published');
+assert.ok(!/<script>(?![\s]*<\/script>)/.test(indexHtml), 'No inline scripts, so the CSP needs no hashes');
+assert.ok(csp.includes("script-src 'self'"), 'CSP allows same-origin scripts');
 
 const server = await serve(4176);
 let browser;
