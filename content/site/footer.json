@@ -1,5 +1,5 @@
 {
-  "heading": "Pick a time.\nBring the mess.",
+  "heading": "Pick a time.\nTell me what you’re building.",
   "intro": "I’m looking for my next design and research leadership role. The easiest way to reach me is a short call.",
   "button": { "label": "Schedule time", "style": "filled", "icon": "outbound", "hrefKey": "scheduleUrl", "external": true },
   "links": [
