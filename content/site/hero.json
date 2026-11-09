@@ -1,0 +1,49 @@
+{
+  "headline": "Kind to people,\nhard on assumptions.",
+  "thesis": "I lead design and research for multi-product platforms, so several teams’ work adds up to one experience for the customer.",
+  "buttons": [
+    {
+      "label": "Let’s chat",
+      "style": "filled",
+      "icon": "outbound",
+      "hrefKey": "scheduleUrl",
+      "external": true
+    },
+    {
+      "label": "LinkedIn",
+      "style": "outline",
+      "icon": "outbound",
+      "hrefKey": "linkedin",
+      "external": true
+    }
+  ],
+  "portrait": {
+    "src": "/img/paul-headshot",
+    "alt": "Paul Butcher",
+    "width": 322,
+    "height": 322
+  },
+  "stats": [
+    {
+      "value": "$6M",
+      "caption": "Product investment avoided after research with 250 target buyers.",
+      "case": "six-million"
+    },
+    {
+      "value": "3 months",
+      "caption": "Analytics delivered against a two-year engineering estimate.",
+      "case": "analytics"
+    },
+    {
+      "value": "$25M",
+      "caption": "Target revenue back in play after a two-day workshop resolved an MVP deadlock.",
+      "case": "deadlock"
+    },
+    {
+      "value": "22 → 1",
+      "caption": "Hospital sites brought together for one children’s health system.",
+      "case": "shriners"
+    }
+  ],
+  "statsNote": "Order matches the Figma desktop frame: $6M, 3 months, $25M, 22 → 1. Tablet and mobile 2×2 keep this order, reading across then down."
+}

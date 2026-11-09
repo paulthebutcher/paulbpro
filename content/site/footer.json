@@ -1,0 +1,12 @@
+{
+  "heading": "Pick a time.\nBring the mess.",
+  "intro": "I’m looking for my next design and research leadership role. The easiest way to reach me is a short call.",
+  "button": { "label": "Schedule time", "style": "filled", "icon": "outbound", "hrefKey": "scheduleUrl", "external": true },
+  "links": [
+    { "label": "hello@paulb.pro", "hrefKey": "email", "type": "mailto" },
+    { "label": "LinkedIn", "hrefKey": "linkedin", "external": true },
+    { "label": "Résumé (PDF)", "hrefKey": "resume" }
+  ],
+  "portrait": { "src": "/img/paul-headshot", "alt": "Paul Butcher", "width": 322, "height": 322 },
+  "copyright": "© {year} Paul Butcher · Salt Lake City (open to relocation) · Designed and built by me"
+}

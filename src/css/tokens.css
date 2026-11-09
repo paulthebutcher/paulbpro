@@ -1,0 +1,134 @@
+/* paulb.pro design tokens. Source of truth: tokens.json. Do not add values here that are not in the JSON. */
+
+:root {
+  /* Brand */
+  --pine: #174f3f;
+  --alabaster: #eae6e5;
+  --royal: #0d21a1;
+  --periwinkle: #b4c1ff;
+
+  /* Derived tints. Lines and muted text are tinted from the section background, never from the brand green on its own. */
+  --line-on-pine: color-mix(in oklab, var(--alabaster) 14%, var(--pine));
+  --line-on-alabaster: color-mix(in oklab, var(--pine) 12%, var(--alabaster));
+  --muted-on-pine: color-mix(in oklab, var(--alabaster) 62%, var(--pine));
+  --muted-on-alabaster: color-mix(in oklab, var(--pine) 68%, var(--alabaster));
+  --placeholder-on-pine: color-mix(in oklab, var(--alabaster) 18%, var(--pine));
+  --placeholder-on-alabaster: color-mix(in oklab, var(--pine) 8%, var(--alabaster));
+
+  /* Fonts */
+  --font-sans: "ABC Diatype", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "ABC Diatype Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Type scale: fluid between mobile (402) and desktop (1512). Values from tokens.json. */
+  --fs-display:    clamp(2.75rem, 1.63rem + 4.68vw, 6rem);       /* 44 to 96 */
+  --fs-display2:   clamp(2.25rem, 1.61rem + 2.52vw, 4rem);       /* 36 to 64 */
+  --fs-closing:    clamp(1.875rem, 1.47rem + 1.62vw, 3rem);      /* 30 to 48 */
+  --fs-stat:       clamp(2.25rem, 1.98rem + 1.08vw, 3rem);       /* 36 to 48 */
+  --fs-level:      clamp(2.25rem, 1.98rem + 1.08vw, 3rem);       /* 36 to 48 */
+  --fs-card-title: clamp(1.5rem, 1.32rem + 0.72vw, 2rem);        /* 24 to 32 */
+  --fs-principle:  clamp(1.375rem, 1.24rem + 0.54vw, 1.75rem);   /* 22 to 28 */
+  --fs-intro:      clamp(1.0625rem, 1.02rem + 0.27vw, 1.25rem);  /* 17 to 20 */
+  --fs-body: 1rem;
+  --fs-small: 0.9375rem;
+  --fs-nav: 1rem;
+  --fs-mono: 0.75rem;
+  --fs-mono-small: 0.6875rem;
+
+  --lh-display: 1.02;
+  --lh-display2: 1.06;
+  --lh-closing: 1.15;
+  --lh-tight: 1.1;
+  --lh-heading: 1.2;
+  --lh-intro: 1.4;
+  --lh-body: 1.5;
+
+  --ls-display: -0.02em;
+  --ls-display2: -0.015em;
+  --ls-tight: -0.01em;
+  --ls-heading: -0.005em;
+  --ls-mono: 0.03em;
+
+  /* Spacing (8-based) */
+  --s-1: 0.5rem;  --s-2: 1rem;  --s-3: 1.5rem;  --s-4: 2rem;
+  --s-6: 3rem;    --s-8: 4rem;  --s-12: 6rem;   --s-16: 8rem;  --s-24: 12rem;
+
+  /* Grid */
+  --grid-columns: 4;
+  --grid-margin: 16px;
+  --grid-inset: 8px;
+  --card-gap: 16px;
+  --frame-max: 1512px;
+
+  /* Shape and line */
+  --r-button: 999px;
+  --r-card: 2px;
+  --hair: 1px;
+  --stroke-diagram: 1.5px;
+  --stroke-accent: 2px;
+
+  /* Motion */
+  --t-fast: 150ms;
+  --t-base: 200ms;
+  --t-draw: 1200ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Controls */
+  --button-h: 56px;
+  --button-px: 20px;
+  --icon: 18px;
+  --tag-w: 92px;
+  --tag-h: 32px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --grid-columns: 8;
+    --grid-margin: 24px;
+    --grid-inset: 8px;
+    --card-gap: 16px;
+    --button-px: 24px;
+    --tag-w: 98px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --grid-columns: 12;
+    --grid-margin: 48px;
+    --grid-inset: 16px;
+    --card-gap: 32px;
+    --button-h: 64px;
+    --icon: 20px;
+    --tag-w: 119px;
+  }
+}
+
+/* Section color contexts. Every section sets one of these; components read the semantic names. */
+.on-pine {
+  --bg: var(--pine);
+  --fg: var(--alabaster);
+  --accent: var(--periwinkle);
+  --line: var(--line-on-pine);
+  --muted: var(--muted-on-pine);
+  --placeholder: var(--placeholder-on-pine);
+  --button-bg: var(--periwinkle);
+  --button-fg: var(--pine);
+  background: var(--bg);
+  color: var(--fg);
+}
+.on-alabaster {
+  --bg: var(--alabaster);
+  --fg: var(--pine);
+  --accent: var(--royal);
+  --line: var(--line-on-alabaster);
+  --muted: var(--muted-on-alabaster);
+  --placeholder: var(--placeholder-on-alabaster);
+  --button-bg: var(--royal);
+  --button-fg: var(--alabaster);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --t-fast: 0ms; --t-base: 0ms; --t-draw: 0ms; }
+}

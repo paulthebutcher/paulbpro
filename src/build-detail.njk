@@ -1,0 +1,9 @@
+---
+layout: base.njk
+pagination:
+  data: collections.builds
+  size: 1
+  alias: entry
+permalink: "{{ entry.url }}"
+---
+{% include 'detail-content.njk' %}

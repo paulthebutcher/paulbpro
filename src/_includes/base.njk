@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if entry %}{{ entry.data.title }}, {{ site.site.name }}{% elif errorPage %}{{ site.ui.notFound.title }} {{ site.site.name }}{% else %}{{ site.site.pageTitle }}{% endif %}</title>
+<meta name="description" content="{{ site.site.description }}"><meta name="theme-color" content="{{ site.site.themeColor }}">
+<meta property="og:title" content="{% if entry %}{{ entry.data.title }}{% else %}{{ site.site.pageTitle }}{% endif %}"><meta property="og:description" content="{{ site.site.description }}"><meta property="og:image" content="{{ site.site.url }}{{ site.site.ogImage }}"><meta property="og:type" content="website"><meta property="og:url" content="{{ site.site.url }}{{ page.url }}">
+<link rel="canonical" href="{{ site.site.url }}{{ page.url }}"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/ABCDiatype-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/ABCDiatypeMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+{% if home %}<link rel="preload" as="image" type="image/avif" href="/img/paul-headshot-322.avif" imagesrcset="/img/paul-headshot-322.avif 322w, /img/paul-headshot-644.avif 644w" imagesizes="(min-width:1200px) 322px, (min-width:768px) 279px, calc(100vw - 48px)">{% endif %}
+{% styles %}<script type="module" src="/js/main.js"></script>
+</head><body class="on-alabaster{% if not production %} development{% endif %}"><a class="skip-link button filled" href="#main">{{ site.ui.skip }}</a>
+{{ content | safe }}
+</body></html>

@@ -1,0 +1,71 @@
+
+> build
+> ELEVENTY_ENV=production eleventy
+
+TRIAL FONTS. Replace before launch: assets/fonts/ABCDiatypeTrial-Regular.otf
+TRIAL FONTS. Replace before launch: assets/fonts/ABCDiatypeMonoTrial-Regular.otf
+[11ty] Writing ./dist/robots.txt from ./src/robots.njk
+[11ty] Writing ./dist/sitemap.xml from ./src/sitemap.njk
+[11ty] Writing ./dist/404.html from ./src/404.njk
+[11ty] Writing ./dist/build/foundry/index.html from ./src/build-detail.njk
+[11ty] Writing ./dist/work/deadlock/index.html from ./src/detail.njk
+[11ty] Writing ./dist/index.html from ./src/index.njk
+[11ty] Writing ./dist/build/wcag-engine/index.html from ./src/build-detail.njk
+[11ty] Writing ./dist/work/analytics/index.html from ./src/detail.njk
+[11ty] Writing ./dist/build/identity-service/index.html from ./src/build-detail.njk
+[11ty] Writing ./dist/work/six-million/index.html from ./src/detail.njk
+[11ty] Writing ./dist/work/ux-practice/index.html from ./src/detail.njk
+[11ty] Writing ./dist/work/shriners/index.html from ./src/detail.njk
+[11ty] Problem writing Eleventy templates:
+[11ty] Production blocked: unfinished copy or forbidden punctuation in:
+[11ty] build/foundry/index.html
+[11ty] build/identity-service/index.html
+[11ty] build/wcag-engine/index.html
+[11ty] work/shriners/index.html
+[11ty] work/six-million/index.html
+[11ty] work/ux-practice/index.html
+[11ty] content/site/site.json: linkedin
+[11ty] content/site/site.json: scheduleUrl
+[11ty]
+[11ty] Original error stack trace: Error: Production blocked: unfinished copy or forbidden punctuation in:
+[11ty] build/foundry/index.html
+[11ty] build/identity-service/index.html
+[11ty] build/wcag-engine/index.html
+[11ty] work/shriners/index.html
+[11ty] work/six-million/index.html
+[11ty] work/ux-practice/index.html
+[11ty] content/site/site.json: linkedin
+[11ty] content/site/site.json: scheduleUrl
+[11ty]     at AsyncEventEmitter.<anonymous> (file:///Users/paulbutcher/Developer/Websites/paulb.pro/codex/eleventy.config.js:54:31)
+[11ty]     at file:///Users/paulbutcher/Developer/Websites/paulb.pro/codex/node_modules/@11ty/eleventy/src/Util/AsyncEventEmitter.js:50:22
+[11ty]     at Array.map (<anonymous>)
+[11ty]     at AsyncEventEmitter.emit (file:///Users/paulbutcher/Developer/Websites/paulb.pro/codex/node_modules/@11ty/eleventy/src/Util/AsyncEventEmitter.js:49:15)
+[11ty]     at Eleventy.executeBuild (file:///Users/paulbutcher/Developer/Websites/paulb.pro/codex/node_modules/@11ty/eleventy/src/Eleventy.js:1460:29)
+[11ty]     at async exec (/Users/paulbutcher/Developer/Websites/paulb.pro/codex/node_modules/@11ty/eleventy/cmd.cjs:131:5)
+[11ty] Copied 4 Wrote 12 files in 0.12 seconds (v3.1.8)
+[11ty] Eleventy Fatal Error (CLI):
+[11ty] Production blocked: unfinished copy or forbidden punctuation in:
+[11ty] build/foundry/index.html
+[11ty] build/identity-service/index.html
+[11ty] build/wcag-engine/index.html
+[11ty] work/shriners/index.html
+[11ty] work/six-million/index.html
+[11ty] work/ux-practice/index.html
+[11ty] content/site/site.json: linkedin
+[11ty] content/site/site.json: scheduleUrl
+[11ty]
+[11ty] Original error stack trace: Error: Production blocked: unfinished copy or forbidden punctuation in:
+[11ty] build/foundry/index.html
+[11ty] build/identity-service/index.html
+[11ty] build/wcag-engine/index.html
+[11ty] work/shriners/index.html
+[11ty] work/six-million/index.html
+[11ty] work/ux-practice/index.html
+[11ty] content/site/site.json: linkedin
+[11ty] content/site/site.json: scheduleUrl
+[11ty]     at AsyncEventEmitter.<anonymous> (file:///Users/paulbutcher/Developer/Websites/paulb.pro/codex/eleventy.config.js:54:31)
+[11ty]     at file:///Users/paulbutcher/Developer/Websites/paulb.pro/codex/node_modules/@11ty/eleventy/src/Util/AsyncEventEmitter.js:50:22
+[11ty]     at Array.map (<anonymous>)
+[11ty]     at AsyncEventEmitter.emit (file:///Users/paulbutcher/Developer/Websites/paulb.pro/codex/node_modules/@11ty/eleventy/src/Util/AsyncEventEmitter.js:49:15)
+[11ty]     at Eleventy.executeBuild (file:///Users/paulbutcher/Developer/Websites/paulb.pro/codex/node_modules/@11ty/eleventy/src/Eleventy.js:1460:29)
+[11ty]     at async exec (/Users/paulbutcher/Developer/Websites/paulb.pro/codex/node_modules/@11ty/eleventy/cmd.cjs:131:5)

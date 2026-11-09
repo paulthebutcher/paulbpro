@@ -1,0 +1,31 @@
+import fs from 'node:fs';
+import subsetFont from 'subset-font';
+import {createHash} from 'node:crypto';
+import sharp from 'sharp';
+export async function prepareAssets(site){
+  fs.mkdirSync('.cache',{recursive:true});
+  fs.mkdirSync('dist/fonts',{recursive:true});
+  for(const family of ['ABCDiatype','ABCDiatypeMono']){
+    const licensed=`src/fonts/${family}-Regular.woff2`;
+    const trial=`assets/fonts/${family}Trial-Regular.otf`;
+    const dest=`dist/fonts/${family}-Regular.woff2`;
+    if(fs.existsSync(licensed)) fs.copyFileSync(licensed,dest);
+    else {
+      console.warn(`TRIAL FONTS. Replace before launch: ${trial}`);
+      const text = Array.from({length:95},(_,i)=>String.fromCodePoint(i+32)).join('') + '←→↗©’“”·' + fs.readdirSync('content',{recursive:true}).filter(f=>/\.(json|md)$/.test(f)).map(f=>fs.readFileSync(`content/${f}`,'utf8')).join('');
+      const hash=createHash('sha256').update(text).update(fs.readFileSync(trial)).digest('hex').slice(0,12);
+      const cache=`.cache/${family}Trial-${hash}.woff2`;
+      if(!fs.existsSync(cache)) fs.writeFileSync(cache,await subsetFont(fs.readFileSync(trial),text,{targetFormat:'woff2'}));
+      fs.copyFileSync(cache,dest);
+    }
+  }
+  const tokens=fs.readFileSync('src/css/tokens.css','utf8');
+  const color=name=>tokens.match(new RegExp(`--${name}: (#[a-f0-9]+)`))[1];
+  const pine=color('pine'), paper=color('alabaster');
+  const favicon=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="${pine}"/><path d="M16 47V24h8a8 8 0 0 1 0 16h-8M38 17v23h8a8 8 0 0 0 0-16h-8" fill="none" stroke="${paper}" stroke-width="1.5" stroke-linecap="round"/></svg>`;
+  fs.writeFileSync('dist/favicon.svg',favicon);
+  await sharp(Buffer.from(favicon)).resize(180,180).png().toFile('dist/apple-touch-icon.png');
+  const lines=site.hero.headline.split('\n');
+  const og=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630"><rect width="1200" height="630" fill="${pine}"/><g fill="${paper}" font-family="Helvetica, Arial, sans-serif"><text x="64" y="245" font-size="80">${lines[0]}</text><text x="64" y="340" font-size="80">${lines[1]}</text><text x="64" y="550" font-family="monospace" font-size="24">${site.site.domain}</text></g></svg>`;
+  await sharp(Buffer.from(og)).png().toFile('dist/og.png');
+}

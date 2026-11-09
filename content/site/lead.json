@@ -1,0 +1,44 @@
+{
+  "tag": "lead",
+  "headline": "Firm on who,\nloose on how.",
+  "intro": [
+    "I keep one map of the team: what each person owns, what they’re the go-to for, and where they want to grow next. Who takes which work, who helps whom, and what we ask the business to fund all come from it.",
+    "Each person gets growth they chose, the team solves most problems without me, and the company gets a design group that’s easy to plan around."
+  ],
+  "levels": [
+    {
+      "id": "person",
+      "label": "Person",
+      "image": "/img/lead/person.svg",
+      "imageAlt": "One node on a map with a product and a specialty attached, and an arrow pointing in the direction it wants to grow.",
+      "principles": [
+        { "headline": "One product,\none specialty.", "body": "Each designer owns a product’s design and research, and is the team’s go-to for one specialty. Everyone knows who to ask and what they own." },
+        { "headline": "Goals they wrote,\ntied to yours.", "body": "Each quarter we write personal goals against what the business needs. I assign work to match, so growth and delivery follow the same plan." },
+        { "headline": "I coach judgment,\nnot process.", "body": "Our 1:1s work on reading a room, saying “not yet,” and choosing the next move when a partner is stuck. Each team needs different judgment." }
+      ]
+    },
+    {
+      "id": "team",
+      "label": "Team",
+      "image": "/img/lead/team.svg",
+      "imageAlt": "Six nodes on a map with arrows between neighbors and none pointing to a center.",
+      "principles": [
+        { "headline": "Problems route\nsideways first.", "body": "Specialties help the team answer most questions together. That keeps me out of the critical path and makes it clear who the senior people are." },
+        { "headline": "The team owns\nthe quality bar.", "body": "A weekly roundtable and design review decides what we improve and who leads it, so standards hold whether or not I’m in the room." },
+        { "headline": "Stuck work gets a\nsecond pair of hands.", "body": "When something stalls I work alongside the designer. They keep ownership of the project, build their judgment, and need less of me the next time." }
+      ]
+    },
+    {
+      "id": "company",
+      "label": "Company",
+      "image": "/img/lead/company.svg",
+      "imageAlt": "The whole team map drawn as a sheet, with a request entering from the left and a headcount case leaving to the right.",
+      "principles": [
+        { "headline": "Talk before it\nbecomes a ticket.", "body": "Every request starts with a conversation about the outcome, what each team needs, and the dates involved. That gives you timelines you can plan around." },
+        { "headline": "Cover the gap\nand count it.", "body": "Products without a designer get what we can give. I track what that costs and use the count to build the headcount case I bring you." },
+        { "headline": "Team shape is\na design decision.", "body": "Structure changes retention and work quality, so I’d design it for your company and expect it to look different from the last one." }
+      ]
+    }
+  ],
+  "closing": "The map is the one constant. Each company gets its own version, and the work changes with it."
+}

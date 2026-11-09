@@ -1,0 +1,31 @@
+{
+  "name": "paulb-pro",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "ELEVENTY_ENV=production eleventy",
+    "build:preview": "eleventy",
+    "a11y": "npm run build:preview && node scripts/qa.mjs a11y",
+    "lighthouse": "npm run build:preview && node scripts/qa.mjs lighthouse",
+    "screenshots": "npm run build:preview && node scripts/qa.mjs screenshots",
+    "check:images": "node scripts/check-images.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@axe-core/cli": "^4.10.2",
+    "@lhci/cli": "^0.15.1",
+    "axe-core": "^4.10.3",
+    "gray-matter": "^4.0.3",
+    "lighthouse": "^12.8.2",
+    "markdown-it": "^14.1.0",
+    "playwright-core": "^1.56.1",
+    "sharp": "^0.33.5",
+    "subset-font": "^2.9.0",
+    "wawoff2": "^2.0.1"
+  }
+}

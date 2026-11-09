@@ -1,0 +1,36 @@
+{
+  "headline": "Most of my job is getting everyone onto one shared picture.",
+  "resumeButton": { "label": "Download my résumé", "icon": "download", "hrefKey": "resume" },
+  "roles": [
+    { "eyebrow": "now", "items": [
+      { "role": "Growth design & analytics", "org": "Popfly" },
+      { "role": "Product design & strategy", "org": "Butcher Built" }
+    ]},
+    { "eyebrow": "before", "items": [
+      { "role": "Director, experience strategy", "org": "Mastercard", "case": "ux-practice" },
+      { "role": "Solutions architect, enterprise architecture", "org": "Zions Bancorporation" },
+      { "role": "Senior digital strategist & UX architect", "org": "Valtech", "case": "shriners" },
+      { "role": "Senior UX designer & front-end developer", "org": "42connect" }
+    ]}
+  ],
+  "objects": [
+    { "caption": "banking", "src": "/img/about/banking" },
+    { "caption": "healthcare", "src": "/img/about/healthcare" },
+    { "caption": "payments", "src": "/img/about/payments" },
+    { "caption": "security", "src": "/img/about/security" }
+  ],
+  "paper": [
+    { "caption": "engineering", "src": "/img/about/engineering" },
+    { "caption": "product", "src": "/img/about/product" },
+    { "caption": "services", "src": "/img/about/services" },
+    { "caption": "support", "src": "/img/about/support" },
+    { "caption": "finance", "src": "/img/about/finance" },
+    { "caption": "sales", "src": "/img/about/sales" },
+    { "caption": "marketing", "src": "/img/about/marketing" },
+    { "caption": "legal", "src": "/img/about/legal" }
+  ],
+  "paragraphs": [
+    "Customers deal with one company, and they notice each seam where many teams’ efforts don’t quite line up. I’ve done this work in banking, payments, security and healthcare, places with more products than anybody planned and someone who only wants to book an appointment or move money. As I see it, the job is looking after the whole: what connects, what merges, and what shouldn’t exist yet.",
+    "That takes people from rooms that rarely talk: engineering, finance, marketing, support. I’ve spent time in most of them, writing front-end code, presenting technology roadmaps to a bank’s governance boards, and researching what buyers would really pay for. So I’m comfortable in a design critique and a pricing conversation, sometimes on the same day."
+  ]
+}
