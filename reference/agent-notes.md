@@ -24,7 +24,7 @@
 
 ### SVG drawings, November 8 Lead review
 
-- [observed] The November 8 evening `../build-pack/reference/image-production.md`
+- [observed] The November 8 evening image production brief
   and Paul's current instructions govern the scenes. All work is on `dev`.
 - [observed] Paul supplied the dimensions from Figma file
   `eFoQM2tITelXx3aVoYCryR`, Codex Pass node `23:230`. These override spec 06:
@@ -53,7 +53,7 @@
   remain in the next group of work. This is the required Lead approval stop,
   not completion of the fourteen-drawing request.
 
-- The user named /codex and /build-pack; those are the existing codex/ and build-pack/ directories inside the supplied workspace. All task writes stay in codex/.
+- The initial implementation kept task writes in the site repository.
 - The source content is copied into content/ unchanged. Added UI labels and the approved 404 copy in content/site/ui.json so templates carry no prose.
 - Missing scheduler, LinkedIn and résumé destinations render as unavailable controls in previews. Production rejects incomplete URLs, body gaps and the missing résumé.
 - Missing image masters render the specified placeholders. No invented product screens or client artifacts.

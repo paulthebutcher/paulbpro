@@ -8,7 +8,7 @@ Recorded 2026-11-08. Tested locally with installed Chrome and Node v24.22.1; .nv
 - Lead: Person, Team and Company respond to scroll, arrow-key focus and Enter activation.
 - Reduced motion, short viewport, 200% text enlargement and disabled JavaScript expose the stacked layout.
 - All generated routes and image loads checked; no client runtime errors.
-- Tokens are unchanged from the build pack. No raw hex or em dash in templates, handwritten CSS outside tokens, or client JS.
+- Tokens matched the original design handoff at the time of this check. No raw hex or em dash in templates, handwritten CSS outside tokens, or client JS.
 - Supplied content matches the pack; only UI labels were added in a separate JSON file.
 
 | Mobile Lighthouse | Home | Deadlock |
