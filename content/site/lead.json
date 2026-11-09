@@ -2,8 +2,7 @@
   "tag": "lead",
   "headline": "Firm on who,\nloose on how.",
   "intro": [
-    "I keep one map of the team: what each person owns, what they’re the go-to for, and where they want to grow next. Who takes which work, who helps whom, and what we ask the business to fund all come from it.",
-    "Each person gets growth they chose, the team solves most problems without me, and the company gets a design group that’s easy to plan around."
+    "I keep one map of the team. Along with who owns what and who people turn to for help, it tracks where each person wants to grow, which is the part most org charts leave out. Staffing and funding asks come from that map, so people get growth they chose and the company gets a design group that helps set the plan."
   ],
   "levels": [
     {
@@ -12,7 +11,7 @@
       "image": "/img/lead/person.svg",
       "imageAlt": "A person sits within concentric map guides, connected to product and specialty tags, with an outward arrow marking their chosen growth direction.",
       "principles": [
-        { "headline": "One product,\none specialty.", "body": "Each designer owns a product’s design and research, and is the team’s go-to for one specialty. Everyone knows who to ask and what they own." },
+        { "headline": "Ownership people\ncan find.", "body": "Product partners should know which designer to call, and designers should know which teammate to ask. I shape ownership around how the company already works so both answers are obvious." },
         { "headline": "Goals they wrote,\ntied to yours.", "body": "Each quarter we write personal goals against what the business needs. I assign work to match, so growth and delivery follow the same plan." },
         { "headline": "I coach judgment,\nnot process.", "body": "Our 1:1s work on reading a room, saying “not yet,” and choosing the next move when a partner is stuck. Each team needs different judgment." }
       ]
@@ -32,13 +31,16 @@
       "id": "company",
       "label": "Company",
       "image": "/img/lead/company.svg",
-      "imageAlt": "A request enters a sheet of products and concentric coverage guides, with four designer nodes and two tally marks counting unstaffed products.",
+      "imageAlt": "An arrow leads into a shared map of products and designers, where two marks show gaps in design coverage.",
       "principles": [
-        { "headline": "Talk before it\nbecomes a ticket.", "body": "Every request starts with a conversation about the outcome, what each team needs, and the dates involved. That gives you timelines you can plan around." },
-        { "headline": "Cover the gap\nand count it.", "body": "Products without a designer get what we can give. I track what that costs and use the count to build the headcount case I bring you." },
-        { "headline": "Team shape is\na design decision.", "body": "Structure changes retention and work quality, so I’d design it for your company and expect it to look different from the last one." }
+        { "headline": "The customer gets\na seat at the table.", "body": "Product brings the business case and engineering brings what’s feasible to build. Design brings what customers need, and I make sure that carries equal weight when we decide what to build." },
+        { "headline": "Name the gaps\nout loud.", "body": "Some products won’t have a designer. I make the cost visible in customer and business terms, so staffing is a decision we make together instead of a quiet backlog." },
+        { "headline": "Team shape is\na design decision.", "body": "Structure shapes retention and the quality of the work, so I design it with the leaders it serves." }
       ]
     }
   ],
-  "closing": "The map is the one constant. Each company gets its own version, and the work changes with it."
+  "closing": {
+    "statement": "The map is the one constant.",
+    "note": "Each company gets its own version, and the work changes with it."
+  }
 }
