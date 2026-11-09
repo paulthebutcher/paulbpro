@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 393" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<g opacity="0.14">
+<path d="M40 48H550M40 344H550" stroke-dasharray="1 4"/>
+<path d="M80 40V352" stroke-dasharray="1 4"/>
+<path d="M184 40V352" stroke-dasharray="1 4"/>
+<path d="M304 40V352" stroke-dasharray="1 4"/>
+<path d="M416 40V352" stroke-dasharray="1 4"/>
+<path d="M512 40V352" stroke-dasharray="1 4"/>
+<rect x="38" y="46" width="4" height="4"/>
+<rect x="548" y="46" width="4" height="4"/>
+<rect x="38" y="342" width="4" height="4"/>
+<rect x="548" y="342" width="4" height="4"/>
+</g>
+<g opacity="0.24">
+<g transform="translate(40 88) scale(1)">
+<path d="M0 0H510" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(40 160) scale(1)">
+<path d="M0 0H510" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(40 232) scale(1)">
+<path d="M0 0H510" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(40 304) scale(1)">
+<path d="M0 0H510" vector-effect="non-scaling-stroke"/>
+</g>
+</g>
+<g opacity="0.18">
+<circle cx="186" cy="140" r="24"/>
+<circle cx="186" cy="140" r="48"/>
+<circle cx="410" cy="212" r="24"/>
+<circle cx="410" cy="212" r="48"/>
+</g>
+<g opacity="0.72">
+<rect x="392" y="280" width="144" height="64" rx="2" stroke-dasharray="4 6"/>
+<g transform="translate(400 192) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(488 208) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+</g>
+<g opacity="0.9">
+<g transform="translate(64 72) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(112 88) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(160 72) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(72 128) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(120 144) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(168 128) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(240 88) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(288 72) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(336 88) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(248 144) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(296 160) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(344 144) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(392 200) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(480 216) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(400 296) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(440 312) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(488 296) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<path d="M156 100L200 68M116 172L160 140M332 116L376 84"/>
+</g>
+<path class="decision" d="M32 84H82V112H186V140H224V84H306V120H384V192H410V212H456V228H552M544 220L552 228L544 236" stroke="var(--accent)" stroke-width="2" fill="none"/>
+</svg>

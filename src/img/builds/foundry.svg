@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 322 322" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<g opacity="0.14">
+<path d="M40 48H282M40 273H282" stroke-dasharray="1 4"/>
+<path d="M40 40V281" stroke-dasharray="1 4"/>
+<path d="M80 40V281" stroke-dasharray="1 4"/>
+<path d="M160 40V281" stroke-dasharray="1 4"/>
+<path d="M240 40V281" stroke-dasharray="1 4"/>
+<path d="M280 40V281" stroke-dasharray="1 4"/>
+<rect x="38" y="46" width="4" height="4"/>
+<rect x="280" y="46" width="4" height="4"/>
+<rect x="38" y="271" width="4" height="4"/>
+<rect x="280" y="271" width="4" height="4"/>
+</g>
+<g opacity="0.18">
+<circle cx="40" cy="200" r="20"/>
+<circle cx="80" cy="200" r="20"/>
+<circle cx="120" cy="200" r="20"/>
+<circle cx="160" cy="200" r="20"/>
+<circle cx="200" cy="200" r="20"/>
+<circle cx="240" cy="200" r="20"/>
+<circle cx="280" cy="200" r="20"/>
+<circle cx="200" cy="112" r="32"/>
+</g>
+<g opacity="0.36">
+<circle cx="40" cy="200" r="12"/>
+<circle cx="80" cy="200" r="12"/>
+<circle cx="120" cy="200" r="12"/>
+<circle cx="160" cy="200" r="12"/>
+<circle cx="200" cy="200" r="12"/>
+<circle cx="240" cy="200" r="12"/>
+<circle cx="280" cy="200" r="12"/>
+<circle cx="200" cy="112" r="16"/>
+</g>
+<g opacity="0.72">
+<path d="M48 200H72"/>
+<path d="M88 200H112"/>
+<path d="M128 200H152"/>
+<path d="M168 200H192"/>
+<path d="M208 200H232"/>
+<path d="M248 200H272"/>
+<path d="M160 208V232"/>
+<rect x="144" y="232" width="48" height="40" rx="2" stroke-dasharray="4 6"/>
+</g>
+<g opacity="0.9">
+<g transform="translate(48 48) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(64 64) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(88 40) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(96 88) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(156 244) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(40 200) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(80 200) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(120 200) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(160 200) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(200 200) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(240 200) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(280 200) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(200 112) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+</g>
+<path class="decision" d="M75.5 71.5V112H64V160H80V200H104V112H192M188 108L192 112L188 116" stroke="var(--accent)" stroke-width="2" fill="none"/>
+</svg>

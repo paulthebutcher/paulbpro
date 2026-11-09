@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 322 322" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<g opacity="0.14">
+<path d="M40 48H282M40 273H282" stroke-dasharray="1 4"/>
+<path d="M48 40V281" stroke-dasharray="1 4"/>
+<path d="M136 40V281" stroke-dasharray="1 4"/>
+<path d="M232 40V281" stroke-dasharray="1 4"/>
+<rect x="38" y="46" width="4" height="4"/>
+<rect x="280" y="46" width="4" height="4"/>
+<rect x="38" y="271" width="4" height="4"/>
+<rect x="280" y="271" width="4" height="4"/>
+</g>
+<g opacity="0.18">
+<circle cx="136" cy="160" r="40"/>
+<circle cx="136" cy="160" r="24"/>
+</g>
+<g opacity="0.36">
+<circle cx="136" cy="160" r="12"/>
+</g>
+<g opacity="0.9">
+<g transform="translate(48 72) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(64 72) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(80 72) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(48 144) scale(0.625)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(40 208) scale(0.625)">
+<rect width="48" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M8 16H40M8 32H40M8 48H32" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(48 216) scale(0.625)">
+<rect width="48" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M8 16H40M8 32H40M8 48H32" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(56 224) scale(0.625)">
+<rect width="48" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M8 16H40M8 32H40M8 48H32" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(184 96) scale(2)">
+<rect width="48" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M8 16H40M8 32H40M8 48H32" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(136 160) scale(0.625)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+</g>
+<path class="decision" d="M88 72H112V160H264M70.5 151.5H96V160H136M86 240H112V160" stroke="var(--accent)" stroke-width="2" fill="none"/>
+</svg>

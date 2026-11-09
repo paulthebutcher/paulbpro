@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {workScenes, buildScenes} from './drawing-scenes.mjs';
 
 const kit = fs.readFileSync('src/img/_parts.md', 'utf8');
 const parts = Object.fromEntries([...kit.matchAll(/## (\w+)\n[\s\S]*?```svg\n([\s\S]*?)\n```/g)]
@@ -16,6 +17,34 @@ const svg = (width, height, content) => `<svg xmlns="http://www.w3.org/2000/svg"
 const layer = (opacity, content) => `<g opacity="${opacity}">\n${content.join('\n')}\n</g>`;
 const ring = (x, y, radius) => `<circle cx="${x}" cy="${y}" r="${radius}"/>`;
 const register = (x, y) => `<rect x="${x - 2}" y="${y - 2}" width="4" height="4"/>`;
+
+const decision = d => `<path class="decision" d="${d}" stroke="var(--accent)" stroke-width="2" fill="none"/>`;
+const lane = (x, y, length) => part('lane', x, y).replace('H64', `H${length}`);
+const page = (x, y, width = 80, height = 64, header = 16) => part('page', x, y)
+  .replace('width="80"', `width="${width}"`).replace('height="64"', `height="${height}"`)
+  .replace('M0 16H80', `M0 ${header}H${width}`);
+const guides = (width, height, columns) => layer(0.14, [
+  route(`M40 48H${width-40}M40 ${height-49}H${width-40}`,'stroke-dasharray="1 4"'),
+  ...columns.map(x => route(`M${x} 40V${height-41}`, 'stroke-dasharray="1 4"')),
+  ...[[40,48],[width-40,48],[40,height-49],[width-40,height-49]].map(([x,y])=>register(x,y)),
+]);
+const drawingKit = {part, route, layer, ring, register, decision, guides, page, lane};
+
+export function generateWork() {
+  fs.mkdirSync('src/img/cases', {recursive:true});
+  // Object order keeps deadlock first, as required by the production brief.
+  for (const [name, content] of Object.entries(workScenes(drawingKit))) {
+    fs.writeFileSync(`src/img/cases/${name}.svg`, svg(590,393,content));
+  }
+}
+
+export function generateBuilds() {
+  fs.mkdirSync('src/img/builds', {recursive:true});
+  // Homepage row first: WCAG Engine, Foundry, Identity Service.
+  for (const [name, {width,height,content}] of Object.entries(buildScenes(drawingKit))) {
+    fs.writeFileSync(`src/img/builds/${name}.svg`, svg(width,height,content));
+  }
+}
 
 export function generateLead() {
   const person = [
@@ -91,7 +120,8 @@ export function generateLead() {
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const group = process.argv[2] || 'lead';
-  if (group !== 'lead') throw new Error('Only the Lead group is ready; awaiting style approval.');
-  generateLead();
-  console.log('Generated three Lead drawings from the shared parts and Lead specs.');
+  const generators = {lead: generateLead, work: generateWork, builds: generateBuilds};
+  if (!generators[group]) throw new Error(`Unknown drawing group: ${group}`);
+  generators[group]();
+  console.log(`Generated ${group} drawings from the approved shared parts and specs.`);
 }

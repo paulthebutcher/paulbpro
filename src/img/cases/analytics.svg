@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 393" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<g opacity="0.14">
+<path d="M40 48H550M40 344H550" stroke-dasharray="1 4"/>
+<path d="M112 40V352" stroke-dasharray="1 4"/>
+<path d="M248 40V352" stroke-dasharray="1 4"/>
+<path d="M362 40V352" stroke-dasharray="1 4"/>
+<path d="M474 40V352" stroke-dasharray="1 4"/>
+<rect x="38" y="46" width="4" height="4"/>
+<rect x="548" y="46" width="4" height="4"/>
+<rect x="38" y="342" width="4" height="4"/>
+<rect x="548" y="342" width="4" height="4"/>
+</g>
+<g opacity="0.18">
+<circle cx="248" cy="196" r="48"/>
+<circle cx="362" cy="108" r="32"/>
+<circle cx="474" cy="108" r="32"/>
+<circle cx="362" cy="268" r="32"/>
+<circle cx="474" cy="268" r="32"/>
+</g>
+<g opacity="0.36">
+<circle cx="248" cy="196" r="24"/>
+<path d="M362 108H474V268H362Z"/>
+</g>
+<g opacity="0.72">
+<path d="M152 112H200V196H240M152 264H200V196M256 196H312V108H362M312 108H474"/>
+</g>
+<g opacity="0.9">
+<g transform="translate(72 80) scale(1)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(72 232) scale(1)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(248 196) scale(1)">
+<circle cx="0" cy="0" r="6" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(344 96) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(456 96) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(344 256) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<g transform="translate(456 256) scale(1)">
+<rect width="36" height="24" rx="2" fill="var(--placeholder)" vector-effect="non-scaling-stroke"/>
+</g>
+<path d="M340 92L384 124M340 124L384 92M452 92L496 124M452 124L496 92"/>
+</g>
+<path class="decision" d="M248 204V268H474M344 256H380V280H344ZM456 256H492V280H456Z" stroke="var(--accent)" stroke-width="2" fill="none"/>
+</svg>

@@ -8,7 +8,7 @@ org: Mastercard
 years: "2022 to 2026"
 role: Director, Experience Strategy
 image: /img/cases/ux-practice.svg
-imageAlt: A row of product boxes, each with a person node attached, and highlighted lines connecting the nodes into one practice.
+imageAlt: "Four product boxes each have an attached designer node, with the highlighted connections joining those designers into one UX practice."
 summary: >
   The cybersecurity portfolio had no design function, and design showed up late or not at all. I hired the leads, built the framework teams used before each Studio gate, and took on analytics and the desirability review because nobody owned them.
 pull: Design had a seat at the venture review instead of a slot after it.

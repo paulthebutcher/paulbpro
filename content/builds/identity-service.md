@@ -7,8 +7,8 @@ featured_size: small
 kind: first-party identity for Popfly
 status: live
 stack: []
-image: /img/builds/identity-service
-imageAlt: "[gap: the n8n flow or the CRM record with landing page, visit history and source filled in]"
+image: /img/builds/identity-service.svg
+imageAlt: "Visit dots, a campaign tag and a data stack feed a record, with the highlighted branches merging the three sources into one field."
 summary: >
   Designed and built the service that connects site visits, campaigns and third-party data to CRM records, so marketing spend can be traced to revenue. Every demo request arrives with its landing page and visit history, and about two-thirds with a known referring source.
 ---

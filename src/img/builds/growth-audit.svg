@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 393" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<g opacity="0.14">
+<circle cx="296" cy="192" r="64"/>
+<circle cx="296" cy="192" r="104"/>
+<circle cx="296" cy="192" r="160"/>
+</g>
+<g opacity="0.14">
+<path d="M40 48H550M40 344H550" stroke-dasharray="1 4"/>
+<path d="M76 40V352" stroke-dasharray="1 4"/>
+<path d="M140 40V352" stroke-dasharray="1 4"/>
+<path d="M260 40V352" stroke-dasharray="1 4"/>
+<path d="M296 40V352" stroke-dasharray="1 4"/>
+<path d="M428 40V352" stroke-dasharray="1 4"/>
+<path d="M524 40V352" stroke-dasharray="1 4"/>
+<rect x="38" y="46" width="4" height="4"/>
+<rect x="548" y="46" width="4" height="4"/>
+<rect x="38" y="342" width="4" height="4"/>
+<rect x="548" y="342" width="4" height="4"/>
+</g>
+<g opacity="0.55">
+<path d="M272 160L140 88M288 160L236 72M312 160L332 72M328 160L428 88M336 176L480 128M336 192L496 216M336 208L448 304M312 224L372 320M280 224L260 320M256 208L160 304M256 192L104 200"/>
+</g>
+<g opacity="0.9">
+<g transform="translate(256 160) scale(1)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<rect x="112" y="40" width="56" height="48" rx="2"/>
+<g transform="translate(120 48) scale(0.5)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<rect x="208" y="24" width="56" height="48" rx="2"/>
+<g transform="translate(216 32) scale(0.5)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<rect x="304" y="24" width="56" height="48" rx="2"/>
+<g transform="translate(312 32) scale(0.5)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<rect x="400" y="40" width="56" height="48" rx="2"/>
+<g transform="translate(408 48) scale(0.5)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<rect x="480" y="104" width="56" height="48" rx="2"/>
+<g transform="translate(488 112) scale(0.5)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<rect x="496" y="192" width="56" height="48" rx="2"/>
+<g transform="translate(504 200) scale(0.5)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<rect x="448" y="280" width="56" height="48" rx="2"/>
+<g transform="translate(456 288) scale(0.5)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<rect x="344" y="320" width="56" height="48" rx="2"/>
+<g transform="translate(352 328) scale(0.5)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<rect x="232" y="320" width="56" height="48" rx="2"/>
+<g transform="translate(240 328) scale(0.5)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<rect x="104" y="280" width="56" height="48" rx="2"/>
+<g transform="translate(112 288) scale(0.5)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+<rect x="48" y="176" width="56" height="48" rx="2"/>
+<g transform="translate(56 184) scale(0.5)">
+<rect width="80" height="64" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 16H80" vector-effect="non-scaling-stroke"/>
+</g>
+</g>
+<path class="decision" d="M336 176L480 128M480 104H536V152H480Z" stroke="var(--accent)" stroke-width="2" fill="none"/>
+</svg>

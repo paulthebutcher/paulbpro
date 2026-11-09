@@ -8,7 +8,7 @@ org: Mastercard
 years: "2024"
 role: Director, Experience Strategy
 image: /img/cases/six-million.svg
-imageAlt: A product drawn only in dashed construction lines beside a small demand-versus-price chart, where the build cost is a line the demand never reaches and the stop point is highlighted.
+imageAlt: "A dashed proposed product sits beside demand below a build-cost threshold, with the highlighted stop marking the decision to cancel the build."
 summary: >
   Willingness-to-pay, market and generative research with 250 people from the target market showed little demand for self-serve SMB security at a price that covered the build. I recommended stopping the planned $6M offering, and leadership agreed.
 pull: Saying no with evidence is most of the job of a desirability review.

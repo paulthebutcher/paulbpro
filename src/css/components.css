@@ -113,3 +113,6 @@
   stroke-dasharray: none !important;
   stroke-dashoffset: 0 !important;
 }
+
+/* Keep each drawing at its authored viewBox ratio at every breakpoint. */
+.work-image .diagram { aspect-ratio: var(--media-ratio); }

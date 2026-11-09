@@ -8,7 +8,7 @@ org: Shriners Children’s, with The Berndt Group (later Valtech)
 years: "2019 to 2020"
 role: Senior Digital Strategist and UX Architect
 image: /img/cases/shriners.svg
-imageAlt: Twenty-two small site thumbnails collapsing into one, with the one highlighted.
+imageAlt: "Twenty-two abstract site frames converge into one, with the highlighted connection and final frame marking the unified site."
 summary: >
   Each Shriners location ran its own site. I led discovery with marketing, clinical, IT and academic leadership, then designed the information architecture, search and content model for the site that replaced them.
 pull: Make the sketch out of the real thing so nothing gets lost in handoff.

@@ -1,5 +1,41 @@
 # Agent notes
 
+### Completed fourteen-drawing set
+
+- [observed] Paul approved the revised Lead direction before the remaining
+  eleven drawings were produced. The parts kit is locked. Work was generated
+  with Deadlock first; builds began with WCAG Engine, Foundry and Identity
+  Service, then the three page-only builds. Every drawing remains static.
+- [observed] All fourteen SVGs and their prose specs exist. Work and builds
+  each contain exactly one 2px accent path; Lead contains none. All files use
+  currentColor and semantic tokens, 1.5px structure, no text, titles, ids or
+  literal colors. Nothing reproduces a client screen, dataset or deliverable.
+- [observed] All case/build front matter references its SVG and supplies
+  imageAlt. The Eleventy media shortcode inlines the files and reserves the
+  viewBox aspect ratio. Work detail pages now use Pine; build pages use
+  Alabaster. Page-only builds stay out of the three-tile homepage row but are
+  reachable through adjacent-page navigation and the sitemap.
+- [observed] No supplied copy for Idea Factory, Growth Audit or StressFreeClaims
+  was found in the repository content or supplied brief. Their new pages retain
+  `[gap: copy]` for summary, body, kind, status and SEO description. Existing
+  content gaps elsewhere remain. Lakewood Court and the Valtech wireframe
+  library receive no drawings.
+- [observed] The Figma dimensions listed below remain authoritative. The
+  homepage build calls are now 676×450 and 322×322. Work's SVG ratio is exactly
+  590/393, including within its card wrapper.
+- [observed] Final Playwright contact sheets are `drawings-lead.png`,
+  `drawings-work.png` and `drawings-builds.png` under `reference/screenshots/`.
+  Each shows the drawings at 1× CSS size, rendered at deviceScaleFactor 2,
+  plus the completed homepage build row. Companion `-detail` and `-opposite`
+  sheets support closer inspection and checks on the other section palette.
+  The homepage row also has its own `drawings-homepage-build-row.png` capture.
+- [observed] `npm run check:images` reports 0 placeholders; `npm run a11y`
+  and `npm run build:preview` pass. `node scripts/check-drawings.mjs` checks
+  all fourteen SVG contracts and both palettes, all eleven detail routes on
+  desktop and touch, their accessible alt text and aspect ratios, and static
+  hover, focus and reduced-motion behavior. It found no axe violations on
+  the detail pages. Results are in `reference/drawing-checks.json`.
+
 ### Lead revision after Crosswalk reference
 
 - [observed] Paul requested another pass inspired by the hero graphic at

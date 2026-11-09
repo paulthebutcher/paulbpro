@@ -33,6 +33,8 @@ try {
   await page.goto('http://127.0.0.1:4174/');
   const buildRow = await page.locator('.build-tiles').evaluate(el => el.outerHTML);
   const pending = await page.locator('.build-tiles .placeholder').count();
+  await page.evaluate(() => document.fonts.ready);
+  if (!pending) await page.locator('.build-tiles').screenshot({path:'reference/screenshots/drawings-homepage-build-row.png'});
   const css = fs.readFileSync('dist/css/main.css', 'utf8');
   const surface = group === 'builds' ? 'on-alabaster' : 'on-pine';
   await page.setContent(`<!doctype html><html lang="en"><head><meta charset="utf-8"><style>${css}
@@ -57,6 +59,11 @@ try {
   }
   await page.screenshot({path: `reference/screenshots/drawings-${group}.png`, fullPage: true});
   await page.locator('[data-drawing-sheet]').screenshot({path: `reference/screenshots/drawings-${group}-detail.png`});
+  await page.locator('[data-drawing-sheet]').evaluate(el => {
+    el.classList.toggle('on-pine');
+    el.classList.toggle('on-alabaster');
+  });
+  await page.locator('[data-drawing-sheet]').screenshot({path: `reference/screenshots/drawings-${group}-opposite.png`});
   console.log(`Saved drawings-${group}.png at deviceScaleFactor 2; every drawing verified at 1x CSS size.`);
 } finally {
   if (browser) await browser.close();

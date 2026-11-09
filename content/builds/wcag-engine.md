@@ -7,8 +7,8 @@ featured_size: large
 kind: accessibility audit platform
 status: live
 stack: [Playwright, axe-core, Claude API]
-image: /img/builds/wcag-engine
-imageAlt: "[gap: the report view, with findings listed and one marked fixed]"
+image: /img/builds/wcag-engine.svg
+imageAlt: "Five inspection layers cross an abstract page with checked and untested marks, while the highlighted keyboard route lands on the main content."
 summary: >
   An automated ADA accessibility audit platform with paying municipal clients. I also ran it on Popfly’s site and worked the fixes through with the team.
 ---

@@ -1,0 +1,173 @@
+{
+  "drawings": 14,
+  "surfaces": [
+    {
+      "surface": "on-pine",
+      "passed": 14
+    },
+    {
+      "surface": "on-alabaster",
+      "passed": 14
+    }
+  ],
+  "routes": [
+    {
+      "mode": "desktop",
+      "route": "/",
+      "drawings": 9,
+      "passed": true
+    },
+    {
+      "mode": "desktop",
+      "route": "/work/deadlock/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "desktop",
+      "route": "/work/analytics/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "desktop",
+      "route": "/work/six-million/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "desktop",
+      "route": "/work/ux-practice/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "desktop",
+      "route": "/work/shriners/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "desktop",
+      "route": "/build/wcag-engine/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "desktop",
+      "route": "/build/foundry/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "desktop",
+      "route": "/build/identity-service/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "desktop",
+      "route": "/build/idea-factory/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "desktop",
+      "route": "/build/growth-audit/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "desktop",
+      "route": "/build/stressfreeclaims/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/",
+      "drawings": 9,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/work/deadlock/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/work/analytics/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/work/six-million/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/work/ux-practice/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/work/shriners/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/build/wcag-engine/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/build/foundry/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/build/identity-service/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/build/idea-factory/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/build/growth-audit/",
+      "drawings": 1,
+      "passed": true
+    },
+    {
+      "mode": "touch",
+      "route": "/build/stressfreeclaims/",
+      "drawings": 1,
+      "passed": true
+    }
+  ],
+  "staticInteractions": [
+    {
+      "mode": "desktop",
+      "hover": true,
+      "focus": true,
+      "reducedMotion": true
+    },
+    {
+      "mode": "touch",
+      "hover": false,
+      "focus": true,
+      "reducedMotion": true
+    }
+  ]
+}

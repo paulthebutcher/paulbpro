@@ -7,8 +7,8 @@ featured_size: small
 kind: multi-agent build pipeline
 status: in use
 stack: []
-image: /img/builds/foundry
-imageAlt: "[gap: describe the chosen screen or diagram]"
+image: /img/builds/foundry.svg
+imageAlt: "Loose notes feed seven pipeline stages beside frozen tests, with the highlighted route passing through the distiller to a separate next step."
 summary: >
   [gap: one sentence on what Foundry does, in plain words. Example shape: A pipeline of agents that takes a small product from a written brief to a deployed build, with checks between stages.]
 ---

@@ -8,7 +8,7 @@ org: Mastercard
 years: "2024"
 role: Director, Experience Strategy
 image: /img/cases/deadlock.svg
-imageAlt: A rough service blueprint with two clusters of conflicting notes, a parking lot in the corner, and one highlighted path through the notes that made scope.
+imageAlt: "Two conflicting clusters of blueprint notes lead past a parking lot, with the highlighted path tracing the agreed scope through five notes."
 summary: >
   Product and engineering had spent three months disagreeing about an MVP and had stopped talking. I ran a two-day workshop with their VPs. Scope was locked on day one; the two leads co-presented the plan the next morning.
 pull: Everyone disliked the first draft, which gave the room permission to start over.

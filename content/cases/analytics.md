@@ -8,7 +8,7 @@ org: Mastercard
 years: "2023 to 2025"
 role: Director, Experience Strategy
 image: /img/cases/analytics.svg
-imageAlt: Two separate product windows on the left and a feature map on the right, with the two features everyone assumed were core crossed out and the two habitual ones highlighted.
+imageAlt: "Two separate product frames feed a feature map with two assumptions crossed out, while the highlighted route and lower pair mark the habitual features that guide integration."
 summary: >
   Engineering estimated two years to instrument our enterprise cyber products. We had dashboards live in three months, with one developer spending half a day per product. Then the data settled a months-long argument about an acquired product’s integration.
 pull: I presented it as those features playing a different role than assumed, which kept it from reading as a verdict on past investment.

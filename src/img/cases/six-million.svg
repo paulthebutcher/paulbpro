@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 393" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<g opacity="0.14">
+<path d="M40 48H550M40 344H550" stroke-dasharray="1 4"/>
+<path d="M64 40V352" stroke-dasharray="1 4"/>
+<path d="M224 40V352" stroke-dasharray="1 4"/>
+<path d="M304 40V352" stroke-dasharray="1 4"/>
+<path d="M464 40V352" stroke-dasharray="1 4"/>
+<path d="M536 40V352" stroke-dasharray="1 4"/>
+<rect x="38" y="46" width="4" height="4"/>
+<rect x="548" y="46" width="4" height="4"/>
+<rect x="38" y="342" width="4" height="4"/>
+<rect x="548" y="342" width="4" height="4"/>
+</g>
+<g opacity="0.18">
+<circle cx="464" cy="264" r="32"/>
+<path d="M304 128H552M304 224H544" stroke-dasharray="1 4"/>
+</g>
+<g opacity="0.36">
+<circle cx="464" cy="264" r="16"/>
+</g>
+<g opacity="0.72">
+<g stroke-dasharray="4 6"><g transform="translate(64 104) scale(1)">
+<rect width="160" height="176" rx="2" vector-effect="non-scaling-stroke"/>
+<path d="M0 32H160" vector-effect="non-scaling-stroke"/>
+</g><rect x="80" y="160" width="56" height="40" rx="2"/><rect x="152" y="160" width="56" height="40" rx="2"/><rect x="80" y="216" width="128" height="40" rx="2"/></g>
+<path d="M304 96V304H544M296 128H304M296 176H304M296 224H304M296 272H304M352 304V312M400 304V312M448 304V312M496 304V312"/>
+<path d="M304 128H536M312 224L352 232L392 248L432 256L464 264"/>
+</g>
+<path class="decision" d="M448 264H464M464 248V280" stroke="var(--accent)" stroke-width="2" fill="none"/>
+</svg>
