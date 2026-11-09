@@ -48,9 +48,3 @@
   for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
-
-[[redirects]]
-  from = "https://www.paulb.pro/*"
-  to = "https://paulb.pro/:splat"
-  status = 301
-  force = true

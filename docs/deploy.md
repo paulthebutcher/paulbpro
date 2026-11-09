@@ -8,8 +8,6 @@ Before merging to `main`:
 2. Run `npm run build` for the launch gate. Resolve all content gaps and use licensed Diatype Regular and Light and Diatype Mono Regular WOFF2 files in `src/fonts/` before publishing a public site.
 3. Netlify currently builds drafts with `build:preview` and sends noindex headers. At launch set `command = "npm run build"` under `[context.production]` in `netlify.toml`. Keep previews on the preview command. Only publish after checking the production build.
 
-The Webflow domain cutover is still pending:
+Production uses `www.paulb.pro` as the primary domain. Netlify redirects `paulb.pro` to it automatically. Keep the canonical URL in `content/site/site.json` on the primary domain.
 
-1. In Netlify, add `paulb.pro` and `www.paulb.pro` and select the apex as primary. Copy the current DNS records and note the Webflow targets for rollback.
-2. If moving nameservers, create all existing mail records in Netlify DNS first, especially the MX records for `hello@paulb.pro`, plus SPF, DKIM and DMARC. Then switch the registrar to the assigned Netlify nameservers. If retaining the existing DNS host, change only the apex and `www` Webflow records to the targets shown in Netlify and leave mail records in place.
-3. Confirm HTTPS on both hosts, the `www` redirect, and `/book`. Verify incoming and outgoing mail. Keep Webflow intact for rollback; to roll back a site release without moving DNS, publish the last good Netlify deploy.
+Before changing DNS, copy the current records. If moving nameservers, recreate the existing mail records first, including MX for `hello@paulb.pro`, SPF, DKIM and DMARC. Afterward, verify HTTPS on both hosts, the redirect to `www`, `/book`, and incoming and outgoing mail. To roll back a site release without moving DNS, publish the last good Netlify deploy.
