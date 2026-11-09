@@ -4,6 +4,7 @@ seoDescription: "How Paul Butcher led discovery and designed the information arc
 slug: shriners
 order: 5
 featured: true
+kind: site consolidation
 org: Shriners Children’s, with The Berndt Group (later Valtech)
 years: "2020 to 2021"
 role: Senior Digital Strategist and UX Architect

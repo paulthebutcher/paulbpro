@@ -4,6 +4,7 @@ seoDescription: "How research with 250 potential customers found too little dema
 slug: six-million
 order: 3
 featured: true
+kind: generative research
 org: Mastercard
 years: "2024"
 role: Director, Experience Strategy

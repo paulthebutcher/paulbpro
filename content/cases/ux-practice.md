@@ -4,6 +4,7 @@ seoDescription: "How Paul Butcher built Mastercard’s cybersecurity UX practice
 slug: ux-practice
 order: 4
 featured: true
+kind: team and practice building
 org: Mastercard
 years: "2022 to 2026"
 role: Director, Experience Strategy

@@ -4,6 +4,7 @@ seoDescription: "How Paul Butcher got enterprise cybersecurity analytics live in
 slug: analytics
 order: 2
 featured: true
+kind: analytics foundation
 org: Mastercard
 years: "2025"
 role: Director, Experience Strategy

@@ -49,6 +49,7 @@ home: true
             <div class="work-image">{% media item.data.image, item.data.imageAlt, 590, 393 %}</div>
             <h3 id="case-{{ item.data.slug }}" class="link-arrow cardTitle">{{ item.data.title }}{{ arrow() }}</h3>
           </a>
+          <p class="mono muted">{{ item.data.kind }} · {{ item.data.years }}</p>
         </article>
         {% endfor %}
       </div></div>

@@ -4,6 +4,7 @@ seoDescription: "How a two-day workshop helped product and engineering agree on 
 slug: deadlock
 order: 1
 featured: true
+kind: scope workshop
 org: Mastercard
 years: "2025"
 role: Director, Experience Strategy
