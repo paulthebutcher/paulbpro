@@ -8,7 +8,7 @@ home: true
 <section id="hero" class="section on-pine"><div class="frame"><div class="hero-grid inset">
 <h1 class="display">{{ site.hero.headline | br | safe }}</h1><p class="hero-thesis intro">{{ site.hero.thesis }}</p><div class="portrait hero-portrait">{% media site.hero.portrait.src, site.hero.portrait.alt, 322, 322, true %}</div><div class="hero-buttons">{% for item in site.hero.buttons %}{{ button(item,site) }}{% endfor %}</div></div>
 <div class="stats">{% for stat in site.hero.stats %}<a class="stat" href="/work/{{ stat.case }}/"><span class="stat-value">{{ stat.value }}</span><span class="stat-caption">{{ stat.caption }}</span></a>{% endfor %}</div></div></section>
-<section id="about" class="section on-alabaster"><div class="frame section-pad"><div class="about-top inset"><div><h2 class="display2">{{ site.about.headline }}</h2><div class="resume-button">{{ button(site.about.resumeButton,site) }}</div></div><div class="roles">{% for group in site.about.roles %}<div><p class="mono muted">{{ group.eyebrow }}</p><ul>{% for item in group.items %}<li class="small">{% if item.case %}<a href="/work/{{ item.case }}/">{% endif %}{{ item.role }} {{ site.ui.roleConnector }} {{ item.org }}{% if item.case %}</a>{% endif %}</li>{% endfor %}</ul></div>{% endfor %}</div></div>
+<section id="about" class="section on-alabaster"><div class="frame section-pad"><div class="about-top inset"><div><h2 class="display2">{{ site.about.headline }}</h2><div class="resume-button">{{ button(site.about.resumeButton,site) }}</div></div><div class="roles">{% for group in site.about.roles %}<div><p class="mono muted">{{ group.eyebrow }}</p><ul>{% for item in group.items %}<li class="small">{{ item.role }} {{ site.ui.roleConnector }} {{ item.org }}</li>{% endfor %}</ul></div>{% endfor %}</div></div>
 {% for group in [site.about.objects, site.about.paper] %}
 {% set gallery = 'paper' if loop.last else 'objects' %}
 <div class="about-row">
@@ -23,7 +23,27 @@ home: true
   </div>
 </div>
 {% endfor %}</div></section>
-<section id="work" class="section on-pine"><div class="frame section-pad tagged">{{ tag(site.work.tag) }}<div class="work-layout"><div class="work-heading inset"><h2 class="display">{{ site.work.headline | br | safe }}</h2><p class="intro">{{ site.work.intro }}</p></div><div class="case-list">{% for item in collections.cases | featured %}<article class="case-card"><a href="{{ item.url }}" aria-labelledby="case-{{ item.data.slug }}">{% media item.data.image,item.data.imageAlt,590,393 %}<h3 id="case-{{ item.data.slug }}" class="link-arrow cardTitle">{{ item.data.title }}{{ arrow() }}</h3></a></article>{% endfor %}</div></div></div></section>
+<section id="work" class="section on-pine">
+  <div class="frame section-pad tagged">
+    <div class="work-layout">
+      <div class="work-heading">
+        {{ tag(site.work.tag) }}
+        <h2 class="display inset">{{ site.work.headline | br | safe }}</h2>
+        <div class="work-intro inset"><p class="intro">{{ site.work.intro }}</p></div>
+      </div>
+      <div class="case-list">
+        {% for item in collections.cases | featured %}
+        <article class="case-card">
+          <a href="{{ item.url }}" aria-labelledby="case-{{ item.data.slug }}">
+            {% media item.data.image, item.data.imageAlt, 590, 393 %}
+            <h3 id="case-{{ item.data.slug }}" class="link-arrow cardTitle">{{ item.data.title }}{{ arrow() }}</h3>
+          </a>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
 <section id="build" class="section on-alabaster"><div class="frame section-pad tagged">{{ tag(site.build.tag) }}<h2 class="display build-heading inset">{{ site.build.headline }}</h2><p class="intro build-intro inset">{{ site.build.intro }}</p><div class="build-tiles inset">{% for item in collections.builds %}<article class="build-tile {{ item.data.featured_size }}"><a href="{{ item.url }}" aria-labelledby="build-{{ item.data.slug }}">{% if item.data.featured_size == 'large' %}{% media item.data.image,item.data.imageAlt,676,412 %}{% else %}{% media item.data.image,item.data.imageAlt,322,320 %}{% endif %}<h3 id="build-{{ item.data.slug }}" class="link-arrow cardTitle">{{ item.data.title }}{{ arrow() }}</h3></a><p class="mono muted">{{ item.data.kind }} · {{ item.data.status }}{% if item.data.stack.length %}<br>{{ item.data.stack | join(', ') }}{% endif %}</p></article>{% endfor %}</div></div></section>
 <section id="lead" class="section on-pine"><div class="frame section-pad tagged">{{ tag(site.lead.tag) }}<div class="lead-header"><h2 class="display inset">{{ site.lead.headline | br | safe }}</h2><div class="inset">{% for paragraph in site.lead.intro %}<p class="intro">{{ paragraph }}</p>{% endfor %}</div></div>
 <div class="lead-stage"><div class="lead-stage__pin"><nav class="lead-stage__labels" aria-label="{{ site.ui.levels }}" hidden>{% for level in site.lead.levels %}<button class="level" aria-controls="level-{{ level.id }}" aria-expanded="false" tabindex="{% if loop.first %}0{% else %}-1{% endif %}">{{ level.label }}</button>{% endfor %}</nav><div class="lead-stage__panels">{% for level in site.lead.levels %}<section id="level-{{ level.id }}" class="lead-level" aria-labelledby="heading-{{ level.id }}"><h3 id="heading-{{ level.id }}" class="level">{{ level.label }}</h3><div class="level-content"><div class="lead-art">{% media level.image,level.imageAlt,322,240 %}</div><div class="principles">{% for principle in level.principles %}<div><h4 class="principle">{{ principle.headline | br | safe }}</h4><p>{{ principle.body }}</p></div>{% endfor %}</div></div></section>{% endfor %}</div></div></div>

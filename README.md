@@ -39,7 +39,7 @@ When launch inputs are complete, set `command = "npm run build"` under `[context
 
 ## Launch blockers
 
-`npm run build` deliberately fails while the supplied `[gap]` markers remain. Fill the unfinished case and build content, scheduler URL and LinkedIn URL in `content/`. Add `src/Paul-Butcher-Resume.pdf`. The supplied copy has not been rewritten to bypass this gate.
+`npm run build` deliberately fails while the supplied `[gap]` markers remain in the case and build content. The contact links are configured in `content/site/site.json`, the booking redirect is in `netlify.toml`, and the résumé PDF is in `src/`.
 
 Replace trial fonts with licensed `src/fonts/ABCDiatype-Regular.woff2` and `src/fonts/ABCDiatypeMono-Regular.woff2` before launch. Licensed files automatically take precedence. Development trial fonts are converted and subset at build time from `assets/fonts/`.
 

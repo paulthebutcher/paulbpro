@@ -24,6 +24,12 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
+  from = "/book"
+  to = "https://app.reclaim.ai/m/paul-paulb/chat"
+  status = 302
+  force = true
+
+[[redirects]]
   from = "https://www.paulb.pro/*"
   to = "https://paulb.pro/:splat"
   status = 301

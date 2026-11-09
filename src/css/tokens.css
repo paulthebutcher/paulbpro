@@ -8,8 +8,8 @@
   --periwinkle: #b4c1ff;
 
   /* Surface tints */
-  --line-on-pine: #285B4C;
-  --line-on-alabaster: #D7D3D2;
+  --line-on-pine: #245849;
+  --line-on-alabaster: #DBD7D6;
   --muted-on-pine: color-mix(in oklab, var(--alabaster) 62%, var(--pine));
   --muted-on-alabaster: color-mix(in oklab, var(--pine) 68%, var(--alabaster));
   --placeholder-on-pine: color-mix(in oklab, var(--alabaster) 18%, var(--pine));

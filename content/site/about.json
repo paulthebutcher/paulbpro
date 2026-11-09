@@ -7,9 +7,9 @@
       { "role": "Product design & strategy", "org": "Butcher Built" }
     ]},
     { "eyebrow": "before", "items": [
-      { "role": "Director, experience strategy", "org": "Mastercard", "case": "ux-practice" },
+      { "role": "Director, experience strategy", "org": "Mastercard" },
       { "role": "Solutions architect, enterprise architecture", "org": "Zions Bancorporation" },
-      { "role": "Senior digital strategist & UX architect", "org": "Valtech", "case": "shriners" },
+      { "role": "Senior digital strategist & UX architect", "org": "Valtech" },
       { "role": "Senior UX designer & front-end developer", "org": "42connect" }
     ]}
   ],
