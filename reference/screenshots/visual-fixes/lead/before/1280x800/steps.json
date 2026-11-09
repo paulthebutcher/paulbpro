@@ -1,0 +1,1487 @@
+{
+  "geometry": {
+    "start": 4468,
+    "end": 8022,
+    "overflow": [
+      {
+        "element": "DIV lead-stage lead-stage--pinned",
+        "x": "visible",
+        "y": "visible"
+      },
+      {
+        "element": "DIV frame section-pad tagged",
+        "x": "visible",
+        "y": "visible"
+      },
+      {
+        "element": "SECTION section on-pine",
+        "x": "visible",
+        "y": "visible"
+      },
+      {
+        "element": "MAIN ",
+        "x": "visible",
+        "y": "visible"
+      },
+      {
+        "element": "BODY on-alabaster development",
+        "x": "visible",
+        "y": "visible"
+      },
+      {
+        "element": "HTML ",
+        "x": "visible",
+        "y": "visible"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "offset": 0,
+      "scrollY": 4468,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 627.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 627.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 0.877945
+    },
+    {
+      "offset": 50,
+      "scrollY": 4518,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 577.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 577.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 100,
+      "scrollY": 4568,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 527.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 527.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 150,
+      "scrollY": 4618,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 477.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 477.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 200,
+      "scrollY": 4668,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 427.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 427.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 250,
+      "scrollY": 4718,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 377.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 377.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 300,
+      "scrollY": 4768,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 327.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 327.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 350,
+      "scrollY": 4818,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 277.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 277.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 400,
+      "scrollY": 4868,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 227.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 227.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 450,
+      "scrollY": 4918,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 177.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 177.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 500,
+      "scrollY": 4968,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 127.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 127.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 550,
+      "scrollY": 5018,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 77.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 77.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 600,
+      "scrollY": 5068,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 27.828125,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 27.828125,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 650,
+      "scrollY": 5118,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -22.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 700,
+      "scrollY": 5168,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -72.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 750,
+      "scrollY": 5218,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -122.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 800,
+      "scrollY": 5268,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -172.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 850,
+      "scrollY": 5318,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -222.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 900,
+      "scrollY": 5368,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -272.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 950,
+      "scrollY": 5418,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -322.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1000,
+      "scrollY": 5468,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -372.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1050,
+      "scrollY": 5518,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -422.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1100,
+      "scrollY": 5568,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -472.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1150,
+      "scrollY": 5618,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -522.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1200,
+      "scrollY": 5668,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -572.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 0.0986211
+    },
+    {
+      "offset": 1250,
+      "scrollY": 5718,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -622.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1300,
+      "scrollY": 5768,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -672.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1350,
+      "scrollY": 5818,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -722.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1400,
+      "scrollY": 5868,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -772.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1450,
+      "scrollY": 5918,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -822.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1500,
+      "scrollY": 5968,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -872.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1550,
+      "scrollY": 6018,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -922.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1600,
+      "scrollY": 6068,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -972.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1650,
+      "scrollY": 6118,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -1022.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 480.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1700,
+      "scrollY": 6168,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1072.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 0.0988896
+    },
+    {
+      "offset": 1750,
+      "scrollY": 6218,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1122.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 0.607432
+    },
+    {
+      "offset": 1800,
+      "scrollY": 6268,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1172.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 0.81699
+    },
+    {
+      "offset": 1850,
+      "scrollY": 6318,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1222.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1900,
+      "scrollY": 6368,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1272.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 1950,
+      "scrollY": 6418,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1322.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2000,
+      "scrollY": 6468,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1372.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2050,
+      "scrollY": 6518,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1422.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2100,
+      "scrollY": 6568,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1472.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2150,
+      "scrollY": 6618,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1522.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2200,
+      "scrollY": 6668,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1572.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2250,
+      "scrollY": 6718,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1622.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -22.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2300,
+      "scrollY": 6768,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1672.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -72.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2350,
+      "scrollY": 6818,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1722.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -122.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2400,
+      "scrollY": 6868,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1772.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -172.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2450,
+      "scrollY": 6918,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1822.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -222.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2500,
+      "scrollY": 6968,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1872.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -272.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2550,
+      "scrollY": 7018,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1922.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -322.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2600,
+      "scrollY": 7068,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1972.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -372.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2650,
+      "scrollY": 7118,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2022.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -422.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2700,
+      "scrollY": 7168,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2072.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -472.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2750,
+      "scrollY": 7218,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2122.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -522.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2800,
+      "scrollY": 7268,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2172.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -572.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2850,
+      "scrollY": 7318,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2222.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -622.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2900,
+      "scrollY": 7368,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2272.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -672.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 2950,
+      "scrollY": 7418,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2322.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -722.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3000,
+      "scrollY": 7468,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2372.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -772.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3050,
+      "scrollY": 7518,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2422.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -822.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3100,
+      "scrollY": 7568,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2472.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -872.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3150,
+      "scrollY": 7577,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2481.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -881.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3200,
+      "scrollY": 7577,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2481.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -881.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3250,
+      "scrollY": 7577,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2481.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -881.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3300,
+      "scrollY": 7577,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2481.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -881.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3350,
+      "scrollY": 7577,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2481.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -881.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3400,
+      "scrollY": 7577,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2481.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -881.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3450,
+      "scrollY": 7577,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2481.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -881.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3500,
+      "scrollY": 7577,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2481.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -881.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3550,
+      "scrollY": 7577,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2481.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -881.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    },
+    {
+      "offset": 3600,
+      "scrollY": 7577,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2481.171875,
+      "stageHeight": 2400,
+      "pinned": true,
+      "pinTop": -881.171875,
+      "pinHeight": 800,
+      "padding": 192,
+      "panelHeight": 456.5625,
+      "opacity": 1
+    }
+  ],
+  "order": [
+    0,
+    1,
+    2
+  ],
+  "maxPanel": 480.5625,
+  "available": 608,
+  "layoutChange": {
+    "mutations": [
+      {
+        "target": "level-person",
+        "attribute": "hidden",
+        "oldValue": ""
+      },
+      {
+        "target": "level-team",
+        "attribute": "data-active",
+        "oldValue": ""
+      },
+      {
+        "target": "level-company",
+        "attribute": "hidden",
+        "oldValue": ""
+      },
+      {
+        "target": "level-person",
+        "attribute": "hidden",
+        "oldValue": null
+      },
+      {
+        "target": "level-team",
+        "attribute": "data-active",
+        "oldValue": null
+      },
+      {
+        "target": "level-company",
+        "attribute": "hidden",
+        "oldValue": null
+      }
+    ],
+    "animations": [
+      "level-team"
+    ],
+    "scrollY": 5669,
+    "active": 1,
+    "expanded": 1,
+    "hidden": [
+      true,
+      false,
+      true
+    ],
+    "top": -572.171875,
+    "stageHeight": 2400,
+    "pinned": true,
+    "pinTop": 0,
+    "pinHeight": 800,
+    "padding": 192,
+    "panelHeight": 480.5625,
+    "opacity": 0.953399
+  }
+}

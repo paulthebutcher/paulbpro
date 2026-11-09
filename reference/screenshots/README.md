@@ -7,3 +7,5 @@
 - [Lead: Team, 1440 x 900](lead-team-1440.png)
 - [Lead: Company, 1440 x 900](lead-company-1440.png)
 - [JavaScript disabled, desktop](lead-no-js.png)
+
+- [Visual fixes: before and after, Lead scroll sequences, and contrast measurements](visual-fixes/README.md)

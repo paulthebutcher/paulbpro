@@ -1,0 +1,1582 @@
+{
+  "geometry": {
+    "start": 4556,
+    "end": 8390,
+    "overflow": [
+      {
+        "element": "DIV lead-stage lead-stage--pinned",
+        "x": "visible",
+        "y": "visible"
+      },
+      {
+        "element": "DIV frame section-pad tagged",
+        "x": "visible",
+        "y": "visible"
+      },
+      {
+        "element": "SECTION section on-pine",
+        "x": "visible",
+        "y": "visible"
+      },
+      {
+        "element": "MAIN ",
+        "x": "visible",
+        "y": "visible"
+      },
+      {
+        "element": "BODY on-alabaster development",
+        "x": "visible",
+        "y": "visible"
+      },
+      {
+        "element": "HTML ",
+        "x": "visible",
+        "y": "visible"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "offset": 0,
+      "scrollY": 4556,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 602.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 602.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 0.921711
+    },
+    {
+      "offset": 50,
+      "scrollY": 4606,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 552.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 552.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 100,
+      "scrollY": 4656,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 502.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 502.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 150,
+      "scrollY": 4706,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 452.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 452.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 200,
+      "scrollY": 4756,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 402.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 402.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 250,
+      "scrollY": 4806,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 352.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 352.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 300,
+      "scrollY": 4856,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 302.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 302.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 350,
+      "scrollY": 4906,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 252.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 252.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 400,
+      "scrollY": 4956,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 202.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 202.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 450,
+      "scrollY": 5006,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 152.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 152.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 500,
+      "scrollY": 5056,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 102.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 102.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 550,
+      "scrollY": 5106,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 52.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 52.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 600,
+      "scrollY": 5156,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": 2.125,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 2.125,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 650,
+      "scrollY": 5206,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -47.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 700,
+      "scrollY": 5256,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -97.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 750,
+      "scrollY": 5306,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -147.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 800,
+      "scrollY": 5356,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -197.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 850,
+      "scrollY": 5406,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -247.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 900,
+      "scrollY": 5456,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -297.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 950,
+      "scrollY": 5506,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -347.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1000,
+      "scrollY": 5556,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -397.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1050,
+      "scrollY": 5606,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -447.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1100,
+      "scrollY": 5656,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -497.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1150,
+      "scrollY": 5706,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -547.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1200,
+      "scrollY": 5756,
+      "active": 0,
+      "expanded": 0,
+      "hidden": [
+        false,
+        true,
+        true
+      ],
+      "top": -597.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1250,
+      "scrollY": 5806,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -647.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 0.406244
+    },
+    {
+      "offset": 1300,
+      "scrollY": 5856,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -697.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 0.731645
+    },
+    {
+      "offset": 1350,
+      "scrollY": 5906,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -747.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 0.87792
+    },
+    {
+      "offset": 1400,
+      "scrollY": 5956,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -797.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 0.953477
+    },
+    {
+      "offset": 1450,
+      "scrollY": 6006,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -847.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1500,
+      "scrollY": 6056,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -897.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1550,
+      "scrollY": 6106,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -947.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1600,
+      "scrollY": 6156,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -997.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1650,
+      "scrollY": 6206,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -1047.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1700,
+      "scrollY": 6256,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -1097.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1750,
+      "scrollY": 6306,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -1147.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1800,
+      "scrollY": 6356,
+      "active": 1,
+      "expanded": 1,
+      "hidden": [
+        true,
+        false,
+        true
+      ],
+      "top": -1197.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 414.75,
+      "opacity": 1
+    },
+    {
+      "offset": 1850,
+      "scrollY": 6406,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1247.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 0.406528
+    },
+    {
+      "offset": 1900,
+      "scrollY": 6456,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1297.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 0.732363
+    },
+    {
+      "offset": 1950,
+      "scrollY": 6506,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1347.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 0.877976
+    },
+    {
+      "offset": 2000,
+      "scrollY": 6556,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1397.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 0.953506
+    },
+    {
+      "offset": 2050,
+      "scrollY": 6606,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1447.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2100,
+      "scrollY": 6656,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1497.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2150,
+      "scrollY": 6706,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1547.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2200,
+      "scrollY": 6756,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1597.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2250,
+      "scrollY": 6806,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1647.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2300,
+      "scrollY": 6856,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1697.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2350,
+      "scrollY": 6906,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1747.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2400,
+      "scrollY": 6956,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1797.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": 0,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2450,
+      "scrollY": 7006,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1847.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -47.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2500,
+      "scrollY": 7056,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1897.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -97.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2550,
+      "scrollY": 7106,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1947.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -147.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2600,
+      "scrollY": 7156,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -1997.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -197.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2650,
+      "scrollY": 7206,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2047.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -247.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2700,
+      "scrollY": 7256,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2097.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -297.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2750,
+      "scrollY": 7306,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2147.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -347.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2800,
+      "scrollY": 7356,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2197.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -397.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2850,
+      "scrollY": 7406,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2247.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -447.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2900,
+      "scrollY": 7456,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2297.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -497.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 2950,
+      "scrollY": 7506,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2347.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -547.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3000,
+      "scrollY": 7556,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2397.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -597.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3050,
+      "scrollY": 7606,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2447.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -647.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3100,
+      "scrollY": 7656,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2497.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -697.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3150,
+      "scrollY": 7706,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2547.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -747.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3200,
+      "scrollY": 7756,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2597.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -797.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3250,
+      "scrollY": 7806,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2647.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -847.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3300,
+      "scrollY": 7856,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2697.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -897.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3350,
+      "scrollY": 7885,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2726.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -926.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3400,
+      "scrollY": 7885,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2726.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -926.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3450,
+      "scrollY": 7885,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2726.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -926.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3500,
+      "scrollY": 7885,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2726.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -926.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3550,
+      "scrollY": 7885,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2726.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -926.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3600,
+      "scrollY": 7885,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2726.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -926.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3650,
+      "scrollY": 7885,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2726.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -926.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3700,
+      "scrollY": 7885,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2726.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -926.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3750,
+      "scrollY": 7885,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2726.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -926.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3800,
+      "scrollY": 7885,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2726.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -926.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    },
+    {
+      "offset": 3850,
+      "scrollY": 7885,
+      "active": 2,
+      "expanded": 2,
+      "hidden": [
+        true,
+        true,
+        false
+      ],
+      "top": -2726.875,
+      "stageHeight": 2700,
+      "pinned": true,
+      "pinTop": -926.875,
+      "pinHeight": 900,
+      "padding": 192,
+      "panelHeight": 438.75,
+      "opacity": 1
+    }
+  ],
+  "order": [
+    0,
+    1,
+    2
+  ],
+  "maxPanel": 438.75,
+  "available": 708,
+  "layoutChange": {
+    "mutations": [
+      {
+        "target": "level-person",
+        "attribute": "hidden",
+        "oldValue": ""
+      },
+      {
+        "target": "level-team",
+        "attribute": "data-active",
+        "oldValue": ""
+      },
+      {
+        "target": "level-company",
+        "attribute": "hidden",
+        "oldValue": ""
+      },
+      {
+        "target": "level-person",
+        "attribute": "hidden",
+        "oldValue": null
+      },
+      {
+        "target": "level-team",
+        "attribute": "data-active",
+        "oldValue": null
+      },
+      {
+        "target": "level-company",
+        "attribute": "hidden",
+        "oldValue": null
+      }
+    ],
+    "animations": [
+      "level-team"
+    ],
+    "scrollY": 5807,
+    "active": 1,
+    "expanded": 1,
+    "hidden": [
+      true,
+      false,
+      true
+    ],
+    "top": -647.875,
+    "stageHeight": 2700,
+    "pinned": true,
+    "pinTop": 0,
+    "pinHeight": 900,
+    "padding": 192,
+    "panelHeight": 414.75,
+    "opacity": 1
+  }
+}

@@ -7,13 +7,18 @@
   --royal: #0d21a1;
   --periwinkle: #b4c1ff;
 
-  /* Derived tints. Lines and muted text are tinted from the section background, never from the brand green on its own. */
-  --line-on-pine: color-mix(in oklab, var(--alabaster) 14%, var(--pine));
-  --line-on-alabaster: color-mix(in oklab, var(--pine) 12%, var(--alabaster));
+  /* Surface tints */
+  --line-on-pine: #285B4C;
+  --line-on-alabaster: #D7D3D2;
   --muted-on-pine: color-mix(in oklab, var(--alabaster) 62%, var(--pine));
   --muted-on-alabaster: color-mix(in oklab, var(--pine) 68%, var(--alabaster));
   --placeholder-on-pine: color-mix(in oklab, var(--alabaster) 18%, var(--pine));
   --placeholder-on-alabaster: color-mix(in oklab, var(--pine) 8%, var(--alabaster));
+
+  /* Monochrome grain stays on the contrast-preserving side of each surface. */
+  --grain-size: 160px;
+  --grain-pine: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer color-interpolation-filters='sRGB'%3E%3CfeFuncR type='linear' slope='.09' intercept='0'/%3E%3CfeFuncG type='linear' slope='.30' intercept='0'/%3E%3CfeFuncB type='linear' slope='.24' intercept='0'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  --grain-alabaster: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer color-interpolation-filters='sRGB'%3E%3CfeFuncR type='linear' slope='0.08' intercept='0.92'/%3E%3CfeFuncG type='linear' slope='0.08' intercept='0.92'/%3E%3CfeFuncB type='linear' slope='0.08' intercept='0.92'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
 
   /* Fonts */
   --font-sans: "ABC Diatype", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
@@ -106,6 +111,7 @@
 /* Section color contexts. Every section sets one of these; components read the semantic names. */
 .on-pine {
   --bg: var(--pine);
+  --grain: var(--grain-pine);
   --fg: var(--alabaster);
   --accent: var(--periwinkle);
   --line: var(--line-on-pine);
@@ -113,11 +119,13 @@
   --placeholder: var(--placeholder-on-pine);
   --button-bg: var(--periwinkle);
   --button-fg: var(--pine);
-  background: var(--bg);
+  background: var(--grain), var(--bg);
+  background-size: var(--grain-size);
   color: var(--fg);
 }
 .on-alabaster {
   --bg: var(--alabaster);
+  --grain: var(--grain-alabaster);
   --fg: var(--pine);
   --accent: var(--royal);
   --line: var(--line-on-alabaster);
@@ -125,7 +133,8 @@
   --placeholder: var(--placeholder-on-alabaster);
   --button-bg: var(--royal);
   --button-fg: var(--alabaster);
-  background: var(--bg);
+  background: var(--grain), var(--bg);
+  background-size: var(--grain-size);
   color: var(--fg);
 }
 
