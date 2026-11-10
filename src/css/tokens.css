@@ -10,8 +10,8 @@
   /* Surface tints */
   --line-on-pine: #285B4C;
   --line-on-alabaster: #D7D3D2;
-  --muted-on-pine: color-mix(in oklab, var(--alabaster) 62%, var(--pine));
-  --muted-on-alabaster: color-mix(in oklab, var(--pine) 68%, var(--alabaster));
+  --muted-on-pine: color-mix(in oklab, var(--alabaster) 82%, var(--pine));
+  --muted-on-alabaster: color-mix(in oklab, var(--pine) 86%, var(--alabaster));
   --placeholder-on-pine: color-mix(in oklab, var(--alabaster) 18%, var(--pine));
   --placeholder-on-alabaster: color-mix(in oklab, var(--pine) 8%, var(--alabaster));
 
