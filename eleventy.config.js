@@ -133,7 +133,7 @@ export default function(config) {
     return `<picture><source type="image/avif" srcset="${srcset(stats.avif)}" sizes="${sizes}"><img src="${fallback.url}" srcset="${srcset(stats.webp)}" sizes="${sizes}" width="${fallback.width}" height="${fallback.height}" alt="${escape(alt)}" decoding="async" ${priority ? 'fetchpriority="high"' : 'loading="lazy"'}></picture>`;
   });
   config.addWatchTarget('content'); config.addWatchTarget('src/css'); config.addWatchTarget('assets'); config.addWatchTarget('src/img');
-  config.addPassthroughCopy({'src/js':'js', 'src/img/surfaces':'img/surfaces'});
+  config.addPassthroughCopy({'src/js':'js', 'src/img/surfaces':'img/surfaces', 'src/img/email':'img/email'});
   if(fs.existsSync('src/Paul-Butcher-Resume.pdf')) config.addPassthroughCopy({'src/Paul-Butcher-Resume.pdf':'Paul-Butcher-Resume.pdf'});
   config.on('eleventy.before',async()=>{
     await prepareAssets(readSite(), [...records('cases'), ...records('builds')]);
